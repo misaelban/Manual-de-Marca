@@ -1,0 +1,414 @@
+<title>Infosec México · Sistema de diseño</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* =====================================================================
+   INFOSEC MÉXICO · SISTEMA DE DISEÑO v2.0 — tokens
+   ===================================================================== */
+:root{
+  /* Marca */
+  --color-primary:#455E7C;--color-primary-hover:#3A506A;--color-primary-active:#2F4257;
+  --color-primary-dark:#030C18;--color-primary-light:#C3CBD5;--color-primary-soft:#ECEFF2;
+  /* Neutros */
+  --color-surface:#FFFFFF;--color-surface-alt:#F7F8F8;--color-border:#E6E7E8;
+  --color-text-primary:#101826;--color-text-secondary:#4F535D;--silver-dark:#5A5E67;--silver-medium:#969AA2;--silver-light:#E9E9EA;
+  /* Semánticos */
+  --success:#1F7A4D;--success-bg:#E7F3EC;--warning:#9A6417;--warning-bg:#FDF2E2;--danger:#B3312C;--danger-bg:#FBEAEA;--info:#455E7C;--info-bg:#ECEFF2;
+  /* Tema oscuro (sitio público) */
+  --dark-bg:#030C18;--dark-surface:#071524;--dark-card:#0A1E33;--dark-border:rgba(0,212,255,.12);--cyan:#00D4FF;--cyan-dim:rgba(0,212,255,.08);--green-neon:#00E676;--dark-text:#E8F1FB;--dark-text-2:#8BAFC8;
+  /* Tipografía */
+  --font-display:'Poppins',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --text-display-xl:clamp(2.6rem,5vw,3.75rem);--text-display-lg:clamp(2.1rem,4vw,2.75rem);--text-heading-lg:1.75rem;--text-heading-md:1.375rem;--text-heading-sm:1.125rem;
+  --text-body-lg:1.125rem;--text-body-md:1rem;--text-body-sm:.9rem;--text-caption:.8rem;--text-eyebrow:.75rem;
+  /* Espacio, radios, sombras, movimiento */
+  --space-4:4px;--space-8:8px;--space-12:12px;--space-16:16px;--space-24:24px;--space-32:32px;--space-48:48px;--space-64:64px;--space-96:96px;
+  --radius-sm:8px;--radius-md:14px;--radius-lg:20px;--radius-pill:999px;
+  --shadow-soft:0 10px 24px rgba(3,12,24,.06);--shadow-medium:0 18px 40px rgba(3,12,24,.10);
+  --motion-fast:150ms;--motion-normal:250ms;--container:1120px;
+  /* Documento */
+  --doc-bg:#F7F8F8;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--doc-bg:#0B1420;--color-surface:#0F1B29;--color-surface-alt:#131F2E;--color-border:#233346;--color-text-primary:#E8EEF5;--color-text-secondary:#AEBBC9;--silver-dark:#B9C3CE;--silver-medium:#7F8B98;--color-primary-soft:#1B2A3B;--color-primary-light:#3E5570;--success-bg:#12301F;--warning-bg:#3A2A10;--danger-bg:#3A1A1A;--info-bg:#1B2A3B;--success:#6BD39A;--warning:#F0C170;--danger:#F08C87;--info:#9DB4CC}}
+:root[data-theme="dark"]{--doc-bg:#0B1420;--color-surface:#0F1B29;--color-surface-alt:#131F2E;--color-border:#233346;--color-text-primary:#E8EEF5;--color-text-secondary:#AEBBC9;--silver-dark:#B9C3CE;--silver-medium:#7F8B98;--color-primary-soft:#1B2A3B;--color-primary-light:#3E5570;--success-bg:#12301F;--warning-bg:#3A2A10;--danger-bg:#3A1A1A;--info-bg:#1B2A3B;--success:#6BD39A;--warning:#F0C170;--danger:#F08C87;--info:#9DB4CC}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--doc-bg);color:var(--color-text-primary);font-family:var(--font-body);line-height:1.6;font-size:15.5px;-webkit-font-smoothing:antialiased}
+a{color:var(--color-primary);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--container);margin:0 auto;padding-block:0 var(--space-96);padding-inline:20px}
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-border)}
+:root:not([data-theme="light"]) .nav{background:rgba(15,27,41,.92)}@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .nav{background:rgba(255,255,255,.92)}}
+.nav-in{max-width:var(--container);margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:var(--space-24)}
+.nav-in img{height:32px;width:auto}.nav-links{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto}.nav-links a{display:block;padding:6px 12px;border-radius:var(--radius-pill);font-size:.88rem;font-weight:500;color:var(--color-text-secondary);white-space:nowrap}.nav-links a:hover{background:var(--color-primary-soft);color:var(--color-primary);text-decoration:none}
+/* Hero */
+.hero{background:var(--color-primary-dark);color:#fff;border-radius:0 0 var(--radius-lg) var(--radius-lg);padding:var(--space-64) var(--space-48) var(--space-48);margin-bottom:var(--space-48);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%,rgba(69,94,124,.55),transparent 55%);pointer-events:none}
+.hero>*{position:relative}.hero img{height:52px;background:#fff;border-radius:var(--radius-sm);padding:6px 12px}
+.hero .eyebrow{color:#C3CBD5;margin-top:var(--space-24)}.hero h1{font-size:var(--text-display-lg);margin:0 0 var(--space-12);max-width:22ch}.hero p{color:#C3CBD5;max-width:62ch;margin:0}
+.hero .meta{display:flex;flex-wrap:wrap;gap:var(--space-24);margin-top:var(--space-24);font-size:.85rem;color:#C3CBD5}.hero .meta b{color:#fff}
+/* Tipografía del documento */
+h1,h2,h3,h4{font-family:var(--font-display);margin:0;letter-spacing:-.01em;color:var(--color-text-primary);text-wrap:balance}
+.hero h1{color:#fff}
+h2.sec{font-size:var(--text-heading-lg);font-weight:700;margin:var(--space-64) 0 var(--space-8);display:flex;gap:14px;align-items:baseline}h2.sec .n{font-family:var(--font-body);font-size:.72rem;color:var(--color-primary);letter-spacing:.08em;font-weight:600}
+h3{font-size:var(--text-heading-sm);font-weight:600;margin:var(--space-32) 0 var(--space-8)}
+.lead{color:var(--color-text-secondary);max-width:70ch;margin:0 0 var(--space-24);font-size:var(--text-body-lg)}
+p{max-width:72ch;margin:0 0 var(--space-12)}ul,ol{max-width:72ch;margin:0 0 var(--space-16);padding-left:22px}li{margin-bottom:5px}
+.eyebrow{font-family:var(--font-body);font-size:var(--text-eyebrow);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary);margin:0 0 var(--space-8)}
+code{font-family:var(--font-mono);font-size:.85em;background:var(--color-primary-soft);color:var(--color-primary);padding:2px 6px;border-radius:6px}
+pre{background:#0B1B2B;color:#DCE6F0;padding:16px 18px;border-radius:var(--radius-md);font-family:var(--font-mono);font-size:.8rem;line-height:1.55;overflow-x:auto;margin:var(--space-12) 0 var(--space-24)}pre code{background:none;color:inherit;padding:0}
+/* Cards & grids */
+.card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-32);box-shadow:var(--shadow-soft)}
+.grid{display:grid;gap:var(--space-24)}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}.hero{padding:var(--space-32) var(--space-24)}}
+/* Swatches */
+.sw{border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface)}.sw .c{height:84px;display:flex;align-items:flex-end;padding:10px;font-family:var(--font-mono);font-size:.78rem}.sw .i{padding:10px 12px;font-size:.85rem}.sw .i b{display:block;font-family:var(--font-display);font-weight:600}.sw .i span{color:var(--color-text-secondary);font-size:.8rem}
+/* Tablas */
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;margin:var(--space-12) 0 var(--space-24)}
+th{text-align:left;font-family:var(--font-display);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-secondary);padding:10px 12px;background:var(--color-surface-alt)}td{padding:10px 12px;border-top:1px solid var(--color-border);vertical-align:top}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+/* Especímenes tipográficos */
+.spec{display:grid;grid-template-columns:200px 1fr;gap:var(--space-16);align-items:baseline;padding:14px 0;border-top:1px solid var(--color-border)}.spec:last-child{border-bottom:1px solid var(--color-border)}
+.spec .l{font-family:var(--font-mono);font-size:.74rem;color:var(--color-text-secondary);line-height:1.5}.spec .l b{display:block;font-family:var(--font-body);font-size:.85rem;color:var(--color-text-primary);font-weight:600}
+@media (max-width:600px){.spec{grid-template-columns:1fr}}
+.t-dxl{font-family:var(--font-display);font-size:var(--text-display-xl);font-weight:800;line-height:1.05;letter-spacing:-.02em}.t-dlg{font-family:var(--font-display);font-size:var(--text-display-lg);font-weight:700;line-height:1.1;letter-spacing:-.015em}
+.t-hlg{font-family:var(--font-display);font-size:var(--text-heading-lg);font-weight:700;line-height:1.2}.t-hmd{font-family:var(--font-display);font-size:var(--text-heading-md);font-weight:600;line-height:1.25}.t-hsm{font-family:var(--font-display);font-size:var(--text-heading-sm);font-weight:600;line-height:1.3}
+.t-blg{font-size:var(--text-body-lg);line-height:1.6}.t-bmd{font-size:var(--text-body-md);line-height:1.6}.t-bsm{font-size:var(--text-body-sm);line-height:1.55;color:var(--color-text-secondary)}.t-cap{font-size:var(--text-caption);line-height:1.5;color:var(--silver-dark)}
+.t-eyebrow{font-size:var(--text-eyebrow);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary)}.t-mono{font-family:var(--font-mono);font-size:.9rem}
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:.95rem;padding:12px 24px;border-radius:var(--radius-pill);border:1px solid transparent;cursor:pointer;text-decoration:none;line-height:1.2;transition:transform var(--motion-fast) ease,background var(--motion-fast) ease,box-shadow var(--motion-fast) ease}
+.btn:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px}.btn:hover{text-decoration:none}
+.btn-primary{background:var(--color-primary);color:#fff}.btn-primary:hover{background:var(--color-primary-hover);box-shadow:var(--shadow-soft);transform:translateY(-1px)}.btn-primary:active{background:var(--color-primary-active);transform:none}
+.btn-outline{background:transparent;color:var(--color-primary);border-color:var(--color-primary-light)}.btn-outline:hover{background:var(--color-primary-soft);border-color:var(--color-primary)}
+.btn-ghost{background:transparent;color:var(--color-text-secondary);padding:12px 10px}.btn-ghost:hover{color:var(--color-primary);background:var(--color-primary-soft)}
+.btn-danger{background:transparent;color:var(--danger);border-color:var(--danger)}.btn-danger:hover{background:var(--danger-bg)}
+.btn-dark{background:var(--color-primary-dark);color:#fff}.btn-dark:hover{background:#0F1E32}
+.btn[disabled],.btn.is-disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-sm{padding:7px 14px;font-size:.82rem}.btn-lg{padding:15px 32px;font-size:1.05rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+/* Badges, chips, alerts */
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;padding:4px 12px;border-radius:var(--radius-pill);white-space:nowrap}
+.badge-primary{background:var(--color-primary-soft);color:var(--color-primary)}.badge-success{background:var(--success-bg);color:var(--success)}.badge-warning{background:var(--warning-bg);color:var(--warning)}.badge-danger{background:var(--danger-bg);color:var(--danger)}.badge-neutral{background:var(--color-surface-alt);color:var(--color-text-secondary);border:1px solid var(--color-border)}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--color-border);border-radius:var(--radius-pill);padding:4px 12px;font-size:.82rem;background:var(--color-surface)}.chip.on{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+.alert{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:14px 16px;border-radius:var(--radius-md);font-size:.92rem;margin:0 0 var(--space-12)}.alert .ic{font-weight:700;font-family:var(--font-display)}.alert b{display:block}
+.alert-success{background:var(--success-bg);color:var(--success)}.alert-warning{background:var(--warning-bg);color:var(--warning)}.alert-danger{background:var(--danger-bg);color:var(--danger)}.alert-info{background:var(--info-bg);color:var(--info)}
+/* Formularios */
+.field{display:flex;flex-direction:column;gap:6px}.field label{font-weight:500;font-size:.92rem}.field .help{font-size:.78rem;color:var(--silver-dark)}.field .err{font-size:.78rem;color:var(--danger)}
+.input,select.input,textarea.input{font-family:var(--font-body);font-size:.95rem;padding:11px 14px;border-radius:var(--radius-sm);border:1px solid var(--color-border);background:var(--color-surface);color:var(--color-text-primary);width:100%;transition:border var(--motion-fast),box-shadow var(--motion-fast)}
+.input:focus{outline:none;border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(69,94,124,.15)}.input.is-error{border-color:var(--danger);box-shadow:0 0 0 3px rgba(179,49,44,.12)}.input[disabled]{background:var(--color-surface-alt);color:var(--silver-dark);cursor:not-allowed}
+.check{display:inline-flex;align-items:center;gap:8px;font-size:.92rem}.check input{width:18px;height:18px;accent-color:var(--color-primary)}
+.switch{position:relative;width:44px;height:24px;background:var(--silver-light);border-radius:var(--radius-pill);display:inline-block;vertical-align:middle;transition:background var(--motion-fast)}.switch::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left var(--motion-fast)}.switch.on{background:var(--color-primary)}.switch.on::after{left:23px}
+/* Componentes de producto */
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-16)}.metric{border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-16);background:var(--color-surface);text-align:center;color:var(--color-text-secondary);font-size:.88rem}.metric b{display:block;font-family:var(--font-display);font-size:1.75rem;font-weight:700;color:var(--color-primary);font-variant-numeric:tabular-nums}.metric.hero{background:var(--color-primary-dark);color:#C3CBD5;border-color:var(--color-primary-dark)}.metric.hero b{color:#fff;font-size:2.2rem}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--color-border)}.tabs a{padding:10px 14px;font-weight:500;color:var(--color-text-secondary);border-bottom:2px solid transparent;margin-bottom:-1px}.tabs a.on{color:var(--color-primary);border-bottom-color:var(--color-primary)}.tabs a:hover{text-decoration:none;color:var(--color-primary)}
+.modal{max-width:440px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-24);box-shadow:var(--shadow-medium)}
+.tip{position:relative;display:inline-block;border-bottom:1px dashed var(--color-primary)}.tip span{position:absolute;left:0;bottom:130%;background:var(--color-primary-dark);color:#fff;font-size:.78rem;padding:6px 10px;border-radius:var(--radius-sm);white-space:nowrap}
+.steps{display:flex;gap:var(--space-16);flex-wrap:wrap}.step{display:flex;gap:10px;align-items:center;font-size:.9rem}.step .n{width:28px;height:28px;border-radius:50%;background:var(--color-border);color:var(--color-text-secondary);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:.82rem}.step.done .n{background:var(--success);color:#fff}.step.on .n{background:var(--color-primary);color:#fff}
+.pag{display:inline-flex;gap:4px}.pag a{min-width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);border:1px solid var(--color-border);font-size:.88rem}.pag a.on{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}.pag a:hover{text-decoration:none;background:var(--color-primary-soft)}
+.kv{display:grid;grid-template-columns:180px 1fr;gap:6px 16px;font-size:.92rem}.kv dt{color:var(--color-text-secondary)}.kv dd{margin:0}
+/* Sitio oscuro (muestra) */
+.dark-demo{background:var(--dark-bg);color:var(--dark-text);border-radius:var(--radius-lg);padding:var(--space-32);border:1px solid var(--dark-border)}.dark-demo h3{color:#fff;margin-top:0}.dark-demo .eyebrow{color:var(--cyan)}.dark-demo p{color:var(--dark-text-2)}
+.dark-demo .dcard{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:12px;padding:20px}.dark-demo .dbtn{display:inline-flex;padding:12px 24px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),#00FFFF);color:var(--dark-bg);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.9rem}.dark-demo .dpill{display:inline-flex;padding:6px 14px;border-radius:999px;background:var(--cyan-dim);color:var(--cyan);border:1px solid var(--dark-border);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
+/* Do / Don't */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16)}.dd>div{border-radius:var(--radius-md);padding:var(--space-16);border:1px solid var(--color-border);background:var(--color-surface)}.dd .ok{border-top:4px solid var(--success)}.dd .no{border-top:4px solid var(--danger)}.dd h4{font-size:.85rem;margin:0 0 8px;letter-spacing:.06em;text-transform:uppercase}.dd .ok h4{color:var(--success)}.dd .no h4{color:var(--danger)}
+@media (max-width:600px){.dd{grid-template-columns:1fr}}
+.logo-box{display:flex;align-items:center;justify-content:center;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-32);min-height:140px}.logo-box.dark{background:var(--color-primary-dark)}.logo-box.dark img{background:#fff;padding:8px 14px;border-radius:8px}.logo-box img{height:60px;width:auto}
+.logo-box.grid-bg{background-image:linear-gradient(var(--color-border) 1px,transparent 1px),linear-gradient(90deg,var(--color-border) 1px,transparent 1px);background-size:20px 20px}
+/* Chart sample */
+.chart svg{max-width:100%;height:auto}
+footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px solid var(--color-border);color:var(--silver-dark);font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{.nav{display:none}body{background:#fff}.hero,.card,pre,table,.alert,.dark-demo,.dd>div{break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}h2.sec{break-after:avoid}}
+</style>
+
+<nav class="nav"><div class="nav-in"><img src="logo.png" alt="Infosec México">
+<ul class="nav-links"><li><a href="#marca">Marca</a></li><li><a href="#color">Color</a></li><li><a href="#tipo">Tipografía</a></li><li><a href="#redaccion">Redacción</a></li><li><a href="#espacio">Espaciado</a></li><li><a href="#comp">Componentes</a></li><li><a href="#forms">Formularios</a></li><li><a href="#producto">Producto</a></li><li><a href="#layouts">Layouts</a></li><li><a href="#dark">Sitio oscuro</a></li><li><a href="#datos">Datos</a></li><li><a href="#tokens">Tokens</a></li></ul></div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <img src="logo.png" alt="Infosec México">
+  <p class="eyebrow">Identidad corporativa · Sistema de diseño v2.0</p>
+  <h1>Sistema de diseño de Infosec México</h1>
+  <p>Una sola fuente de verdad para marca, color, tipografía, redacción y componentes, en sitios de marketing y en producto (IPStrike y los sistemas que vengan). Cada regla incluye el valor exacto, cuándo usarlo y qué evitar.</p>
+  <div class="meta"><span>Versión <b>2.0</b></span><span>Fecha <b>14 de septiembre de 2026</b></span><span>Sustituye a <b>design_system2 (v1)</b></span><span>Ámbito <b>web · producto · documentos</b></span></div>
+</header>
+
+<!-- ================================================================ MARCA -->
+<h2 class="sec" id="marca"><span class="n">01</span>Marca y logotipo</h2>
+<p class="lead">El logotipo combina el isotipo de anillos concéntricos (radar) con el wordmark "INFOSEC MÉXICO". Transmite vigilancia continua y precisión; el tratamiento visual del resto del sistema debe respetar esa sobriedad.</p>
+<div class="grid g3">
+  <div class="logo-box"><img src="logo.png" alt="Logotipo sobre fondo claro"></div>
+  <div class="logo-box dark"><img src="logo.png" alt="Logotipo sobre fondo oscuro, en placa blanca"></div>
+  <div class="logo-box grid-bg"><img src="logo.png" alt="Área de protección"></div>
+</div>
+<div class="grid g2" style="margin-top:var(--space-24)">
+  <div class="card"><h3 style="margin-top:0">Reglas de uso</h3>
+  <ul><li><b>Área de protección:</b> alrededor del logotipo deja libre, como mínimo, la altura del isotipo (el anillo exterior) por cada lado.</li>
+  <li><b>Tamaño mínimo:</b> 28 px de alto en interfaces (barra de navegación), 44 px en portadas y documentos; 20 mm en impresión.</li>
+  <li><b>Sobre fondos oscuros o fotografías:</b> colócalo en una placa blanca con radio de 8 px (como en el hero de este documento) o usa la versión monocroma blanca cuando se disponga.</li>
+  <li><b>Alineación:</b> a la izquierda en navegación y documentos; centrado solo en pantallas de acceso y portadas.</li>
+  <li><b>Formato:</b> PNG con transparencia para pantalla; SVG cuando exista para impresión y escalado.</li></ul></div>
+  <div class="dd"><div class="no"><h4>Nunca</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cambiar los colores del isotipo o del wordmark.</li><li>Estirar, inclinar o rotar.</li><li>Aplicar sombras, degradados o contornos.</li><li>Colocarlo directamente sobre fondos con poco contraste.</li><li>Recrear el wordmark con otra tipografía.</li></ul></div>
+  <div class="ok"><h4>Siempre</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Usar el archivo original sin modificaciones.</li><li>Mantener la proporción.</li><li>Verificar contraste con el fondo.</li><li>Acompañarlo del nombre en texto en documentos largos ("Infosec México").</li></ul></div></div>
+</div>
+
+<!-- ================================================================ COLOR -->
+<h2 class="sec" id="color"><span class="n">02</span>Color</h2>
+<p class="lead">El azul acero <code>#455E7C</code> es el color de acción y énfasis; el azul profundo <code>#030C18</code> da autoridad a portadas y cabeceras; los neutros sostienen la lectura. Los colores semánticos se reservan para estado y nunca se usan como decoración.</p>
+<h3>Paleta de marca</h3>
+<div class="grid g4">
+  <div class="sw"><div class="c" style="background:#455E7C;color:#fff">#455E7C</div><div class="i"><b>Primary</b><span>Botones primarios, enlaces, eyebrows, foco, iconos activos</span></div></div>
+  <div class="sw"><div class="c" style="background:#3A506A;color:#fff">#3A506A</div><div class="i"><b>Primary hover</b><span>Estado hover de botones primarios</span></div></div>
+  <div class="sw"><div class="c" style="background:#030C18;color:#fff">#030C18</div><div class="i"><b>Primary dark</b><span>Heros, portadas, cabeceras de correo/PDF, tarjetas destacadas</span></div></div>
+  <div class="sw"><div class="c" style="background:#C3CBD5;color:#101826">#C3CBD5</div><div class="i"><b>Primary light</b><span>Bordes de botones outline, texto secundario sobre oscuro</span></div></div>
+  <div class="sw"><div class="c" style="background:#ECEFF2;color:#101826">#ECEFF2</div><div class="i"><b>Primary soft</b><span>Fondo de badges primarios, hover de navegación, alertas informativas</span></div></div>
+  <div class="sw"><div class="c" style="background:#FFFFFF;color:#101826;border-bottom:1px solid #E6E7E8">#FFFFFF</div><div class="i"><b>Surface</b><span>Tarjetas, formularios, tablas</span></div></div>
+  <div class="sw"><div class="c" style="background:#F7F8F8;color:#101826">#F7F8F8</div><div class="i"><b>Surface alt</b><span>Fondo de página, cabeceras de tabla, paneles</span></div></div>
+  <div class="sw"><div class="c" style="background:#E6E7E8;color:#101826">#E6E7E8</div><div class="i"><b>Border</b><span>Bordes y divisores (1 px)</span></div></div>
+</div>
+<h3>Texto</h3>
+<div class="grid g4">
+  <div class="sw"><div class="c" style="background:#101826;color:#fff">#101826</div><div class="i"><b>Text primary</b><span>Títulos y cuerpo · 17.8:1 AAA</span></div></div>
+  <div class="sw"><div class="c" style="background:#4F535D;color:#fff">#4F535D</div><div class="i"><b>Text secondary</b><span>Subtítulos, descripciones, cabeceras de tabla · 7.7:1 AAA</span></div></div>
+  <div class="sw"><div class="c" style="background:#5A5E67;color:#fff">#5A5E67</div><div class="i"><b>Silver dark</b><span>Captions y ayudas que deben leerse · 6.5:1 AA</span></div></div>
+  <div class="sw"><div class="c" style="background:#969AA2;color:#fff">#969AA2</div><div class="i"><b>Silver medium</b><span>Solo decorativo (placeholders, iconos inactivos) · 2.8:1 no apto para texto</span></div></div>
+</div>
+<h3>Semánticos (estado)</h3>
+<div class="grid g4">
+  <div class="sw"><div class="c" style="background:#E7F3EC;color:#1F7A4D">#1F7A4D / #E7F3EC</div><div class="i"><b>Success</b><span>Correcto, activo, desbloqueo, entregado</span></div></div>
+  <div class="sw"><div class="c" style="background:#FDF2E2;color:#9A6417">#9A6417 / #FDF2E2</div><div class="i"><b>Warning</b><span>Aviso, pendiente, suspendido, atención</span></div></div>
+  <div class="sw"><div class="c" style="background:#FBEAEA;color:#B3312C">#B3312C / #FBEAEA</div><div class="i"><b>Danger</b><span>Error, bloqueo, revocado, eliminar</span></div></div>
+  <div class="sw"><div class="c" style="background:#ECEFF2;color:#455E7C">#455E7C / #ECEFF2</div><div class="i"><b>Info</b><span>Información neutra (usa el primario)</span></div></div>
+</div>
+<h3>Qué color lleva cada elemento</h3>
+<div class="tw"><table><tr><th>Elemento</th><th>Color</th><th>Token</th><th>Notas</th></tr>
+<tr><td>Título (H1–H3)</td><td>#101826</td><td><code>--color-text-primary</code></td><td>Sobre oscuro: #FFFFFF. Nunca en primario ni en semánticos.</td></tr>
+<tr><td>Subtítulo / lead</td><td>#4F535D</td><td><code>--color-text-secondary</code></td><td>Sobre oscuro: #C3CBD5.</td></tr>
+<tr><td>Eyebrow (etiqueta sobre el título)</td><td>#455E7C</td><td><code>--color-primary</code></td><td>Único texto en color primario además de enlaces. Sobre oscuro: #C3CBD5 (sitio público: cian).</td></tr>
+<tr><td>Cuerpo</td><td>#101826</td><td><code>--color-text-primary</code></td><td>Texto secundario en #4F535D.</td></tr>
+<tr><td>Caption / ayuda</td><td>#5A5E67</td><td><code>--silver-dark</code></td><td>No usar #969AA2 para texto que deba leerse.</td></tr>
+<tr><td>Enlace</td><td>#455E7C</td><td><code>--color-primary</code></td><td>Subrayado solo en hover; peso 500–600.</td></tr>
+<tr><td>Botón primario</td><td>fondo #455E7C · texto #FFFFFF</td><td><code>--color-primary</code></td><td>Hover #3A506A, activo #2F4257. 6.7:1 AA.</td></tr>
+<tr><td>Botón outline</td><td>texto #455E7C · borde #C3CBD5</td><td><code>--color-primary-light</code></td><td>Hover fondo #ECEFF2, borde #455E7C.</td></tr>
+<tr><td>Botón destructivo</td><td>texto/borde #B3312C</td><td><code>--danger</code></td><td>Solo acciones irreversibles; siempre con confirmación.</td></tr>
+<tr><td>Badge de estado</td><td>par semántico</td><td><code>--success/-bg</code> etc.</td><td>Texto ≥ 4.5:1 sobre su fondo (verificado).</td></tr>
+<tr><td>Foco de teclado</td><td>#455E7C, 2 px, offset 2–3 px</td><td><code>--color-primary</code></td><td>Obligatorio en todo elemento interactivo.</td></tr>
+<tr><td>Bordes / divisores</td><td>#E6E7E8</td><td><code>--color-border</code></td><td>1 px; nunca más gruesos salvo la barra superior de 4 px en tarjetas Do/Don't.</td></tr>
+<tr><td>Cabecera de correo y PDF</td><td>fondo #030C18 · texto #FFFFFF</td><td><code>--color-primary-dark</code></td><td>Subtítulo en #C3CBD5.</td></tr></table></div>
+<div class="alert alert-info"><span class="ic">i</span><div><b>Regla del acento</b>El primario aparece en pocos lugares por pantalla: un botón principal, enlaces, el eyebrow y el foco. Si todo es azul, nada destaca. Los semánticos nunca sustituyen al primario en botones.</div></div>
+
+<!-- ================================================================ TIPOGRAFÍA -->
+<h2 class="sec" id="tipo"><span class="n">03</span>Tipografía</h2>
+<p class="lead"><b>Poppins</b> para títulos, navegación, métricas y etiquetas de tabla; <b>Inter</b> para todo lo que se lee de corrido, formularios y botones; <b>JetBrains Mono</b> para IPs, identificadores, código y columnas numéricas. Ambas familias principales se cargan desde Google Fonts con fallback a <code>sans-serif</code>.</p>
+<div class="grid g3">
+  <div class="card"><p class="eyebrow">Display</p><div class="t-hlg" style="font-family:var(--font-display)">Poppins</div><p class="t-bsm">Pesos 500, 600, 700 y 800. Geométrica y firme: encabezados, navegación, KPIs, cabeceras de tabla y botones de portada.</p></div>
+  <div class="card"><p class="eyebrow">Cuerpo</p><div class="t-hlg" style="font-family:var(--font-body)">Inter</div><p class="t-bsm">Pesos 400, 500, 600 y 700. Lectura continua, formularios, botones de producto, tablas, correo.</p></div>
+  <div class="card"><p class="eyebrow">Datos</p><div class="t-hlg" style="font-family:var(--font-mono)">JetBrains Mono</div><p class="t-bsm">Peso 400 y 500. IPs, CIDR, Rule ID, hashes, fechas en tablas, código. Fallback: <code>ui-monospace, Menlo</code>.</p></div>
+</div>
+<h3>Escala y especificación</h3>
+<div class="tw"><table><tr><th>Estilo</th><th>Familia · peso</th><th>Tamaño</th><th>Interlínea</th><th>Tracking</th><th>Caja</th><th>Color</th><th>Uso</th></tr>
+<tr><td>Display XL</td><td>Poppins 800</td><td>clamp(2.6rem, 5vw, 3.75rem)</td><td>1.05</td><td>−0.02em</td><td>Oración</td><td>#101826 / #FFF</td><td>Titular de portada del sitio</td></tr>
+<tr><td>Display LG</td><td>Poppins 700</td><td>clamp(2.1rem, 4vw, 2.75rem)</td><td>1.10</td><td>−0.015em</td><td>Oración</td><td>#101826 / #FFF</td><td>Título de sección de marketing, portada de documentos</td></tr>
+<tr><td>Heading LG (H1 producto)</td><td>Poppins 700</td><td>1.75rem (28 px)</td><td>1.20</td><td>−0.01em</td><td>Oración</td><td>#101826</td><td>Título de página en aplicaciones</td></tr>
+<tr><td>Heading MD (H2)</td><td>Poppins 600</td><td>1.375rem (22 px)</td><td>1.25</td><td>−0.01em</td><td>Oración</td><td>#101826</td><td>Secciones dentro de una página</td></tr>
+<tr><td>Heading SM (H3)</td><td>Poppins 600</td><td>1.125rem (18 px)</td><td>1.30</td><td>0</td><td>Oración</td><td>#101826</td><td>Título de tarjeta o bloque</td></tr>
+<tr><td>Eyebrow</td><td>Inter 600</td><td>0.75rem (12 px)</td><td>1.4</td><td>+0.08em</td><td><b>MAYÚSCULAS</b></td><td>#455E7C</td><td>Etiqueta corta sobre un título (categoría, contexto)</td></tr>
+<tr><td>Body LG</td><td>Inter 400</td><td>1.125rem (18 px)</td><td>1.60</td><td>0</td><td>Oración</td><td>#4F535D</td><td>Lead / introducción</td></tr>
+<tr><td>Body MD</td><td>Inter 400</td><td>1rem (16 px)</td><td>1.60</td><td>0</td><td>Oración</td><td>#101826</td><td>Texto base</td></tr>
+<tr><td>Body SM</td><td>Inter 400</td><td>0.9rem (14.4 px)</td><td>1.55</td><td>0</td><td>Oración</td><td>#4F535D</td><td>Descripciones en tarjetas y tablas compactas</td></tr>
+<tr><td>Caption</td><td>Inter 400</td><td>0.8rem (12.8 px)</td><td>1.50</td><td>0</td><td>Oración</td><td>#5A5E67</td><td>Ayudas de campo, pies de figura, metadatos</td></tr>
+<tr><td>Etiqueta de tabla</td><td>Poppins 600</td><td>0.72rem</td><td>1.4</td><td>+0.06em</td><td><b>MAYÚSCULAS</b></td><td>#4F535D</td><td>Cabeceras de tabla y de listas de datos</td></tr>
+<tr><td>Botón</td><td>Inter 600</td><td>0.95rem</td><td>1.2</td><td>0</td><td>Oración</td><td>según variante</td><td>Producto y documentos (en el sitio público: mayúsculas, ver §10)</td></tr>
+<tr><td>Etiqueta de campo</td><td>Inter 500</td><td>0.92rem</td><td>1.4</td><td>0</td><td>Oración</td><td>#101826</td><td>Formularios</td></tr>
+<tr><td>Dato / código</td><td>JetBrains Mono 400</td><td>0.85–0.9rem</td><td>1.5</td><td>0</td><td>—</td><td>#101826</td><td>IPs, IDs, fechas, código</td></tr></table></div>
+<h3>Especímenes</h3>
+<div class="card">
+  <div class="spec"><div class="l"><b>Display XL</b>Poppins 800 · −0.02em</div><div class="t-dxl">Seguridad que se anticipa</div></div>
+  <div class="spec"><div class="l"><b>Display LG</b>Poppins 700</div><div class="t-dlg">Protección integral para tu empresa</div></div>
+  <div class="spec"><div class="l"><b>Heading LG</b>Poppins 700 · 28 px</div><div class="t-hlg">Bloqueo de IPs maliciosas</div></div>
+  <div class="spec"><div class="l"><b>Heading MD</b>Poppins 600 · 22 px</div><div class="t-hmd">Reglas aplicadas en Cloudflare</div></div>
+  <div class="spec"><div class="l"><b>Heading SM</b>Poppins 600 · 18 px</div><div class="t-hsm">Bitácora de bloqueos</div></div>
+  <div class="spec"><div class="l"><b>Eyebrow</b>Inter 600 · 12 px · mayúsculas</div><div class="t-eyebrow">SOC · Cloudflare</div></div>
+  <div class="spec"><div class="l"><b>Body LG</b>Inter 400 · 18 px</div><div class="t-blg">Estrategias integrales de protección, auditoría y respuesta ante incidentes diseñadas a la medida del entorno empresarial.</div></div>
+  <div class="spec"><div class="l"><b>Body MD</b>Inter 400 · 16 px</div><div class="t-bmd">Selecciona el cliente y el dominio, captura el objetivo validado por el SOC y el motivo del bloqueo.</div></div>
+  <div class="spec"><div class="l"><b>Body SM</b>Inter 400 · 14.4 px</div><div class="t-bsm">Últimas acciones realizadas en los clientes que tienes asignados.</div></div>
+  <div class="spec"><div class="l"><b>Caption</b>Inter 400 · 12.8 px</div><div class="t-cap">IPv4 /16 /24 o host · IPv6 /32 /48 /64 o host. Se rechazan rangos privados.</div></div>
+  <div class="spec"><div class="l"><b>Dato</b>JetBrains Mono 400</div><div class="t-mono">203.0.113.45 · 2026-09-14 01:45:49 · 311bbedd9b81427e99c8bafdca5e11c7</div></div>
+</div>
+
+<!-- ================================================================ REDACCIÓN -->
+<h2 class="sec" id="redaccion"><span class="n">04</span>Redacción: mayúsculas, minúsculas y estilo</h2>
+<p class="lead">La marca escribe como habla un especialista que respeta el tiempo del lector: claro, directo, en español correcto. La caja tipográfica es información, no decoración.</p>
+<div class="grid g2">
+<div class="card"><h3 style="margin-top:0">Mayúsculas y minúsculas</h3>
+<div class="tw"><table><tr><th>Elemento</th><th>Regla</th><th>Ejemplo</th></tr>
+<tr><td>Títulos y subtítulos</td><td><b>Tipo oración</b>: solo la primera letra y los nombres propios.</td><td>"Reglas aplicadas en Cloudflare" — no "Reglas Aplicadas En Cloudflare"</td></tr>
+<tr><td>Eyebrows y cabeceras de tabla</td><td><b>MAYÚSCULAS</b> con tracking +0.06/+0.08 em. Máximo 3–4 palabras.</td><td>"ADMINISTRACIÓN", "FECHA (UTC)"</td></tr>
+<tr><td>Botones</td><td>Tipo oración; verbo en infinitivo o imperativo claro.</td><td>"Bloquear en Cloudflare", "Guardar", "Exportar PDF"</td></tr>
+<tr><td>Menú de navegación</td><td>Tipo oración, sustantivos.</td><td>"Bloqueo", "Reglas Cloudflare", "Usuarios"</td></tr>
+<tr><td>Etiquetas de campo</td><td>Tipo oración, sin dos puntos.</td><td>"Correo electrónico", "Motivo / justificación"</td></tr>
+<tr><td>Cuerpo</td><td>Nunca frases completas en mayúsculas, ni para enfatizar. Énfasis con <b>negrita</b>.</td><td>—</td></tr>
+<tr><td>Marca</td><td>"Infosec México" (con acento y M mayúscula). En el logotipo va en mayúsculas; en texto, nunca.</td><td>"…el SOC de Infosec México"</td></tr>
+<tr><td>Productos y siglas</td><td>IPStrike (I, P, S mayúsculas), SOC, SIEM, WAF, API, IP, DNS: siempre en mayúsculas.</td><td>"la API de IPStrike"</td></tr>
+<tr><td>Nombres de terceros</td><td>Como los escribe su dueño.</td><td>Cloudflare, DigitalOcean, Microsoft 365, GoDaddy, AWS, Azure</td></tr></table></div></div>
+<div class="card"><h3 style="margin-top:0">Estilo y ortografía</h3>
+<ul>
+<li><b>Acentos siempre</b>, también en mayúsculas: "MÉXICO", "ADMINISTRACIÓN", "Última".</li>
+<li><b>Signos dobles</b> en preguntas y exclamaciones: "¿Confirmas el bloqueo?".</li>
+<li><b>Voz activa y segunda persona</b> ("tú") en producto: "Selecciona el cliente"; tercera persona en textos corporativos del sitio.</li>
+<li><b>Frases cortas.</b> Un mensaje por párrafo; un verbo por botón.</li>
+<li><b>Números:</b> cifras siempre (5 intentos, 30 minutos); separador de miles con coma en español de México (1,250); fechas ISO en datos (2026-09-14) y en prosa "14 de septiembre de 2026"; horas en UTC en registros, indicándolo.</li>
+<li><b>Unidades y símbolos</b> con espacio: 512 MB, 30 min, 12 px.</li>
+<li><b>Mensajes de error</b>: qué pasó y qué hacer, sin disculpas ni culpas: "El motivo es obligatorio (mínimo 5 caracteres)".</li>
+<li><b>Mensajes de éxito</b>: nombran el resultado: "1.2.3.4 bloqueada en infosecmexico.com.mx".</li>
+<li><b>Sin jerga interna</b> de cara al cliente; sin anglicismos cuando hay palabra en español (usar "correo", no "email"; "bitácora", no "log"), salvo términos técnicos establecidos (WAF, token, webhook).</li>
+<li><b>Puntuación:</b> los títulos no llevan punto final; las listas de fragmentos tampoco; las oraciones completas sí.</li></ul></div>
+</div>
+<div class="dd" style="margin-top:var(--space-16)">
+<div class="ok"><h4>Así sí</h4><p class="t-eyebrow" style="margin:0">SOC · Cloudflare</p><div class="t-hmd">Bloqueo de IPs maliciosas</div><p class="t-bsm" style="margin:6px 0 10px">Selecciona el cliente y captura el objetivo validado por el SOC.</p><span class="btn btn-primary btn-sm">Bloquear en Cloudflare</span></div>
+<div class="no"><h4>Así no</h4><p class="t-eyebrow" style="margin:0;color:var(--danger)">Soc - cloudflare</p><div class="t-hmd" style="color:var(--color-primary)">BLOQUEO DE IPS MALICIOSAS</div><p class="t-bsm" style="margin:6px 0 10px">Seleccione El Cliente Y Capture El Objetivo Validado Por El SOC.</p><span class="btn btn-danger btn-sm">BLOQUEAR!!</span></div>
+</div>
+
+<!-- ================================================================ ESPACIADO -->
+<h2 class="sec" id="espacio"><span class="n">05</span>Espaciado, radios, sombras y movimiento</h2>
+<div class="grid g2">
+<div class="card"><h3 style="margin-top:0">Escala de espacio (base 4 px)</h3>
+<div class="tw"><table><tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
+<tr><td>space-4 / 8</td><td>4 · 8 px</td><td>Separación icono-texto, entre chips</td></tr><tr><td>space-12 / 16</td><td>12 · 16 px</td><td>Entre campos, padding de celdas y alertas</td></tr><tr><td>space-24</td><td>24 px</td><td>Entre tarjetas, padding de tarjeta compacta, gutter lateral</td></tr><tr><td>space-32</td><td>32 px</td><td>Padding de tarjeta estándar, separación entre bloques</td></tr><tr><td>space-48 / 64</td><td>48 · 64 px</td><td>Entre secciones, padding de portada</td></tr><tr><td>space-96</td><td>96 px</td><td>Respiro superior/inferior de secciones de marketing</td></tr></table></div>
+<p class="t-bsm">Contenedor máximo 1120 px (sitio) y 1180 px (producto). Gutter lateral mínimo 16 px en móvil, 24 px en escritorio. Los grupos de elementos se separan con <code>gap</code>, no con márgenes sueltos.</p></div>
+<div class="card"><h3 style="margin-top:0">Radios, sombras, movimiento</h3>
+<div class="tw"><table><tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
+<tr><td>radius-sm</td><td>8 px</td><td>Inputs, código, chips cuadrados, placas de logo</td></tr><tr><td>radius-md</td><td>14 px</td><td>Alertas, tablas, tarjetas compactas, modales pequeños</td></tr><tr><td>radius-lg</td><td>20 px</td><td>Tarjetas estándar, heros, paneles</td></tr><tr><td>radius-pill</td><td>999 px</td><td>Botones, badges, chips, navegación activa</td></tr>
+<tr><td>shadow-soft</td><td>0 10 24 rgba(3,12,24,.06)</td><td>Tarjetas en reposo</td></tr><tr><td>shadow-medium</td><td>0 18 40 rgba(3,12,24,.10)</td><td>Modales, elementos elevados, hover de tarjetas de marketing</td></tr>
+<tr><td>motion-fast</td><td>150 ms ease</td><td>Hover, foco, cambios de color</td></tr><tr><td>motion-normal</td><td>250 ms ease</td><td>Apertura de paneles, transformaciones</td></tr></table></div>
+<p class="t-bsm">Respeta <code>prefers-reduced-motion</code>: sin transiciones ni desplazamientos animados. Nada parpadea; nada se mueve sin que el usuario lo provoque.</p></div>
+</div>
+
+<!-- ================================================================ COMPONENTES -->
+<h2 class="sec" id="comp"><span class="n">06</span>Componentes base</h2>
+<h3>Botones</h3>
+<div class="card">
+<div class="btn-row"><a class="btn btn-primary" href="#comp">Bloquear en Cloudflare</a><a class="btn btn-outline" href="#comp">Exportar PDF</a><a class="btn btn-ghost" href="#comp">Cancelar</a><a class="btn btn-danger" href="#comp">Eliminar regla</a><a class="btn btn-dark" href="#comp">Solicitar cotización</a><span class="btn btn-primary is-disabled">Deshabilitado</span></div>
+<div class="btn-row" style="margin-top:var(--space-16)"><a class="btn btn-primary btn-sm" href="#comp">Pequeño</a><a class="btn btn-primary" href="#comp">Estándar</a><a class="btn btn-primary btn-lg" href="#comp">Grande (portada)</a></div>
+<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Variante</th><th>Cuándo</th><th>Reposo</th><th>Hover</th><th>Activo / Foco</th><th>Deshabilitado</th></tr>
+<tr><td>Primario</td><td>La acción principal de la pantalla. <b>Uno por vista.</b></td><td>#455E7C · texto #FFF</td><td>#3A506A, sombra suave, −1 px</td><td>#2F4257 · anillo #455E7C 2 px</td><td>45 % opacidad</td></tr>
+<tr><td>Outline</td><td>Acciones secundarias (exportar, actualizar, cambiar contraseña)</td><td>transparente · texto #455E7C · borde #C3CBD5</td><td>fondo #ECEFF2 · borde #455E7C</td><td>anillo</td><td>45 %</td></tr>
+<tr><td>Ghost</td><td>Terciarias, navegación interna, cancelar</td><td>texto #4F535D</td><td>texto #455E7C · fondo #ECEFF2</td><td>anillo</td><td>45 %</td></tr>
+<tr><td>Destructivo</td><td>Irreversibles; siempre con confirmación</td><td>texto/borde #B3312C</td><td>fondo #FBEAEA</td><td>anillo #B3312C</td><td>45 %</td></tr>
+<tr><td>Dark</td><td>CTA sobre fondos claros del sitio de marketing</td><td>#030C18 · texto #FFF</td><td>#0F1E32</td><td>anillo</td><td>45 %</td></tr></table></div>
+<p class="t-bsm">Forma píldora (999 px), Inter 600, 12×24 px de padding (7×14 en pequeño, 15×32 en grande). Icono opcional a la izquierda, 18 px, separado 8 px. Texto en tipo oración, verbo primero. Botones de icono (papelera) llevan <code>aria-label</code> y borde 1 px #E6E7E8.</p></div>
+
+<h3>Badges y chips</h3>
+<div class="card"><div class="btn-row"><span class="badge badge-primary">Administrador</span><span class="badge badge-success">Activo</span><span class="badge badge-warning">Suspendido</span><span class="badge badge-danger">Bloqueo</span><span class="badge badge-neutral">Analista</span><span class="chip">infosecmexico.com.mx <small style="color:var(--silver-dark)">active</small></span><span class="chip on">block:write</span></div>
+<p class="t-bsm" style="margin-top:var(--space-12)">Badge = estado o categoría (color semántico, texto 0.78 rem 600). Chip = valor seleccionable o listado (borde 1 px, fondo blanco; activo en primario). Nunca más de un badge por celda; nunca un badge como botón.</p></div>
+
+<h3>Alertas y mensajes</h3>
+<div class="card">
+<div class="alert alert-success"><span class="ic">✓</span><div><b>1.2.3.4 bloqueada en infosecmexico.com.mx</b>Regla 311bbedd… creada. Se notificó al superior y al cliente.</div></div>
+<div class="alert alert-warning"><span class="ic">!</span><div><b>Una sola sesión por usuario</b>Si inicias sesión en otro equipo, esta sesión se cerrará.</div></div>
+<div class="alert alert-danger"><span class="ic">×</span><div><b>No se pudo bloquear</b>"10.0.0.5" es una dirección privada o reservada.</div></div>
+<div class="alert alert-info"><span class="ic">i</span><div><b>Sin duplicados</b>Si la IP ya tiene una regla en ese dominio, la plataforma lo avisa y no crea otra.</div></div>
+<p class="t-bsm">Título en negrita (qué pasó) + una línea (qué hacer). Icono de texto simple, sin emojis en producto. Radio 14 px, padding 14×16, sin borde. Las alertas de página van arriba del contenido; las de campo, debajo del campo en 0.78 rem.</p></div>
+
+<h3>Tarjetas y tablas</h3>
+<div class="grid g2">
+<div class="card"><p class="eyebrow">Tarjeta estándar</p><h3 style="margin:0 0 8px">Título en Heading SM</h3><p class="t-bsm">Borde 1 px #E6E7E8, radio 20 px, padding 32 px, sombra suave. En marketing, hover eleva a sombra media y −4 px. En producto no hay hover.</p><div class="btn-row"><a class="btn btn-outline btn-sm" href="#comp">Acción</a></div></div>
+<div class="card" style="padding:0;overflow:hidden"><div class="tw"><table style="margin:0;border:0;border-radius:0"><tr><th>Objetivo</th><th>Modo</th><th class="num">Creación</th></tr><tr><td class="t-mono">1.2.3.4</td><td><span class="badge badge-danger">block</span></td><td class="num t-mono">2026-09-14 01:45</td></tr><tr><td class="t-mono">187.190.204.110</td><td><span class="badge badge-success">whitelist</span></td><td class="num t-mono">2026-09-03 19:55</td></tr></table></div></div>
+</div>
+<p class="t-bsm" style="margin-top:var(--space-12)">Tablas: cabecera Poppins 600 0.72 rem mayúsculas sobre #F7F8F8; filas separadas por 1 px; hover de fila #F7F8F8; números alineados a la derecha con <code>tabular-nums</code>; datos técnicos en monoespaciada; contenedor con <code>overflow-x:auto</code>. Variante compacta: padding 7×6 y 0.85 rem.</p>
+
+<!-- ================================================================ FORMULARIOS -->
+<h2 class="sec" id="forms"><span class="n">07</span>Formularios</h2>
+<div class="card"><div class="grid g2">
+  <div class="field"><label for="f1">Correo electrónico</label><input class="input" id="f1" type="email" placeholder="analista@infosecmexico.com.mx"><span class="help">Este correo es tu credencial de acceso.</span></div>
+  <div class="field"><label for="f2">Objetivo</label><input class="input is-error" id="f2" value="10.0.0.5"><span class="err">"10.0.0.5" es una dirección privada o reservada; no se bloquea.</span></div>
+  <div class="field"><label for="f3">Cliente</label><select class="input" id="f3"><option>Selecciona…</option><option>Ventura</option><option>Infosec México</option></select></div>
+  <div class="field"><label for="f4">Campo deshabilitado</label><input class="input" id="f4" value="Zaira Martínez" disabled></div>
+  <div class="field" style="grid-column:1/-1"><label for="f5">Motivo / justificación</label><textarea class="input" id="f5" rows="3" placeholder="Ticket, alerta del SIEM, IOC, evidencia…"></textarea><span class="help">Se registra en Cloudflare, en la bitácora y en las notificaciones.</span></div>
+  <div class="field"><label>Opciones</label><label class="check"><input type="checkbox" checked> Enviar acceso por correo</label><label class="check"><input type="checkbox"> Copia al analista</label></div>
+  <div class="field"><label>Tipo</label><label class="check"><input type="radio" name="r" checked> IP o segmento</label><label class="check"><input type="radio" name="r"> Dominio</label></div>
+  <div class="field"><label>Interruptor</label><div class="btn-row"><span class="switch on" role="switch" aria-checked="true" aria-label="Activo"></span><span class="t-bsm">Activo</span><span class="switch" role="switch" aria-checked="false" aria-label="Inactivo"></span><span class="t-bsm">Inactivo</span></div></div>
+</div>
+<div class="btn-row" style="margin-top:var(--space-24)"><a class="btn btn-primary" href="#forms">Guardar</a><a class="btn btn-ghost" href="#forms">Cancelar</a></div></div>
+<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Estado</th><th>Borde</th><th>Fondo</th><th>Extra</th></tr>
+<tr><td>Reposo</td><td>1 px #E6E7E8</td><td>#FFFFFF</td><td>Placeholder en #969AA2 (decorativo)</td></tr><tr><td>Foco</td><td>#455E7C</td><td>#FFFFFF</td><td>Anillo 3 px rgba(69,94,124,.15)</td></tr><tr><td>Error</td><td>#B3312C</td><td>#FFFFFF</td><td>Mensaje debajo en #B3312C 0.78 rem; el campo conserva el valor</td></tr><tr><td>Deshabilitado</td><td>#E6E7E8</td><td>#F7F8F8</td><td>Texto #5A5E67, cursor no permitido</td></tr></table></div>
+<ul><li>Etiqueta encima del campo (nunca solo placeholder); obligatorio marcado con <span style="color:var(--success)">*</span> verde o indicando "(opcional)" en los opcionales, no ambos.</li><li>Radio 8 px, padding 11×14, Inter 0.95 rem. Campos en una columna en móvil; hasta 4 por fila en escritorio.</li><li>Botón primario alineado a la izquierda al final del formulario; el destructivo nunca junto al primario.</li><li>Validación al enviar, mensaje específico por campo; el éxito se confirma con alerta de página.</li></ul>
+
+<!-- ================================================================ PRODUCTO -->
+<h2 class="sec" id="producto"><span class="n">08</span>Componentes de producto</h2>
+<p class="lead">Patrones usados en IPStrike y reutilizables en los siguientes sistemas: métricas, pestañas, pasos, paginación, modales y tooltips.</p>
+<h3>Métricas (KPI)</h3>
+<div class="metrics"><div class="metric hero"><b>7</b>Ataques detenidos</div><div class="metric"><b>7</b>IPs desbloqueadas</div><div class="metric"><b>5</b>Dominios protegidos</div><div class="metric"><b>1</b>Dominios con actividad</div></div>
+<p class="t-bsm" style="margin-top:var(--space-12)">Cifra en Poppins 700 1.75 rem primario, etiqueta en 0.88 rem secundario. Una sola métrica "héroe" (fondo #030C18, cifra blanca 2.2 rem) por pantalla: la que responde la pregunta principal.</p>
+<div class="grid g2" style="margin-top:var(--space-24)">
+<div class="card"><h3 style="margin-top:0">Pestañas y pasos</h3>
+<div class="tabs"><a class="on" href="#producto">Información</a><a href="#producto">Configuración</a><a href="#producto">Revisión</a></div>
+<div class="steps" style="margin-top:var(--space-24)"><div class="step done"><span class="n">✓</span>Cliente</div><div class="step on"><span class="n">2</span>Destino</div><div class="step"><span class="n">3</span>Objetivo</div><div class="step"><span class="n">4</span>Confirmar</div></div>
+<p class="t-bsm" style="margin-top:var(--space-16)">Pestaña activa: texto y subrayado 2 px en primario. Pasos: completado en verde con ✓, actual en primario, pendiente en borde.</p></div>
+<div class="card"><h3 style="margin-top:0">Paginación y tooltip</h3>
+<div class="pag"><a href="#producto">‹</a><a class="on" href="#producto">1</a><a href="#producto">2</a><a href="#producto">3</a><a href="#producto">›</a></div>
+<p style="margin-top:var(--space-24)">Los tooltips aclaran, no informan de lo crítico: <span class="tip">Rule ID<span>Identificador de la regla en Cloudflare</span></span>.</p></div>
+</div>
+<h3>Modal de confirmación</h3>
+<div class="modal"><p class="eyebrow">Confirmar</p><h3 style="margin:0 0 8px">¿Eliminar la regla para 1.2.3.4?</h3><p class="t-bsm">La IP volverá a tener acceso a infosecmexico.com.mx. Se notificará al superior y al cliente.</p><div class="btn-row"><a class="btn btn-ghost" href="#producto">Cancelar</a><a class="btn btn-danger" href="#producto">Eliminar</a></div></div>
+<p class="t-bsm" style="margin-top:var(--space-12)">Ancho máximo 440 px, radio 20 px, sombra media. La pregunta nombra el objeto y la consecuencia. Cancelar a la izquierda (ghost), acción a la derecha; si es destructiva, en rojo. Cierra con Esc y devuelve el foco.</p>
+
+<!-- ================================================================ LAYOUTS -->
+<h2 class="sec" id="layouts"><span class="n">09</span>Layouts</h2>
+<div class="grid g2">
+<div class="card"><p class="eyebrow">Hero dividido (sitio)</p><h3 style="margin:0 0 8px">Texto + visual</h3><p class="t-bsm">Fondo #030C18, Display LG blanco, lead en #C3CBD5, CTA primario + outline claro. Altura según contenido, nunca 100 vh. Ideal para portada y landings.</p><div class="btn-row"><span class="btn btn-primary btn-sm">CTA principal</span><span class="btn btn-outline btn-sm">Secundaria</span></div></div>
+<div class="card"><p class="eyebrow">Sección con rejilla</p><h3 style="margin:0 0 8px">Título + texto + tarjetas</h3><p class="t-bsm">Eyebrow, Display LG / Heading LG, lead de 60–70 caracteres por línea y rejilla de 2–4 tarjetas con la misma altura por fila. Separación 24 px; sección a 64–96 px.</p></div>
+<div class="card"><p class="eyebrow">Página de producto</p><h3 style="margin:0 0 8px">Cabecera + formulario + tabla</h3><p class="t-bsm">Barra fija de 68 px, cabecera de página (eyebrow + Heading LG + lead), tarjeta de acción a todo lo ancho con campos en filas de 3–4, y debajo la tabla. Las tablas nunca comprimen a la columna vecina: rejillas con <code>minmax(0,1fr)</code>.</p></div>
+<div class="card"><p class="eyebrow">Portal / dashboard</p><h3 style="margin:0 0 8px">Filtros → métricas → gráficas → detalle</h3><p class="t-bsm">Filtros en una fila arriba; fila de KPIs (una héroe); gráficas en rejilla de 2; tablas de detalle al final. Todo lo importante visible sin desplazarse.</p></div>
+</div>
+
+<!-- ================================================================ DARK -->
+<h2 class="sec" id="dark"><span class="n">10</span>Tema oscuro del sitio público</h2>
+<p class="lead">infosecmexico.com.mx usa una variante oscura con acento cian neón. Convive con el sistema claro bajo estas reglas: mismo logotipo, misma voz, misma escala de espacio; cambian los fondos, el acento y la tipografía display.</p>
+<div class="dark-demo"><p class="eyebrow">Servicios</p><h3 style="font-family:'Space Grotesk',var(--font-display)">Protección que se anticipa</h3><p>Fondo #030C18, superficies #071524 / #0A1E33, bordes rgba(0,212,255,.12), texto #E8F1FB y #8BAFC8. Acento cian #00D4FF (11:1 sobre el fondo) y verde #00E676 solo para indicadores positivos.</p>
+<div class="grid g3" style="margin-top:var(--space-16)"><div class="dcard"><span class="dpill">Hackeo ético</span><p style="margin:10px 0 0;color:#E8F1FB">Tarjeta oscura con borde cian tenue; en hover, borde a .35 y sombra cian.</p></div><div class="dcard"><span class="dpill">Forense digital</span><p style="margin:10px 0 0;color:#E8F1FB">Tipografía display del sitio: Space Grotesk; cuerpo: Inter.</p></div><div class="dcard"><span class="dpill">Monitoreo</span><p style="margin:10px 0 0;color:#E8F1FB">Botones en degradado cian con texto oscuro y <b>mayúsculas</b> con tracking .06 em (excepción exclusiva del sitio).</p></div></div>
+<div class="btn-row" style="margin-top:var(--space-16)"><span class="dbtn">Solicitar diagnóstico</span></div></div>
+<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Elemento</th><th>Sistema claro (producto, documentos)</th><th>Sitio oscuro</th></tr>
+<tr><td>Display</td><td>Poppins</td><td>Space Grotesk</td></tr><tr><td>Acento</td><td>#455E7C</td><td>#00D4FF</td></tr><tr><td>Botón primario</td><td>píldora azul, tipo oración</td><td>degradado cian, MAYÚSCULAS, radio 12 px</td></tr><tr><td>Fondo / tarjeta</td><td>#F7F8F8 / #FFFFFF</td><td>#030C18 / #0A1E33</td></tr><tr><td>Radios</td><td>8 · 14 · 20 · píldora</td><td>6 · 12 · 20</td></tr></table></div>
+<div class="alert alert-warning"><span class="ic">!</span><div><b>No mezclar</b>El cian neón no se usa en producto ni en documentos, y el azul acero no sustituye al cian en el sitio. Cada contexto conserva su acento.</div></div>
+
+<!-- ================================================================ DATOS -->
+<h2 class="sec" id="datos"><span class="n">11</span>Visualización de datos</h2>
+<div class="grid g2">
+<div class="card chart"><svg xmlns="http://www.w3.org/2000/svg" width="520" height="190" viewBox="0 0 520 190" role="img" aria-label="Dominios más atacados"><text x="0" y="16" font-size="13" font-weight="600" fill="#101826" font-family="Inter">Dominios más atacados (bloqueos)</text><text x="180" y="46" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">asistenciaventura.com</text><rect x="190" y="34" width="280" height="16" rx="4" fill="#455E7C"/><text x="478" y="46" font-size="12" font-weight="600" fill="#101826" font-family="Inter">14</text><text x="180" y="76" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">subastasventura.com</text><rect x="190" y="64" width="180" height="16" rx="4" fill="#C3CBD5"/><text x="378" y="76" font-size="12" font-weight="600" fill="#101826" font-family="Inter">9</text><text x="180" y="106" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">venturadigital.com.mx</text><rect x="190" y="94" width="120" height="16" rx="4" fill="#C3CBD5"/><text x="318" y="106" font-size="12" font-weight="600" fill="#101826" font-family="Inter">6</text><text x="180" y="136" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">gruasventura.com</text><rect x="190" y="124" width="60" height="16" rx="4" fill="#C3CBD5"/><text x="258" y="136" font-size="12" font-weight="600" fill="#101826" font-family="Inter">3</text></svg></div>
+<div class="card"><h3 style="margin-top:0">Reglas</h3><ul style="font-size:.92rem"><li><b>Una serie, un tono:</b> el valor principal en #455E7C, el resto en #C3CBD5. Nada de arcoíris.</li><li>Varias series: orden fijo de tonos (#455E7C, #030C18, #8BAFC8, #C3CBD5) con leyenda y etiqueta directa; máximo 4.</li><li>Estados (bien/aviso/crítico) con la paleta semántica, con icono y etiqueta, nunca solo color.</li><li>Barras finas con extremo redondeado 4 px, etiqueta directa del valor, rejilla #E6E7E8 al 100 %, texto en tonos de texto (no en el color de la serie).</li><li>Un solo eje; si hay dos medidas, dos gráficas.</li><li>Números con <code>tabular-nums</code>; título en Poppins/Inter 600 13 px que nombra la medida.</li><li>Siempre existe una tabla equivalente para quien no pueda leer la gráfica.</li></ul></div>
+</div>
+
+<!-- ================================================================ TOKENS -->
+<h2 class="sec" id="tokens"><span class="n">12</span>Tokens CSS</h2>
+<p class="lead">Copia este bloque como base de cualquier proyecto nuevo. Los componentes se estilizan a través de los tokens, nunca con valores sueltos.</p>
+<pre><code>:root {
+  /* Marca */
+  --color-primary:#455E7C;        --color-primary-hover:#3A506A;  --color-primary-active:#2F4257;
+  --color-primary-dark:#030C18;   --color-primary-light:#C3CBD5;  --color-primary-soft:#ECEFF2;
+  /* Neutros */
+  --color-surface:#FFFFFF;        --color-surface-alt:#F7F8F8;    --color-border:#E6E7E8;
+  --color-text-primary:#101826;   --color-text-secondary:#4F535D;
+  --silver-dark:#5A5E67;          --silver-medium:#969AA2;        --silver-light:#E9E9EA;
+  /* Semánticos (texto / fondo) */
+  --success:#1F7A4D; --success-bg:#E7F3EC;   --warning:#9A6417; --warning-bg:#FDF2E2;
+  --danger:#B3312C;  --danger-bg:#FBEAEA;    --info:#455E7C;    --info-bg:#ECEFF2;
+  /* Sitio público (tema oscuro) */
+  --dark-bg:#030C18; --dark-surface:#071524; --dark-card:#0A1E33; --cyan:#00D4FF; --green-neon:#00E676;
+  --dark-text:#E8F1FB; --dark-text-2:#8BAFC8; --dark-border:rgba(0,212,255,.12);
+  /* Tipografía */
+  --font-display:'Poppins',sans-serif;  --font-body:'Inter',sans-serif;  --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --text-display-xl:clamp(2.6rem,5vw,3.75rem); --text-display-lg:clamp(2.1rem,4vw,2.75rem);
+  --text-heading-lg:1.75rem; --text-heading-md:1.375rem; --text-heading-sm:1.125rem;
+  --text-body-lg:1.125rem; --text-body-md:1rem; --text-body-sm:.9rem; --text-caption:.8rem; --text-eyebrow:.75rem;
+  /* Espacio, radios, sombras, movimiento */
+  --space-4:4px; --space-8:8px; --space-12:12px; --space-16:16px; --space-24:24px; --space-32:32px; --space-48:48px; --space-64:64px; --space-96:96px;
+  --radius-sm:8px; --radius-md:14px; --radius-lg:20px; --radius-pill:999px;
+  --shadow-soft:0 10px 24px rgba(3,12,24,.06); --shadow-medium:0 18px 40px rgba(3,12,24,.10);
+  --motion-fast:150ms; --motion-normal:250ms; --container:1120px;
+}
+/* Fuentes */
+&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;</code></pre>
+<h3>Lista de verificación antes de publicar</h3>
+<ul><li>¿Un solo botón primario por vista y el acento en pocos lugares?</li><li>¿Títulos en tipo oración, eyebrows y cabeceras de tabla en mayúsculas con tracking, acentos incluidos?</li><li>¿Texto auxiliar en #5A5E67 (no #969AA2) y contraste ≥ 4.5:1 en todo lo legible?</li><li>¿Foco visible en todo lo interactivo, alt en imágenes, tabla equivalente para cada gráfica?</li><li>¿Espaciado por tokens y rejillas que no aplastan columnas en móvil (gutter ≥ 16 px)?</li><li>¿Mensajes que dicen qué pasó y qué hacer, sin jerga ni anglicismos innecesarios?</li></ul>
+
+<footer><span>© 2026 Infosec México · Sistema de diseño v2.0</span><span>Fuente: infosecmexico-brand/design-system.html</span></footer>
+</div>
