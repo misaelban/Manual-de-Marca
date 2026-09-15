@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* =====================================================================
-   INFOSEC MÉXICO · SISTEMA DE DISEÑO v2.0 — tokens
+   INFOSEC MÉXICO · SISTEMA DE DISEÑO v2.1 — tokens
    ===================================================================== */
 :root{
   /* Marca */
@@ -63,7 +63,10 @@ pre{background:#0B1B2B;color:#DCE6F0;padding:16px 18px;border-radius:var(--radiu
 .sw{border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface)}.sw .c{height:84px;display:flex;align-items:flex-end;padding:10px;font-family:var(--font-mono);font-size:.78rem}.sw .i{padding:10px 12px;font-size:.85rem}.sw .i b{display:block;font-family:var(--font-display);font-weight:600}.sw .i span{color:var(--color-text-secondary);font-size:.8rem}
 /* Tablas */
 .tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;margin:var(--space-12) 0 var(--space-24)}
-th{text-align:left;font-family:var(--font-display);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-secondary);padding:10px 12px;background:var(--color-surface-alt)}td{padding:10px 12px;border-top:1px solid var(--color-border);vertical-align:top}
+th{text-align:center;font-family:var(--font-display);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);padding:10px 12px;background:var(--color-primary-soft)}td{padding:10px 12px;border-top:1px solid var(--color-border);vertical-align:middle}td.left{text-align:left}
+/* Severidad (datos de seguridad) */
+.sev-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin:var(--space-12) 0 var(--space-16)}.sev-box{border-radius:var(--radius-md);padding:12px 8px;text-align:center;color:#fff;font-size:.8rem;font-weight:600}.sev-box .n{display:block;font-family:var(--font-display);font-size:1.6rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}.sev-box.crit{background:#C62828}.sev-box.high{background:#E8720C}.sev-box.med{background:#F2C230;color:#101826}.sev-box.low{background:#2E7D32}.sev-box.dark{background:var(--color-primary-dark)}.sev-box.neutral{background:var(--color-primary)}.sev-box.gray{background:#E9E9EA;color:#101826}
+.sev-chips{display:inline-flex;gap:6px;align-items:center}.sev-chips .chip{display:inline-flex;align-items:center;justify-content:center;min-width:40px;padding:3px 10px;border-radius:var(--radius-pill);font-family:var(--font-display);font-weight:700;font-size:.82rem;color:#fff;border:0}.sev-chips .chip.crit{background:#C62828}.sev-chips .chip.high{background:#E8720C}.sev-chips .chip.med{background:#F2C230;color:#101826}.sev-chips .chip.low{background:#2E7D32}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 /* Especímenes tipográficos */
 .spec{display:grid;grid-template-columns:200px 1fr;gap:var(--space-16);align-items:baseline;padding:14px 0;border-top:1px solid var(--color-border)}.spec:last-child{border-bottom:1px solid var(--color-border)}
@@ -120,15 +123,15 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 </style>
 
 <nav class="nav"><div class="nav-in"><img src="logo.png" alt="Infosec México">
-<ul class="nav-links"><li><a href="#marca">Marca</a></li><li><a href="#color">Color</a></li><li><a href="#tipo">Tipografía</a></li><li><a href="#redaccion">Redacción</a></li><li><a href="#espacio">Espaciado</a></li><li><a href="#comp">Componentes</a></li><li><a href="#forms">Formularios</a></li><li><a href="#producto">Producto</a></li><li><a href="#layouts">Layouts</a></li><li><a href="#dark">Sitio oscuro</a></li><li><a href="#datos">Datos</a></li><li><a href="#tokens">Tokens</a></li></ul></div></nav>
+<ul class="nav-links"><li><a href="#marca">Marca</a></li><li><a href="#color">Color</a></li><li><a href="#tipo">Tipografía</a></li><li><a href="#redaccion">Redacción</a></li><li><a href="#espacio">Espaciado</a></li><li><a href="#comp">Componentes</a></li><li><a href="#forms">Formularios</a></li><li><a href="#producto">Producto</a></li><li><a href="#layouts">Layouts</a></li><li><a href="#dark">Sitio oscuro</a></li><li><a href="#datos">Datos</a></li><li><a href="#vulns">Vulnerabilidades</a></li><li><a href="#tokens">Tokens</a></li></ul></div></nav>
 
 <div class="wrap">
 <header class="hero">
   <img src="logo.png" alt="Infosec México">
-  <p class="eyebrow">Identidad corporativa · Sistema de diseño v2.0</p>
+  <p class="eyebrow">Identidad corporativa · Sistema de diseño v2.1</p>
   <h1>Sistema de diseño de Infosec México</h1>
   <p>Una sola fuente de verdad para marca, color, tipografía, redacción y componentes, en sitios de marketing y en producto (IPStrike y los sistemas que vengan). Cada regla incluye el valor exacto, cuándo usarlo y qué evitar.</p>
-  <div class="meta"><span>Versión <b>2.0</b></span><span>Fecha <b>14 de septiembre de 2026</b></span><span>Sustituye a <b>design_system2 (v1)</b></span><span>Ámbito <b>web · producto · documentos</b></span></div>
+  <div class="meta"><span>Versión <b>2.1</b></span><span>Fecha <b>15 de septiembre de 2026</b></span><span>Sustituye a <b>design_system2 (v1)</b></span><span>Ámbito <b>web · producto · documentos</b></span></div>
 </header>
 
 <!-- ================================================================ MARCA -->
@@ -159,9 +162,9 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
   <div class="sw"><div class="c" style="background:#3A506A;color:#fff">#3A506A</div><div class="i"><b>Primary hover</b><span>Estado hover de botones primarios</span></div></div>
   <div class="sw"><div class="c" style="background:#030C18;color:#fff">#030C18</div><div class="i"><b>Primary dark</b><span>Heros, portadas, cabeceras de correo/PDF, tarjetas destacadas</span></div></div>
   <div class="sw"><div class="c" style="background:#C3CBD5;color:#101826">#C3CBD5</div><div class="i"><b>Primary light</b><span>Bordes de botones outline, texto secundario sobre oscuro</span></div></div>
-  <div class="sw"><div class="c" style="background:#ECEFF2;color:#101826">#ECEFF2</div><div class="i"><b>Primary soft</b><span>Fondo de badges primarios, hover de navegación, alertas informativas</span></div></div>
+  <div class="sw"><div class="c" style="background:#ECEFF2;color:#101826">#ECEFF2</div><div class="i"><b>Primary soft</b><span>Cabeceras de tabla, fondo de badges primarios, hover de navegación, alertas informativas</span></div></div>
   <div class="sw"><div class="c" style="background:#FFFFFF;color:#101826;border-bottom:1px solid #E6E7E8">#FFFFFF</div><div class="i"><b>Surface</b><span>Tarjetas, formularios, tablas</span></div></div>
-  <div class="sw"><div class="c" style="background:#F7F8F8;color:#101826">#F7F8F8</div><div class="i"><b>Surface alt</b><span>Fondo de página, cabeceras de tabla, paneles</span></div></div>
+  <div class="sw"><div class="c" style="background:#F7F8F8;color:#101826">#F7F8F8</div><div class="i"><b>Surface alt</b><span>Fondo de página y paneles</span></div></div>
   <div class="sw"><div class="c" style="background:#E6E7E8;color:#101826">#E6E7E8</div><div class="i"><b>Border</b><span>Bordes y divisores (1 px)</span></div></div>
 </div>
 <h3>Texto</h3>
@@ -192,7 +195,10 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <tr><td>Badge de estado</td><td>par semántico</td><td><code>--success/-bg</code> etc.</td><td>Texto ≥ 4.5:1 sobre su fondo (verificado).</td></tr>
 <tr><td>Foco de teclado</td><td>#455E7C, 2 px, offset 2–3 px</td><td><code>--color-primary</code></td><td>Obligatorio en todo elemento interactivo.</td></tr>
 <tr><td>Bordes / divisores</td><td>#E6E7E8</td><td><code>--color-border</code></td><td>1 px; nunca más gruesos salvo la barra superior de 4 px en tarjetas Do/Don't.</td></tr>
-<tr><td>Cabecera de correo y PDF</td><td>fondo #030C18 · texto #FFFFFF</td><td><code>--color-primary-dark</code></td><td>Subtítulo en #C3CBD5.</td></tr></table></div>
+<tr><td>Cabecera de correo y PDF</td><td>fondo #030C18 · texto #FFFFFF</td><td><code>--color-primary-dark</code></td><td>Subtítulo en #C3CBD5.</td></tr>
+<tr><td>Cabecera de tabla</td><td>fondo #ECEFF2 · texto #455E7C</td><td><code>--color-primary-soft</code></td><td>Poppins 600, mayúsculas con tracking, centrada. Ver §12.</td></tr>
+<tr><td>KPI / indicador</td><td>fondo #E9E9EA · texto #101826</td><td><code>--silver-light</code></td><td>Caja gris con número grande; nunca el KPI en color semántico. Ver §12.</td></tr>
+<tr><td>Severidad de vulnerabilidad</td><td>#C62828 · #E8720C · #F2C230 · #2E7D32</td><td><code>--sev-*</code></td><td>Crítica, alta, media y baja; siempre como fondo de caja o chip. Ver §12.</td></tr></table></div>
 <div class="alert alert-info"><span class="ic">i</span><div><b>Regla del acento</b>El primario aparece en pocos lugares por pantalla: un botón principal, enlaces, el eyebrow y el foco. Si todo es azul, nada destaca. Los semánticos nunca sustituyen al primario en botones.</div></div>
 
 <!-- ================================================================ TIPOGRAFÍA -->
@@ -377,8 +383,52 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <div class="card"><h3 style="margin-top:0">Reglas</h3><ul style="font-size:.92rem"><li><b>Una serie, un tono:</b> el valor principal en #455E7C, el resto en #C3CBD5. Nada de arcoíris.</li><li>Varias series: orden fijo de tonos (#455E7C, #030C18, #8BAFC8, #C3CBD5) con leyenda y etiqueta directa; máximo 4.</li><li>Estados (bien/aviso/crítico) con la paleta semántica, con icono y etiqueta, nunca solo color.</li><li>Barras finas con extremo redondeado 4 px, etiqueta directa del valor, rejilla #E6E7E8 al 100 %, texto en tonos de texto (no en el color de la serie).</li><li>Un solo eje; si hay dos medidas, dos gráficas.</li><li>Números con <code>tabular-nums</code>; título en Poppins/Inter 600 13 px que nombra la medida.</li><li>Siempre existe una tabla equivalente para quien no pueda leer la gráfica.</li></ul></div>
 </div>
 
+<!-- ================================================================ DATOS DE VULNERABILIDADES -->
+<h2 class="sec" id="vulns"><span class="n">12</span>Datos de vulnerabilidades y tablas</h2>
+<p class="lead">Reglas nacidas en VulnManagement para presentar hallazgos de seguridad: una paleta de severidad propia, cajas de resumen, chips en tablas y cabeceras uniformes. Aplican a cualquier producto que muestre riesgo o vulnerabilidades.</p>
+
+<h3>Paleta de severidad</h3>
+<p>Es independiente de los colores semánticos (éxito / aviso / peligro), que se reservan para estados de la interfaz. Se usa <b>siempre como fondo</b> de una caja o chip con el número encima; nunca como color de texto suelto ni de títulos.</p>
+<div class="grid g4" style="margin-bottom:var(--space-16)">
+  <div class="sw"><div class="c" style="background:#C62828;color:#fff">#C62828</div><div class="i"><b>Crítica</b><span><code>--sev-critical</code> · texto blanco · texto sobre blanco: #B71C1C</span></div></div>
+  <div class="sw"><div class="c" style="background:#E8720C;color:#fff">#E8720C</div><div class="i"><b>Alta</b><span><code>--sev-high</code> · texto blanco · texto sobre blanco: #B8560A</span></div></div>
+  <div class="sw"><div class="c" style="background:#F2C230;color:#101826">#F2C230</div><div class="i"><b>Media</b><span><code>--sev-medium</code> · texto #101826 · texto sobre blanco: #8A6A00</span></div></div>
+  <div class="sw"><div class="c" style="background:#2E7D32;color:#fff">#2E7D32</div><div class="i"><b>Baja</b><span><code>--sev-low</code> · solo como referencia; las bajas no se gestionan</span></div></div>
+</div>
+
+<h3>Resumen: indicadores y fila de severidades</h3>
+<p>El resumen de un cliente o escaneo se presenta en dos filas, siempre en este orden: primero los <b>indicadores</b> en cajas grises (<code>--silver-light</code>, texto #101826) y debajo la <b>fila de severidades</b> con fondo de color. La caja de total (riesgo residual) va en <code>--color-primary-dark</code>; un dato neutro (activos) en <code>--color-primary</code>. Las bajas aparecen solo en resúmenes, no en tablas.</p>
+<div class="card" style="padding:var(--space-24)">
+  <div class="sev-row" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"><div class="sev-box gray"><span class="n">152</span>Riesgo crítico activo (C+A)</div><div class="sev-box gray"><span class="n">69.6%</span>Cierre de brecha</div><div class="sev-box gray"><span class="n">12</span>Activos con riesgo crítico</div></div>
+  <div class="sev-row" style="margin-bottom:0"><div class="sev-box crit"><span class="n">35</span>Crítica</div><div class="sev-box high"><span class="n">117</span>Alta</div><div class="sev-box med"><span class="n">114</span>Media</div><div class="sev-box low"><span class="n">25</span>Baja</div><div class="sev-box dark"><span class="n">266</span>Riesgo residual (C+A+M)</div></div>
+</div>
+<div class="dd" style="margin-top:var(--space-16)"><div class="ok"><h4>Sí</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Una sola fila, de crítica a baja, misma altura y radio (<code>--radius-md</code>).</li><li>Número en Poppins 700 y etiqueta en Inter 600 centrados.</li><li>Los KPI siempre antes de las severidades.</li></ul></div><div class="no"><h4>No</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cuadrículas 2 × 2 ni cajas blancas con el número en color.</li><li>Semánticos (#B3312C, #9A6417) para severidad, ni severidad para estados de la interfaz.</li><li>Texto en color de severidad sin caja.</li></ul></div></div>
+
+<h3>Chips de severidad en tablas</h3>
+<p>Dentro de una tabla los conteos crítica / alta / media van en una sola columna <b>"Severidad"</b> como chips horizontales en ese orden fijo, sin sufijos en la cabecera. El chip es una pastilla (<code>--radius-pill</code>) con número en Poppins 700 y ancho mínimo 40 px.</p>
+<div class="tw"><table><tr><th>Mes</th><th>Archivo</th><th>Activos</th><th>Severidad</th><th>Estatus</th></tr>
+<tr><td><b>Sep 2026</b></td><td>4 septiembre.nessus</td><td>14</td><td><span class="sev-chips"><span class="chip crit">153</span><span class="chip high">179</span><span class="chip med">304</span></span></td><td><span class="badge badge-primary">Validado</span></td></tr>
+<tr><td><b>Ago 2026</b></td><td>3 agosto.nessus</td><td>14</td><td><span class="sev-chips"><span class="chip crit">290</span><span class="chip high">271</span><span class="chip med">402</span></span></td><td><span class="badge badge-primary">Validado</span></td></tr></table></div>
+
+<h3>Tablas</h3>
+<ul>
+<li><b>Cabecera:</b> fondo <code>--color-primary-soft</code> (#ECEFF2), texto <code>--color-primary</code>, Poppins 600, 0.72 rem, mayúsculas con tracking 0.06 em, <b>centrada</b>; esquinas superiores con <code>--radius-sm</code>.</li>
+<li><b>Celdas:</b> centradas y alineadas a media altura; solo los textos largos (nombre de vulnerabilidad, sistema operativo, descripciones) se alinean a la izquierda. Identificadores (IP, hostname, mes) en negritas.</li>
+<li><b>Orden:</b> series temporales del mes más reciente al más antiguo; rankings de mayor a menor.</li>
+<li><b>Divisores:</b> <code>--color-border</code> de 1 px; sin zebra.</li>
+</ul>
+
+<h3>Gráficas de riesgo</h3>
+<ul>
+<li><b>Mitigación acumulada vs riesgo activo:</b> gráfica de área con superficies superpuestas (no apiladas), riesgo activo en <code>--color-primary</code> al 35 % y remediados en <code>--success</code> al 45 %; ocupa el ancho completo.</li>
+<li><b>Hallazgos por severidad y mes:</b> barras apiladas con la paleta de severidad, valor dentro de cada segmento y total encima de la barra.</li>
+<li><b>Top de activos:</b> barras horizontales de mayor a menor; IP y hostname en negritas; en detalle, apiladas por severidad.</li>
+<li>Sin efecto <em>mouseover</em>: los valores van impresos en la gráfica. Cada gráfica ofrece un botón de maximizar (⤢) que la abre ampliada con su tabla de detalle; se cierra con ✕, Esc o clic fuera.</li>
+<li>Fechas y meses siempre mediante selector de calendario, nunca captura manual.</li>
+</ul>
+
 <!-- ================================================================ TOKENS -->
-<h2 class="sec" id="tokens"><span class="n">12</span>Tokens CSS</h2>
+<h2 class="sec" id="tokens"><span class="n">13</span>Tokens CSS</h2>
 <p class="lead">Copia este bloque como base de cualquier proyecto nuevo. Los componentes se estilizan a través de los tokens, nunca con valores sueltos.</p>
 <pre><code>:root {
   /* Marca */
@@ -391,6 +441,9 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
   /* Semánticos (texto / fondo) */
   --success:#1F7A4D; --success-bg:#E7F3EC;   --warning:#9A6417; --warning-bg:#FDF2E2;
   --danger:#B3312C;  --danger-bg:#FBEAEA;    --info:#455E7C;    --info-bg:#ECEFF2;
+  /* Severidad de vulnerabilidades (fondo de caja o chip) */
+  --sev-critical:#C62828; --sev-high:#E8720C; --sev-medium:#F2C230; --sev-low:#2E7D32;
+  --sev-critical-text:#B71C1C; --sev-high-text:#B8560A; --sev-medium-text:#8A6A00;
   /* Sitio público (tema oscuro) */
   --dark-bg:#030C18; --dark-surface:#071524; --dark-card:#0A1E33; --cyan:#00D4FF; --green-neon:#00E676;
   --dark-text:#E8F1FB; --dark-text-2:#8BAFC8; --dark-border:rgba(0,212,255,.12);
@@ -408,7 +461,7 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 /* Fuentes */
 &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;</code></pre>
 <h3>Lista de verificación antes de publicar</h3>
-<ul><li>¿Un solo botón primario por vista y el acento en pocos lugares?</li><li>¿Títulos en tipo oración, eyebrows y cabeceras de tabla en mayúsculas con tracking, acentos incluidos?</li><li>¿Texto auxiliar en #5A5E67 (no #969AA2) y contraste ≥ 4.5:1 en todo lo legible?</li><li>¿Foco visible en todo lo interactivo, alt en imágenes, tabla equivalente para cada gráfica?</li><li>¿Espaciado por tokens y rejillas que no aplastan columnas en móvil (gutter ≥ 16 px)?</li><li>¿Mensajes que dicen qué pasó y qué hacer, sin jerga ni anglicismos innecesarios?</li></ul>
+<ul><li>¿Un solo botón primario por vista y el acento en pocos lugares?</li><li>¿Cabeceras de tabla en Primary soft, centradas, y severidades solo con la paleta de §12?</li><li>¿Títulos en tipo oración, eyebrows y cabeceras de tabla en mayúsculas con tracking, acentos incluidos?</li><li>¿Texto auxiliar en #5A5E67 (no #969AA2) y contraste ≥ 4.5:1 en todo lo legible?</li><li>¿Foco visible en todo lo interactivo, alt en imágenes, tabla equivalente para cada gráfica?</li><li>¿Espaciado por tokens y rejillas que no aplastan columnas en móvil (gutter ≥ 16 px)?</li><li>¿Mensajes que dicen qué pasó y qué hacer, sin jerga ni anglicismos innecesarios?</li></ul>
 
-<footer><span>© 2026 Infosec México · Sistema de diseño v2.0</span><span>Fuente: infosecmexico-brand/design-system.html</span></footer>
+<footer><span>© 2026 Infosec México · Sistema de diseño v2.1</span><span>Fuente: infosecmexico-brand/design-system.html</span></footer>
 </div>
