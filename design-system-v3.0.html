@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* =====================================================================
-   INFOSEC MÉXICO · SISTEMA DE DISEÑO v3.1 — tokens
+   INFOSEC MÉXICO · SISTEMA DE DISEÑO v3.0 — tokens
    ===================================================================== */
 :root{
   /* Marca */
@@ -63,7 +63,7 @@ pre{background:#0B1B2B;color:#DCE6F0;padding:16px 18px;border-radius:var(--radiu
 .sw{border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface)}.sw .c{height:84px;display:flex;align-items:flex-end;padding:10px;font-family:var(--font-mono);font-size:.78rem}.sw .i{padding:10px 12px;font-size:.85rem}.sw .i b{display:block;font-family:var(--font-display);font-weight:600}.sw .i span{color:var(--color-text-secondary);font-size:.8rem}
 /* Tablas */
 .tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;margin:var(--space-12) 0 var(--space-24)}
-th{text-align:center;font-family:var(--font-display);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:10px 12px;background:var(--color-primary)}td{padding:10px 12px;border-top:1px solid var(--color-border);vertical-align:middle}td.left{text-align:left}table.centered td{text-align:center}table.centered .sev-chips{justify-content:center}
+th{text-align:center;font-family:var(--font-display);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);padding:10px 12px;background:var(--color-primary-soft)}td{padding:10px 12px;border-top:1px solid var(--color-border);vertical-align:middle}td.left{text-align:left}table.centered td{text-align:center}table.centered .sev-chips{justify-content:center}
 /* Severidad (datos de seguridad) */
 .sev-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin:var(--space-12) 0 var(--space-16)}.sev-box{border-radius:var(--radius-md);padding:12px 8px;text-align:center;color:#fff;font-size:.8rem;font-weight:600}.sev-box .n{display:block;font-family:var(--font-display);font-size:1.6rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}.sev-box.crit{background:#C62828}.sev-box.high{background:#E8720C}.sev-box.med{background:#F2C230;color:#101826}.sev-box.low{background:#2E7D32}.sev-box.dark{background:var(--color-primary-dark)}.sev-box.neutral{background:var(--color-primary)}.sev-box.gray{background:#E9E9EA;color:#101826}
 .sev-chips{display:inline-flex;gap:6px;align-items:center}.sev-chips .chip{display:inline-flex;align-items:center;justify-content:center;min-width:40px;padding:3px 10px;border-radius:var(--radius-pill);font-family:var(--font-display);font-weight:700;font-size:.82rem;color:#fff;border:0}.sev-chips .chip.crit{background:#C62828}.sev-chips .chip.high{background:#E8720C}.sev-chips .chip.med{background:#F2C230;color:#101826}.sev-chips .chip.low{background:#2E7D32}
@@ -128,89 +128,71 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <div class="wrap">
 <header class="hero">
   <img src="logo.png" alt="Infosec México">
-  <p class="eyebrow">Identidad corporativa · Sistema de diseño v3.1</p>
+  <p class="eyebrow">Identidad corporativa · Sistema de diseño v3.0</p>
   <h1>Sistema de diseño de Infosec México</h1>
   <p>Una sola fuente de verdad para color, tipografía, logotipo, fondos, navegación, títulos, tablas y componentes, en producto (IPStrike, VulnManagement y los sistemas que vengan), documentos y sitio. Cada regla incluye el valor exacto, cuándo usarlo y qué evitar.</p>
-  <div class="meta"><span>Versión <b>3.1</b></span><span>Fecha <b>15 de septiembre de 2026</b></span><span>Sustituye a <b>v3.0</b></span><span>Ámbito <b>web · producto · documentos</b></span></div>
+  <div class="meta"><span>Versión <b>3.0</b></span><span>Fecha <b>15 de septiembre de 2026</b></span><span>Sustituye a <b>v2.1</b></span><span>Ámbito <b>web · producto · documentos</b></span></div>
 </header>
 
 
 <!-- ================================================================ COLORES ACEPTADOS -->
 <h2 class="sec" id="color"><span class="n">01</span>Colores aceptados</h2>
-<p class="lead">El sistema claro admite exactamente <b>21 colores</b>: 5 azules de marca, 4 neutros, 6 de texto, 4 semánticos (pares texto/fondo) y 4 de severidad. Cualquier otro valor está fuera de la marca (el sitio público tiene su variante oscura en §16). El azul acero <code>#455E7C</code> es el color de acción y énfasis; el azul profundo <code>#030C18</code> da autoridad a portadas y cabeceras; los neutros sostienen la lectura; los semánticos se reservan para estado y nunca se usan como decoración.</p>
-<h3>Azules de marca (5)</h3>
-<div class="grid g4" style="grid-template-columns:repeat(5,minmax(0,1fr))">
-  <div class="sw"><div class="c" style="background:#455E7C;color:#fff">#455E7C</div><div class="i"><b>Primary</b><span><code>--color-primary</code> · botones primarios, enlaces, eyebrows, foco, navegación activa, avatar, cabeceras de tabla</span></div></div>
-  <div class="sw"><div class="c" style="background:#3A506A;color:#fff">#3A506A</div><div class="i"><b>Primary hover</b><span><code>--color-primary-hover</code> · hover de botones primarios</span></div></div>
-  <div class="sw"><div class="c" style="background:#2F4257;color:#fff">#2F4257</div><div class="i"><b>Primary active</b><span><code>--color-primary-active</code> · botón primario pulsado</span></div></div>
-  <div class="sw"><div class="c" style="background:#030C18;color:#fff">#030C18</div><div class="i"><b>Primary dark</b><span><code>--color-primary-dark</code> · heros, portadas, cabeceras de correo/PDF, KPI héroe, caja de total</span></div></div>
-  <div class="sw"><div class="c" style="background:#C3CBD5;color:#101826">#C3CBD5</div><div class="i"><b>Primary light</b><span><code>--color-primary-light</code> · bordes de botones outline, barras secundarias en gráficas</span></div></div>
-</div>
-<h3>Neutros y superficies (4)</h3>
+<p class="lead">Estos son los únicos colores aceptados en producto, documentos y comunicaciones (el sitio público tiene su variante en §16). El azul acero <code>#455E7C</code> es el color de acción y énfasis; el azul profundo <code>#030C18</code> da autoridad a portadas y cabeceras; los neutros sostienen la lectura. Los colores semánticos se reservan para estado y nunca se usan como decoración.</p>
+<h3>Paleta de marca</h3>
 <div class="grid g4">
-  <div class="sw"><div class="c" style="background:#FFFFFF;color:#101826;border-bottom:1px solid #E6E7E8">#FFFFFF</div><div class="i"><b>Surface</b><span><code>--color-surface</code> · tarjetas, formularios, tablas, modales</span></div></div>
-  <div class="sw"><div class="c" style="background:#F7F8F8;color:#101826">#F7F8F8</div><div class="i"><b>Surface alt</b><span><code>--color-surface-alt</code> · fondo de página, paneles, hover de fila</span></div></div>
-  <div class="sw"><div class="c" style="background:#ECEFF2;color:#101826">#ECEFF2</div><div class="i"><b>Primary soft</b><span><code>--color-primary-soft</code> · badges primarios, hover de menú, alertas informativas, notas</span></div></div>
-  <div class="sw"><div class="c" style="background:#E9E9EA;color:#101826">#E9E9EA</div><div class="i"><b>Silver light</b><span><code>--silver-light</code> · cajas de KPI / indicadores</span></div></div>
+  <div class="sw"><div class="c" style="background:#455E7C;color:#fff">#455E7C</div><div class="i"><b>Primary</b><span>Botones primarios, enlaces, eyebrows, foco, iconos activos</span></div></div>
+  <div class="sw"><div class="c" style="background:#3A506A;color:#fff">#3A506A</div><div class="i"><b>Primary hover</b><span>Estado hover de botones primarios</span></div></div>
+  <div class="sw"><div class="c" style="background:#030C18;color:#fff">#030C18</div><div class="i"><b>Primary dark</b><span>Heros, portadas, cabeceras de correo/PDF, tarjetas destacadas</span></div></div>
+  <div class="sw"><div class="c" style="background:#C3CBD5;color:#101826">#C3CBD5</div><div class="i"><b>Primary light</b><span>Bordes de botones outline, texto secundario sobre oscuro</span></div></div>
+  <div class="sw"><div class="c" style="background:#ECEFF2;color:#101826">#ECEFF2</div><div class="i"><b>Primary soft</b><span>Cabeceras de tabla, fondo de badges primarios, hover de navegación, alertas informativas</span></div></div>
+  <div class="sw"><div class="c" style="background:#FFFFFF;color:#101826;border-bottom:1px solid #E6E7E8">#FFFFFF</div><div class="i"><b>Surface</b><span>Tarjetas, formularios, tablas</span></div></div>
+  <div class="sw"><div class="c" style="background:#F7F8F8;color:#101826">#F7F8F8</div><div class="i"><b>Surface alt</b><span>Fondo de página y paneles</span></div></div>
+  <div class="sw"><div class="c" style="background:#E6E7E8;color:#101826">#E6E7E8</div><div class="i"><b>Border</b><span>Bordes y divisores (1 px)</span></div></div>
 </div>
-<p class="t-bsm">El borde universal es <b>#E6E7E8</b> (<code>--color-border</code>, 1 px): divisores de tabla, bordes de tarjeta y de campo. Se cuenta entre los neutros pero nunca se usa como fondo.</p>
-<h3>Texto (6)</h3>
-<div class="grid g3">
-  <div class="sw"><div class="c" style="background:#101826;color:#fff">#101826</div><div class="i"><b>Text primary</b><span>Títulos y cuerpo sobre claro · 17.8:1 AAA</span></div></div>
-  <div class="sw"><div class="c" style="background:#4F535D;color:#fff">#4F535D</div><div class="i"><b>Text secondary</b><span>Subtítulos, lead, descripciones, entradas de menú · 7.7:1 AAA</span></div></div>
+<h3>Texto</h3>
+<div class="grid g4">
+  <div class="sw"><div class="c" style="background:#101826;color:#fff">#101826</div><div class="i"><b>Text primary</b><span>Títulos y cuerpo · 17.8:1 AAA</span></div></div>
+  <div class="sw"><div class="c" style="background:#4F535D;color:#fff">#4F535D</div><div class="i"><b>Text secondary</b><span>Subtítulos, descripciones, cabeceras de tabla · 7.7:1 AAA</span></div></div>
   <div class="sw"><div class="c" style="background:#5A5E67;color:#fff">#5A5E67</div><div class="i"><b>Silver dark</b><span>Captions y ayudas que deben leerse · 6.5:1 AA</span></div></div>
-  <div class="sw"><div class="c" style="background:#969AA2;color:#fff">#969AA2</div><div class="i"><b>Silver medium</b><span>Solo decorativo: placeholders, iconos inactivos, idioma no seleccionado · 2.8:1, no apto para texto</span></div></div>
-  <div class="sw"><div class="c" style="background:#030C18;color:#FFFFFF">#FFFFFF <small>&nbsp;sobre #030C18</small></div><div class="i"><b>Texto sobre oscuro</b><span>Títulos y cifras sobre Primary dark y sobre botones primarios · 18.4:1 AAA</span></div></div>
-  <div class="sw"><div class="c" style="background:#030C18;color:#C3CBD5">#C3CBD5 <small>&nbsp;sobre #030C18</small></div><div class="i"><b>Texto secundario sobre oscuro</b><span>Eyebrow, lead y metadatos en portadas y cabeceras · 12.6:1 AAA</span></div></div>
+  <div class="sw"><div class="c" style="background:#969AA2;color:#fff">#969AA2</div><div class="i"><b>Silver medium</b><span>Solo decorativo (placeholders, iconos inactivos) · 2.8:1 no apto para texto</span></div></div>
 </div>
-<h3>Semánticos: estado (4 pares)</h3>
+<h3>Semánticos (estado)</h3>
 <div class="grid g4">
-  <div class="sw"><div class="c" style="background:#E7F3EC;color:#1F7A4D">#1F7A4D / #E7F3EC</div><div class="i"><b>Success</b><span><code>--success</code> / <code>--success-bg</code> · correcto, activo, validado y enviado, cierre de brecha</span></div></div>
-  <div class="sw"><div class="c" style="background:#FDF2E2;color:#9A6417">#9A6417 / #FDF2E2</div><div class="i"><b>Warning</b><span><code>--warning</code> / <code>--warning-bg</code> · aviso, pendiente, suspendido</span></div></div>
-  <div class="sw"><div class="c" style="background:#FBEAEA;color:#B3312C">#B3312C / #FBEAEA</div><div class="i"><b>Danger</b><span><code>--danger</code> / <code>--danger-bg</code> · error, bloqueo, revocado, eliminar</span></div></div>
-  <div class="sw"><div class="c" style="background:#ECEFF2;color:#455E7C">#455E7C / #ECEFF2</div><div class="i"><b>Info</b><span><code>--info</code> / <code>--info-bg</code> · información neutra y estado "validado"; reutiliza el primario y Primary soft</span></div></div>
+  <div class="sw"><div class="c" style="background:#E7F3EC;color:#1F7A4D">#1F7A4D / #E7F3EC</div><div class="i"><b>Success</b><span>Correcto, activo, desbloqueo, entregado</span></div></div>
+  <div class="sw"><div class="c" style="background:#FDF2E2;color:#9A6417">#9A6417 / #FDF2E2</div><div class="i"><b>Warning</b><span>Aviso, pendiente, suspendido, atención</span></div></div>
+  <div class="sw"><div class="c" style="background:#FBEAEA;color:#B3312C">#B3312C / #FBEAEA</div><div class="i"><b>Danger</b><span>Error, bloqueo, revocado, eliminar</span></div></div>
+  <div class="sw"><div class="c" style="background:#ECEFF2;color:#455E7C">#455E7C / #ECEFF2</div><div class="i"><b>Info</b><span>Información neutra (usa el primario)</span></div></div>
 </div>
-<h3>Severidad de vulnerabilidades (4)</h3>
-<p class="t-bsm">Paleta propia para datos de riesgo. Se usa <b>solo como fondo</b> de cajas y chips con el número encima; nunca como color de texto, título o icono. Es independiente de los semánticos: "alta" no es "warning". Detalle en §14.</p>
+<h3>Severidad de vulnerabilidades</h3>
+<p class="t-bsm">Paleta propia para datos de riesgo (VulnManagement). Se usa <b>solo como fondo</b> de cajas y chips; nunca como color de texto ni de título. Detalle en §14.</p>
 <div class="grid g4">
   <div class="sw"><div class="c" style="background:#C62828;color:#fff">#C62828</div><div class="i"><b>Crítica</b><span><code>--sev-critical</code> · texto blanco</span></div></div>
   <div class="sw"><div class="c" style="background:#E8720C;color:#fff">#E8720C</div><div class="i"><b>Alta</b><span><code>--sev-high</code> · texto blanco</span></div></div>
   <div class="sw"><div class="c" style="background:#F2C230;color:#101826">#F2C230</div><div class="i"><b>Media</b><span><code>--sev-medium</code> · texto #101826</span></div></div>
-  <div class="sw"><div class="c" style="background:#2E7D32;color:#fff">#2E7D32</div><div class="i"><b>Baja</b><span><code>--sev-low</code> · solo como referencia en resúmenes</span></div></div>
+  <div class="sw"><div class="c" style="background:#2E7D32;color:#fff">#2E7D32</div><div class="i"><b>Baja</b><span><code>--sev-low</code> · solo referencia</span></div></div>
 </div>
 <h3>Colores no aceptados</h3>
-<div class="dd"><div class="no"><h4>Nunca</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cualquier valor fuera de los 21 de esta sección (otros azules, morados, verdes brillantes, negro puro #000000, grises "a ojo").</li><li>Degradados, salvo el botón del sitio público (§16) y el fondo radial de la pantalla de acceso.</li><li>El cian neón #00D4FF en producto o documentos.</li><li>Colores semánticos como decoración, como fondo de sección o en botones primarios.</li><li>Texto en #969AA2, en color de severidad o en color semántico sin su fondo.</li><li>Colores de severidad para estados de la interfaz, ni semánticos para severidad.</li></ul></div>
-<div class="ok"><h4>Regla del acento</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Un botón primario por pantalla; el resto del azul acero va en enlaces, eyebrow, foco, la entrada activa del menú y las cabeceras de tabla.</li><li>Los semánticos solo para estado (correcto, aviso, error) y siempre con texto o icono, nunca color solo.</li><li>La severidad solo para riesgo, en caja o chip.</li><li>Todo texto con contraste ≥ 4.5:1 (verificado en esta paleta).</li><li>Un solo fondo oscuro por pantalla.</li></ul></div></div>
+<div class="dd"><div class="no"><h4>Nunca</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cualquier color fuera de esta sección (naranjas, morados, verdes brillantes, negro puro #000000).</li><li>Degradados, salvo el botón del sitio público (§16).</li><li>El cian neón #00D4FF en producto o documentos.</li><li>Colores semánticos como decoración o como fondo de sección.</li><li>Texto en #969AA2 o en color de severidad.</li></ul></div>
+<div class="ok"><h4>Regla del acento</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Un botón primario por pantalla; el resto del azul acero va en enlaces, eyebrow y foco.</li><li>Los semánticos solo para estado (correcto, aviso, error).</li><li>La severidad solo para riesgo.</li><li>Todo texto con contraste ≥ 4.5:1 (verificado en esta paleta).</li></ul></div></div>
 <h3>Qué color lleva cada elemento</h3>
-<p class="t-bsm">Ordenado por frecuencia de uso: texto, fondos, elementos interactivos y datos.</p>
 <div class="tw"><table><tr><th>Elemento</th><th>Color</th><th>Token</th><th>Notas</th></tr>
-<tr><th colspan="4" style="text-align:left;background:var(--color-primary-soft);color:var(--color-primary)">Texto</th></tr>
+<tr><td>Título (H1–H3)</td><td>#101826</td><td><code>--color-text-primary</code></td><td>Sobre oscuro: #FFFFFF. Nunca en primario ni en semánticos.</td></tr>
+<tr><td>Subtítulo / lead</td><td>#4F535D</td><td><code>--color-text-secondary</code></td><td>Sobre oscuro: #C3CBD5.</td></tr>
+<tr><td>Eyebrow (etiqueta sobre el título)</td><td>#455E7C</td><td><code>--color-primary</code></td><td>Único texto en color primario además de enlaces. Sobre oscuro: #C3CBD5 (sitio público: cian).</td></tr>
 <tr><td>Cuerpo</td><td>#101826</td><td><code>--color-text-primary</code></td><td>Texto secundario en #4F535D.</td></tr>
-<tr><td>Título (H1–H4)</td><td>#101826</td><td><code>--color-text-primary</code></td><td>Sobre oscuro: #FFFFFF. Nunca en primario ni en semánticos. Ver §06.</td></tr>
-<tr><td>Subtítulo / lead</td><td>#4F535D</td><td><code>--color-text-secondary</code></td><td>Sobre oscuro: #C3CBD5. Ver §07.</td></tr>
-<tr><td>Eyebrow</td><td>#455E7C</td><td><code>--color-primary</code></td><td>Único texto en color primario además de enlaces. Sobre oscuro: #C3CBD5 (sitio público: cian).</td></tr>
 <tr><td>Caption / ayuda</td><td>#5A5E67</td><td><code>--silver-dark</code></td><td>No usar #969AA2 para texto que deba leerse.</td></tr>
-<tr><td>Placeholder / decorativo</td><td>#969AA2</td><td><code>--silver-medium</code></td><td>Placeholders, iconos inactivos, idioma no seleccionado.</td></tr>
 <tr><td>Enlace</td><td>#455E7C</td><td><code>--color-primary</code></td><td>Subrayado solo en hover; peso 500–600.</td></tr>
-<tr><th colspan="4" style="text-align:left;background:var(--color-primary-soft);color:var(--color-primary)">Fondos</th></tr>
-<tr><td>Página</td><td>#F7F8F8</td><td><code>--color-surface-alt</code></td><td>Ver §04.</td></tr>
-<tr><td>Tarjeta / tabla / formulario</td><td>#FFFFFF</td><td><code>--color-surface</code></td><td>Con borde #E6E7E8 o sombra suave.</td></tr>
-<tr><td>Portada, hero, cabecera de correo y PDF</td><td>fondo #030C18 · texto #FFFFFF</td><td><code>--color-primary-dark</code></td><td>Subtítulo en #C3CBD5.</td></tr>
-<tr><td>Cabecera de tabla</td><td>fondo #455E7C · texto #FFFFFF</td><td><code>--color-primary</code></td><td>Poppins 600, mayúsculas con tracking, centrada · 6.7:1 AA. Ver §08.</td></tr>
-<tr><td>Bordes / divisores</td><td>#E6E7E8</td><td><code>--color-border</code></td><td>1 px; nunca más gruesos salvo la barra superior de 4 px en tarjetas Sí/No.</td></tr>
-<tr><th colspan="4" style="text-align:left;background:var(--color-primary-soft);color:var(--color-primary)">Interactivos</th></tr>
 <tr><td>Botón primario</td><td>fondo #455E7C · texto #FFFFFF</td><td><code>--color-primary</code></td><td>Hover #3A506A, activo #2F4257. 6.7:1 AA.</td></tr>
 <tr><td>Botón outline</td><td>texto #455E7C · borde #C3CBD5</td><td><code>--color-primary-light</code></td><td>Hover fondo #ECEFF2, borde #455E7C.</td></tr>
 <tr><td>Botón destructivo</td><td>texto/borde #B3312C</td><td><code>--danger</code></td><td>Solo acciones irreversibles; siempre con confirmación.</td></tr>
-<tr><td>Menú: entrada activa / hover</td><td>#455E7C con texto blanco / #ECEFF2 con texto #455E7C</td><td><code>--color-primary</code> / <code>--color-primary-soft</code></td><td>Ver §05.</td></tr>
+<tr><td>Badge de estado</td><td>par semántico</td><td><code>--success/-bg</code> etc.</td><td>Texto ≥ 4.5:1 sobre su fondo (verificado).</td></tr>
 <tr><td>Foco de teclado</td><td>#455E7C, 2 px, offset 2–3 px</td><td><code>--color-primary</code></td><td>Obligatorio en todo elemento interactivo.</td></tr>
-<tr><td>Badge de estado</td><td>par semántico</td><td><code>--success/-bg</code> etc.</td><td>Texto ≥ 4.5:1 sobre su fondo (verificado). Un badge por celda.</td></tr>
-<tr><td>Alerta</td><td>par semántico</td><td><code>--*-bg</code></td><td>Título en negritas + una línea; icono de texto.</td></tr>
-<tr><th colspan="4" style="text-align:left;background:var(--color-primary-soft);color:var(--color-primary)">Datos</th></tr>
+<tr><td>Bordes / divisores</td><td>#E6E7E8</td><td><code>--color-border</code></td><td>1 px; nunca más gruesos salvo la barra superior de 4 px en tarjetas Do/Don't.</td></tr>
+<tr><td>Cabecera de correo y PDF</td><td>fondo #030C18 · texto #FFFFFF</td><td><code>--color-primary-dark</code></td><td>Subtítulo en #C3CBD5.</td></tr>
+<tr><td>Cabecera de tabla</td><td>fondo #ECEFF2 · texto #455E7C</td><td><code>--color-primary-soft</code></td><td>Poppins 600, mayúsculas con tracking, centrada. Ver §08.</td></tr>
 <tr><td>KPI / indicador</td><td>fondo #E9E9EA · texto #101826</td><td><code>--silver-light</code></td><td>Caja gris con número grande; nunca el KPI en color semántico. Ver §14.</td></tr>
-<tr><td>Severidad de vulnerabilidad</td><td>#C62828 · #E8720C · #F2C230 · #2E7D32</td><td><code>--sev-*</code></td><td>Crítica, alta, media y baja; siempre como fondo de caja o chip. Ver §14.</td></tr>
-<tr><td>Total / riesgo residual</td><td>fondo #030C18 · texto #FFFFFF</td><td><code>--color-primary-dark</code></td><td>Caja que cierra la fila de severidades. Ver §14.</td></tr>
-<tr><td>Series de gráfica</td><td>#455E7C, #1F7A4D, #C3CBD5</td><td><code>--color-primary</code>, <code>--success</code>, <code>--color-primary-light</code></td><td>Riesgo activo, remediados, barras secundarias. Severidad con su paleta. Ver §14–15.</td></tr></table></div>
+<tr><td>Severidad de vulnerabilidad</td><td>#C62828 · #E8720C · #F2C230 · #2E7D32</td><td><code>--sev-*</code></td><td>Crítica, alta, media y baja; siempre como fondo de caja o chip. Ver §14.</td></tr></table></div>
+
 <!-- ================================================================ TIPOGRAFÍA -->
 <h2 class="sec" id="tipo"><span class="n">02</span>Tipografía</h2>
 <p class="lead"><b>Poppins</b> para títulos, navegación, métricas y etiquetas de tabla; <b>Inter</b> para todo lo que se lee de corrido, formularios y botones; <b>JetBrains Mono</b> para IPs, identificadores, código y columnas numéricas. Ambas familias principales se cargan desde Google Fonts con fallback a <code>sans-serif</code>.</p>
@@ -231,7 +213,7 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <tr><td>Body MD</td><td>Inter 400</td><td>1rem (16 px)</td><td>1.60</td><td>0</td><td>Oración</td><td>#101826</td><td>Texto base</td></tr>
 <tr><td>Body SM</td><td>Inter 400</td><td>0.9rem (14.4 px)</td><td>1.55</td><td>0</td><td>Oración</td><td>#4F535D</td><td>Descripciones en tarjetas y tablas compactas</td></tr>
 <tr><td>Caption</td><td>Inter 400</td><td>0.8rem (12.8 px)</td><td>1.50</td><td>0</td><td>Oración</td><td>#5A5E67</td><td>Ayudas de campo, pies de figura, metadatos</td></tr>
-<tr><td>Etiqueta de tabla</td><td>Poppins 600</td><td>0.72rem</td><td>1.4</td><td>+0.06em</td><td><b>MAYÚSCULAS</b></td><td>#FFFFFF sobre #455E7C</td><td>Cabeceras de tabla (§08), centradas</td></tr>
+<tr><td>Etiqueta de tabla</td><td>Poppins 600</td><td>0.72rem</td><td>1.4</td><td>+0.06em</td><td><b>MAYÚSCULAS</b></td><td>#455E7C</td><td>Cabeceras de tabla (§08), centradas</td></tr>
 <tr><td>Botón</td><td>Inter 600</td><td>0.95rem</td><td>1.2</td><td>0</td><td>Oración</td><td>según variante</td><td>Producto y documentos (en el sitio público: mayúsculas, ver §16)</td></tr>
 <tr><td>Etiqueta de campo</td><td>Inter 500</td><td>0.92rem</td><td>1.4</td><td>0</td><td>Oración</td><td>#101826</td><td>Formularios</td></tr>
 <tr><td>Dato / código</td><td>JetBrains Mono 400</td><td>0.85–0.9rem</td><td>1.5</td><td>0</td><td>—</td><td>#101826</td><td>IPs, IDs, fechas, código</td></tr></table></div>
@@ -282,7 +264,7 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
   <div class="sw"><div class="c" style="background:#F7F8F8;color:#101826;border-bottom:1px solid #E6E7E8">#F7F8F8</div><div class="i"><b>Fondo de página</b><span><code>--color-surface-alt</code> · el lienzo de toda aplicación y documento HTML; también hover de fila en tablas.</span></div></div>
   <div class="sw"><div class="c" style="background:#FFFFFF;color:#101826;border-bottom:1px solid #E6E7E8">#FFFFFF</div><div class="i"><b>Superficie</b><span><code>--color-surface</code> · tarjetas, formularios, tablas, modales y el cuerpo de PDF. Siempre con borde #E6E7E8 o sombra suave, nunca "flotando" sin límite.</span></div></div>
   <div class="sw"><div class="c" style="background:#030C18;color:#fff">#030C18</div><div class="i"><b>Portada / cabecera</b><span><code>--color-primary-dark</code> · heros, portadas de manuales y reportes, cabecera de correo y PDF, pantalla de acceso, KPI héroe. Texto blanco y subtítulo #C3CBD5.</span></div></div>
-  <div class="sw"><div class="c" style="background:#ECEFF2;color:#455E7C">#ECEFF2</div><div class="i"><b>Énfasis suave</b><span><code>--color-primary-soft</code> · badges primarios, hover de menú, alertas informativas, notas.</span></div></div>
+  <div class="sw"><div class="c" style="background:#ECEFF2;color:#455E7C">#ECEFF2</div><div class="i"><b>Énfasis suave</b><span><code>--color-primary-soft</code> · cabeceras de tabla, badges primarios, hover de menú, alertas informativas, notas.</span></div></div>
   <div class="sw"><div class="c" style="background:#E9E9EA;color:#101826">#E9E9EA</div><div class="i"><b>Indicador (KPI)</b><span><code>--silver-light</code> · cajas de indicadores con número grande. Solo para KPIs; no como fondo de sección.</span></div></div>
   <div class="sw"><div class="c" style="background:linear-gradient(90deg,#E7F3EC 33%,#FDF2E2 33% 66%,#FBEAEA 66%);color:#101826">semánticos</div><div class="i"><b>Fondos de estado</b><span>#E7F3EC · #FDF2E2 · #FBEAEA solo en alertas y badges, nunca en bloques grandes.</span></div></div>
 </div>
@@ -292,9 +274,9 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <tr><td>Portada de documento / hero</td><td>#030C18</td><td>Logo en placa blanca (radio 8 px), eyebrow #C3CBD5, título blanco, lead #C3CBD5</td></tr>
 <tr><td>Pantalla de acceso</td><td>#030C18 con degradado radial sutil hacia #071524</td><td>Tarjeta blanca centrada de 440 px</td></tr>
 <tr><td>Correo HTML</td><td>Blanco</td><td>Cabecera #030C18 con radio 14 px arriba; cuerpo con borde #E6E7E8</td></tr>
-<tr><td>PDF</td><td>Blanco</td><td>Cabecera #030C18; tablas con cabecera #455E7C y texto blanco</td></tr>
+<tr><td>PDF</td><td>Blanco</td><td>Cabecera #030C18; tablas con cabecera #ECEFF2</td></tr>
 <tr><td>Resumen de riesgo</td><td>#F7F8F8</td><td>Fila de cajas grises #E9E9EA y fila de severidades (§14)</td></tr></table></div>
-<div class="dd"><div class="no"><h4>Fondos no aceptados</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Fotografías o texturas detrás de texto.</li><li>Degradados de color (salvo el acceso y el sitio público).</li><li>Negro puro #000000 o grises fuera de la paleta.</li><li>Color primario #455E7C como fondo de sección (solo botones, navegación activa, cabeceras de tabla y cajas neutras de datos).</li><li>Fondos de severidad o semánticos en bloques grandes.</li></ul></div>
+<div class="dd"><div class="no"><h4>Fondos no aceptados</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Fotografías o texturas detrás de texto.</li><li>Degradados de color (salvo el acceso y el sitio público).</li><li>Negro puro #000000 o grises fuera de la paleta.</li><li>Color primario #455E7C como fondo de sección (solo botones, navegación activa y cajas neutras de datos).</li><li>Fondos de severidad o semánticos en bloques grandes.</li></ul></div>
 <div class="ok"><h4>Siempre</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Texto #101826 sobre claros; blanco sobre #030C18.</li><li>Un solo fondo oscuro por pantalla (el hero o la portada).</li><li>Las superficies blancas llevan borde o sombra suave, no ambas.</li><li>Radio 20 px en tarjetas y heros, 14 px en tablas y alertas.</li></ul></div></div>
 
 <!-- ================================================================ MENÚS Y NAVEGACIÓN -->
@@ -375,7 +357,7 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <h3>Especificación</h3>
 <div class="tw"><table><tr><th>Parte</th><th>Regla</th></tr>
 <tr><td class="left"><b>Contenedor</b></td><td class="left">Dentro de una tarjeta blanca; envoltorio con <code>overflow-x: auto</code> para que la tabla pueda ser más ancha que la pantalla sin romper el diseño. Ancho 100 %. Radio 14 px con esquinas superiores en la cabecera.</td></tr>
-<tr><td class="left"><b>Cabecera</b></td><td class="left">Fondo <code>--color-primary</code> #455E7C · texto #FFFFFF (6.7:1 AA) · Poppins 600 · 0.72 rem · MAYÚSCULAS con tracking +0.06 em · <b>centrada</b> · padding 10 × 12 px · sin ajuste de línea (<code>white-space: nowrap</code>) · sin borde inferior. Sin sufijos ni abreviaturas entre paréntesis ("Severidad", no "Severidad (C / A / M)").</td></tr>
+<tr><td class="left"><b>Cabecera</b></td><td class="left">Fondo <code>--color-primary-soft</code> #ECEFF2 · texto <code>--color-primary</code> #455E7C · Poppins 600 · 0.72 rem · MAYÚSCULAS con tracking +0.06 em · <b>centrada</b> · padding 10 × 12 px · sin ajuste de línea (<code>white-space: nowrap</code>) · borde inferior 1 px #E6E7E8. Sin sufijos ni abreviaturas entre paréntesis ("Severidad", no "Severidad (C / A / M)").</td></tr>
 <tr><td class="left"><b>Celdas</b></td><td class="left">Inter 400 · 0.9 rem · #101826 · padding 10 × 12 px · alineadas al centro horizontal y vertical. Excepción: textos largos (nombre de vulnerabilidad, sistema operativo, descripciones, notas) alineados a la izquierda (<code>td.left</code>).</td></tr>
 <tr><td class="left"><b>Identificadores</b></td><td class="left">Mes, IP y hostname en <b>negritas</b>; fechas, IPs, hashes e IDs en JetBrains Mono. Texto secundario de la celda (quién cargó, fecha) en caption #5A5E67 debajo del dato principal.</td></tr>
 <tr><td class="left"><b>Números</b></td><td class="left"><code>font-variant-numeric: tabular-nums</code>; centrados como el resto. Porcentajes con un decimal (69.6 %).</td></tr>
@@ -387,8 +369,8 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <tr><td class="left"><b>Vacío</b></td><td class="left">Una fila con texto en #5A5E67 ("Aún no hay escaneos cargados."), nunca una tabla sin filas ni un mensaje fuera de la tabla.</td></tr>
 <tr><td class="left"><b>Compacta</b></td><td class="left">Para tablas secundarias y modales: padding 7 × 8 px, 0.85 rem. Mismas reglas de cabecera.</td></tr>
 <tr><td class="left"><b>Reporte HTML</b></td><td class="left">Idéntica; tipografía con fallback Segoe UI/Arial; chips y badges como en pantalla.</td></tr>
-<tr><td class="left"><b>PDF</b></td><td class="left">Cabecera #455E7C con texto blanco en 9 px mayúsculas; celdas 9 px; chips de severidad como pastillas de 8 px. Las tablas no se cortan entre páginas si caben en una.</td></tr></table></div>
-<div class="dd"><div class="no"><h4>No</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cabeceras alineadas a la izquierda, en gris claro o en tipo oración.</li><li>Números a la derecha con textos centrados: toda la tabla comparte alineación.</li><li>Columnas C / A / M separadas en texto plano; siempre chips.</li><li>Dos badges o un botón primario dentro de una celda.</li><li>Tablas dentro de rejillas estrechas (comprimen las columnas); ocupan el ancho completo.</li></ul></div>
+<tr><td class="left"><b>PDF</b></td><td class="left">Cabecera #ECEFF2 / #455E7C en 9 px mayúsculas; celdas 9 px; chips de severidad como pastillas de 8 px. Las tablas no se cortan entre páginas si caben en una.</td></tr></table></div>
+<div class="dd"><div class="no"><h4>No</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cabeceras alineadas a la izquierda, en gris o en tipo oración.</li><li>Números a la derecha con textos centrados: toda la tabla comparte alineación.</li><li>Columnas C / A / M separadas en texto plano; siempre chips.</li><li>Dos badges o un botón primario dentro de una celda.</li><li>Tablas dentro de rejillas estrechas (comprimen las columnas); ocupan el ancho completo.</li></ul></div>
 <div class="ok"><h4>Sí</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Título de la tabla en H2/H3 encima, dentro de la misma tarjeta.</li><li>Cabeceras cortas (1–2 palabras) y sin abreviaturas ambiguas.</li><li>Datos técnicos en monoespaciada; identificadores en negritas.</li><li>Botón "Abrir" como enlace de fila; la fila no es clicable completa.</li></ul></div></div>
 
 <!-- ================================================================ BOTONES, BADGES, ALERTAS Y TARJETAS -->
@@ -605,7 +587,7 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 /* Fuentes */
 &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;</code></pre>
 <h3>Lista de verificación antes de publicar</h3>
-<ul><li>¿Un solo botón primario por vista y el acento en pocos lugares?</li><li>¿Cabeceras de tabla en primario con texto blanco, centradas (§08), y severidades solo con la paleta de §01/§14?</li><li>¿Títulos en tipo oración, eyebrows y cabeceras de tabla en mayúsculas con tracking, acentos incluidos?</li><li>¿Texto auxiliar en #5A5E67 (no #969AA2) y contraste ≥ 4.5:1 en todo lo legible?</li><li>¿Foco visible en todo lo interactivo, alt en imágenes, tabla equivalente para cada gráfica?</li><li>¿Espaciado por tokens y rejillas que no aplastan columnas en móvil (gutter ≥ 16 px)?</li><li>¿Mensajes que dicen qué pasó y qué hacer, sin jerga ni anglicismos innecesarios?</li></ul>
+<ul><li>¿Un solo botón primario por vista y el acento en pocos lugares?</li><li>¿Cabeceras de tabla en Primary soft, centradas (§08), y severidades solo con la paleta de §01/§14?</li><li>¿Títulos en tipo oración, eyebrows y cabeceras de tabla en mayúsculas con tracking, acentos incluidos?</li><li>¿Texto auxiliar en #5A5E67 (no #969AA2) y contraste ≥ 4.5:1 en todo lo legible?</li><li>¿Foco visible en todo lo interactivo, alt en imágenes, tabla equivalente para cada gráfica?</li><li>¿Espaciado por tokens y rejillas que no aplastan columnas en móvil (gutter ≥ 16 px)?</li><li>¿Mensajes que dicen qué pasó y qué hacer, sin jerga ni anglicismos innecesarios?</li></ul>
 
-<footer><span>© 2026 Infosec México · Sistema de diseño v3.1</span><span>Fuente: infosecmexico-brand/design-system.html</span></footer>
+<footer><span>© 2026 Infosec México · Sistema de diseño v3.0</span><span>Fuente: infosecmexico-brand/design-system.html</span></footer>
 </div>
