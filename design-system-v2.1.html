@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* =====================================================================
-   INFOSEC MÉXICO · SISTEMA DE DISEÑO v3.0 — tokens
+   INFOSEC MÉXICO · SISTEMA DE DISEÑO v2.1 — tokens
    ===================================================================== */
 :root{
   /* Marca */
@@ -63,7 +63,7 @@ pre{background:#0B1B2B;color:#DCE6F0;padding:16px 18px;border-radius:var(--radiu
 .sw{border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface)}.sw .c{height:84px;display:flex;align-items:flex-end;padding:10px;font-family:var(--font-mono);font-size:.78rem}.sw .i{padding:10px 12px;font-size:.85rem}.sw .i b{display:block;font-family:var(--font-display);font-weight:600}.sw .i span{color:var(--color-text-secondary);font-size:.8rem}
 /* Tablas */
 .tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;margin:var(--space-12) 0 var(--space-24)}
-th{text-align:center;font-family:var(--font-display);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);padding:10px 12px;background:var(--color-primary-soft)}td{padding:10px 12px;border-top:1px solid var(--color-border);vertical-align:middle}td.left{text-align:left}table.centered td{text-align:center}table.centered .sev-chips{justify-content:center}
+th{text-align:center;font-family:var(--font-display);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);padding:10px 12px;background:var(--color-primary-soft)}td{padding:10px 12px;border-top:1px solid var(--color-border);vertical-align:middle}td.left{text-align:left}
 /* Severidad (datos de seguridad) */
 .sev-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin:var(--space-12) 0 var(--space-16)}.sev-box{border-radius:var(--radius-md);padding:12px 8px;text-align:center;color:#fff;font-size:.8rem;font-weight:600}.sev-box .n{display:block;font-family:var(--font-display);font-size:1.6rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}.sev-box.crit{background:#C62828}.sev-box.high{background:#E8720C}.sev-box.med{background:#F2C230;color:#101826}.sev-box.low{background:#2E7D32}.sev-box.dark{background:var(--color-primary-dark)}.sev-box.neutral{background:var(--color-primary)}.sev-box.gray{background:#E9E9EA;color:#101826}
 .sev-chips{display:inline-flex;gap:6px;align-items:center}.sev-chips .chip{display:inline-flex;align-items:center;justify-content:center;min-width:40px;padding:3px 10px;border-radius:var(--radius-pill);font-family:var(--font-display);font-weight:700;font-size:.82rem;color:#fff;border:0}.sev-chips .chip.crit{background:#C62828}.sev-chips .chip.high{background:#E8720C}.sev-chips .chip.med{background:#F2C230;color:#101826}.sev-chips .chip.low{background:#2E7D32}
@@ -123,21 +123,39 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 </style>
 
 <nav class="nav"><div class="nav-in"><img src="logo.png" alt="Infosec México">
-<ul class="nav-links"><li><a href="#color">Colores</a></li><li><a href="#tipo">Tipografía</a></li><li><a href="#logo">Logotipo</a></li><li><a href="#fondos">Fondos</a></li><li><a href="#menus">Menús</a></li><li><a href="#titulos">Títulos</a></li><li><a href="#subtitulos">Subtítulos</a></li><li><a href="#tablas">Tablas</a></li><li><a href="#comp">Componentes</a></li><li><a href="#forms">Formularios</a></li><li><a href="#espacio">Espaciado</a></li><li><a href="#redaccion">Redacción</a></li><li><a href="#producto">Producto</a></li><li><a href="#vulns">Vulnerabilidades</a></li><li><a href="#datos">Datos</a></li><li><a href="#dark">Sitio oscuro</a></li><li><a href="#tokens">Tokens</a></li></ul></div></nav>
+<ul class="nav-links"><li><a href="#marca">Marca</a></li><li><a href="#color">Color</a></li><li><a href="#tipo">Tipografía</a></li><li><a href="#redaccion">Redacción</a></li><li><a href="#espacio">Espaciado</a></li><li><a href="#comp">Componentes</a></li><li><a href="#forms">Formularios</a></li><li><a href="#producto">Producto</a></li><li><a href="#layouts">Layouts</a></li><li><a href="#dark">Sitio oscuro</a></li><li><a href="#datos">Datos</a></li><li><a href="#vulns">Vulnerabilidades</a></li><li><a href="#tokens">Tokens</a></li></ul></div></nav>
 
 <div class="wrap">
 <header class="hero">
   <img src="logo.png" alt="Infosec México">
-  <p class="eyebrow">Identidad corporativa · Sistema de diseño v3.0</p>
+  <p class="eyebrow">Identidad corporativa · Sistema de diseño v2.1</p>
   <h1>Sistema de diseño de Infosec México</h1>
-  <p>Una sola fuente de verdad para color, tipografía, logotipo, fondos, navegación, títulos, tablas y componentes, en producto (IPStrike, VulnManagement y los sistemas que vengan), documentos y sitio. Cada regla incluye el valor exacto, cuándo usarlo y qué evitar.</p>
-  <div class="meta"><span>Versión <b>3.0</b></span><span>Fecha <b>15 de septiembre de 2026</b></span><span>Sustituye a <b>v2.1</b></span><span>Ámbito <b>web · producto · documentos</b></span></div>
+  <p>Una sola fuente de verdad para marca, color, tipografía, redacción y componentes, en sitios de marketing y en producto (IPStrike y los sistemas que vengan). Cada regla incluye el valor exacto, cuándo usarlo y qué evitar.</p>
+  <div class="meta"><span>Versión <b>2.1</b></span><span>Fecha <b>15 de septiembre de 2026</b></span><span>Sustituye a <b>design_system2 (v1)</b></span><span>Ámbito <b>web · producto · documentos</b></span></div>
 </header>
 
+<!-- ================================================================ MARCA -->
+<h2 class="sec" id="marca"><span class="n">01</span>Marca y logotipo</h2>
+<p class="lead">El logotipo combina el isotipo de anillos concéntricos (radar) con el wordmark "INFOSEC MÉXICO". Transmite vigilancia continua y precisión; el tratamiento visual del resto del sistema debe respetar esa sobriedad.</p>
+<div class="grid g3">
+  <div class="logo-box"><img src="logo.png" alt="Logotipo sobre fondo claro"></div>
+  <div class="logo-box dark"><img src="logo.png" alt="Logotipo sobre fondo oscuro, en placa blanca"></div>
+  <div class="logo-box grid-bg"><img src="logo.png" alt="Área de protección"></div>
+</div>
+<div class="grid g2" style="margin-top:var(--space-24)">
+  <div class="card"><h3 style="margin-top:0">Reglas de uso</h3>
+  <ul><li><b>Área de protección:</b> alrededor del logotipo deja libre, como mínimo, la altura del isotipo (el anillo exterior) por cada lado.</li>
+  <li><b>Tamaño mínimo:</b> 28 px de alto en interfaces (barra de navegación), 44 px en portadas y documentos; 20 mm en impresión.</li>
+  <li><b>Sobre fondos oscuros o fotografías:</b> colócalo en una placa blanca con radio de 8 px (como en el hero de este documento) o usa la versión monocroma blanca cuando se disponga.</li>
+  <li><b>Alineación:</b> a la izquierda en navegación y documentos; centrado solo en pantallas de acceso y portadas.</li>
+  <li><b>Formato:</b> PNG con transparencia para pantalla; SVG cuando exista para impresión y escalado.</li></ul></div>
+  <div class="dd"><div class="no"><h4>Nunca</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cambiar los colores del isotipo o del wordmark.</li><li>Estirar, inclinar o rotar.</li><li>Aplicar sombras, degradados o contornos.</li><li>Colocarlo directamente sobre fondos con poco contraste.</li><li>Recrear el wordmark con otra tipografía.</li></ul></div>
+  <div class="ok"><h4>Siempre</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Usar el archivo original sin modificaciones.</li><li>Mantener la proporción.</li><li>Verificar contraste con el fondo.</li><li>Acompañarlo del nombre en texto en documentos largos ("Infosec México").</li></ul></div></div>
+</div>
 
-<!-- ================================================================ COLORES ACEPTADOS -->
-<h2 class="sec" id="color"><span class="n">01</span>Colores aceptados</h2>
-<p class="lead">Estos son los únicos colores aceptados en producto, documentos y comunicaciones (el sitio público tiene su variante en §16). El azul acero <code>#455E7C</code> es el color de acción y énfasis; el azul profundo <code>#030C18</code> da autoridad a portadas y cabeceras; los neutros sostienen la lectura. Los colores semánticos se reservan para estado y nunca se usan como decoración.</p>
+<!-- ================================================================ COLOR -->
+<h2 class="sec" id="color"><span class="n">02</span>Color</h2>
+<p class="lead">El azul acero <code>#455E7C</code> es el color de acción y énfasis; el azul profundo <code>#030C18</code> da autoridad a portadas y cabeceras; los neutros sostienen la lectura. Los colores semánticos se reservan para estado y nunca se usan como decoración.</p>
 <h3>Paleta de marca</h3>
 <div class="grid g4">
   <div class="sw"><div class="c" style="background:#455E7C;color:#fff">#455E7C</div><div class="i"><b>Primary</b><span>Botones primarios, enlaces, eyebrows, foco, iconos activos</span></div></div>
@@ -163,17 +181,6 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
   <div class="sw"><div class="c" style="background:#FBEAEA;color:#B3312C">#B3312C / #FBEAEA</div><div class="i"><b>Danger</b><span>Error, bloqueo, revocado, eliminar</span></div></div>
   <div class="sw"><div class="c" style="background:#ECEFF2;color:#455E7C">#455E7C / #ECEFF2</div><div class="i"><b>Info</b><span>Información neutra (usa el primario)</span></div></div>
 </div>
-<h3>Severidad de vulnerabilidades</h3>
-<p class="t-bsm">Paleta propia para datos de riesgo (VulnManagement). Se usa <b>solo como fondo</b> de cajas y chips; nunca como color de texto ni de título. Detalle en §14.</p>
-<div class="grid g4">
-  <div class="sw"><div class="c" style="background:#C62828;color:#fff">#C62828</div><div class="i"><b>Crítica</b><span><code>--sev-critical</code> · texto blanco</span></div></div>
-  <div class="sw"><div class="c" style="background:#E8720C;color:#fff">#E8720C</div><div class="i"><b>Alta</b><span><code>--sev-high</code> · texto blanco</span></div></div>
-  <div class="sw"><div class="c" style="background:#F2C230;color:#101826">#F2C230</div><div class="i"><b>Media</b><span><code>--sev-medium</code> · texto #101826</span></div></div>
-  <div class="sw"><div class="c" style="background:#2E7D32;color:#fff">#2E7D32</div><div class="i"><b>Baja</b><span><code>--sev-low</code> · solo referencia</span></div></div>
-</div>
-<h3>Colores no aceptados</h3>
-<div class="dd"><div class="no"><h4>Nunca</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cualquier color fuera de esta sección (naranjas, morados, verdes brillantes, negro puro #000000).</li><li>Degradados, salvo el botón del sitio público (§16).</li><li>El cian neón #00D4FF en producto o documentos.</li><li>Colores semánticos como decoración o como fondo de sección.</li><li>Texto en #969AA2 o en color de severidad.</li></ul></div>
-<div class="ok"><h4>Regla del acento</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Un botón primario por pantalla; el resto del azul acero va en enlaces, eyebrow y foco.</li><li>Los semánticos solo para estado (correcto, aviso, error).</li><li>La severidad solo para riesgo.</li><li>Todo texto con contraste ≥ 4.5:1 (verificado en esta paleta).</li></ul></div></div>
 <h3>Qué color lleva cada elemento</h3>
 <div class="tw"><table><tr><th>Elemento</th><th>Color</th><th>Token</th><th>Notas</th></tr>
 <tr><td>Título (H1–H3)</td><td>#101826</td><td><code>--color-text-primary</code></td><td>Sobre oscuro: #FFFFFF. Nunca en primario ni en semánticos.</td></tr>
@@ -189,19 +196,20 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <tr><td>Foco de teclado</td><td>#455E7C, 2 px, offset 2–3 px</td><td><code>--color-primary</code></td><td>Obligatorio en todo elemento interactivo.</td></tr>
 <tr><td>Bordes / divisores</td><td>#E6E7E8</td><td><code>--color-border</code></td><td>1 px; nunca más gruesos salvo la barra superior de 4 px en tarjetas Do/Don't.</td></tr>
 <tr><td>Cabecera de correo y PDF</td><td>fondo #030C18 · texto #FFFFFF</td><td><code>--color-primary-dark</code></td><td>Subtítulo en #C3CBD5.</td></tr>
-<tr><td>Cabecera de tabla</td><td>fondo #ECEFF2 · texto #455E7C</td><td><code>--color-primary-soft</code></td><td>Poppins 600, mayúsculas con tracking, centrada. Ver §08.</td></tr>
-<tr><td>KPI / indicador</td><td>fondo #E9E9EA · texto #101826</td><td><code>--silver-light</code></td><td>Caja gris con número grande; nunca el KPI en color semántico. Ver §14.</td></tr>
-<tr><td>Severidad de vulnerabilidad</td><td>#C62828 · #E8720C · #F2C230 · #2E7D32</td><td><code>--sev-*</code></td><td>Crítica, alta, media y baja; siempre como fondo de caja o chip. Ver §14.</td></tr></table></div>
+<tr><td>Cabecera de tabla</td><td>fondo #ECEFF2 · texto #455E7C</td><td><code>--color-primary-soft</code></td><td>Poppins 600, mayúsculas con tracking, centrada. Ver §12.</td></tr>
+<tr><td>KPI / indicador</td><td>fondo #E9E9EA · texto #101826</td><td><code>--silver-light</code></td><td>Caja gris con número grande; nunca el KPI en color semántico. Ver §12.</td></tr>
+<tr><td>Severidad de vulnerabilidad</td><td>#C62828 · #E8720C · #F2C230 · #2E7D32</td><td><code>--sev-*</code></td><td>Crítica, alta, media y baja; siempre como fondo de caja o chip. Ver §12.</td></tr></table></div>
+<div class="alert alert-info"><span class="ic">i</span><div><b>Regla del acento</b>El primario aparece en pocos lugares por pantalla: un botón principal, enlaces, el eyebrow y el foco. Si todo es azul, nada destaca. Los semánticos nunca sustituyen al primario en botones.</div></div>
 
 <!-- ================================================================ TIPOGRAFÍA -->
-<h2 class="sec" id="tipo"><span class="n">02</span>Tipografía</h2>
+<h2 class="sec" id="tipo"><span class="n">03</span>Tipografía</h2>
 <p class="lead"><b>Poppins</b> para títulos, navegación, métricas y etiquetas de tabla; <b>Inter</b> para todo lo que se lee de corrido, formularios y botones; <b>JetBrains Mono</b> para IPs, identificadores, código y columnas numéricas. Ambas familias principales se cargan desde Google Fonts con fallback a <code>sans-serif</code>.</p>
 <div class="grid g3">
   <div class="card"><p class="eyebrow">Display</p><div class="t-hlg" style="font-family:var(--font-display)">Poppins</div><p class="t-bsm">Pesos 500, 600, 700 y 800. Geométrica y firme: encabezados, navegación, KPIs, cabeceras de tabla y botones de portada.</p></div>
   <div class="card"><p class="eyebrow">Cuerpo</p><div class="t-hlg" style="font-family:var(--font-body)">Inter</div><p class="t-bsm">Pesos 400, 500, 600 y 700. Lectura continua, formularios, botones de producto, tablas, correo.</p></div>
   <div class="card"><p class="eyebrow">Datos</p><div class="t-hlg" style="font-family:var(--font-mono)">JetBrains Mono</div><p class="t-bsm">Peso 400 y 500. IPs, CIDR, Rule ID, hashes, fechas en tablas, código. Fallback: <code>ui-monospace, Menlo</code>.</p></div>
 </div>
-<h3>Escala completa</h3><p class="t-bsm">Los títulos se detallan en §06 y los subtítulos en §07; esta tabla es la referencia rápida de todos los estilos.</p>
+<h3>Escala y especificación</h3>
 <div class="tw"><table><tr><th>Estilo</th><th>Familia · peso</th><th>Tamaño</th><th>Interlínea</th><th>Tracking</th><th>Caja</th><th>Color</th><th>Uso</th></tr>
 <tr><td>Display XL</td><td>Poppins 800</td><td>clamp(2.6rem, 5vw, 3.75rem)</td><td>1.05</td><td>−0.02em</td><td>Oración</td><td>#101826 / #FFF</td><td>Titular de portada del sitio</td></tr>
 <tr><td>Display LG</td><td>Poppins 700</td><td>clamp(2.1rem, 4vw, 2.75rem)</td><td>1.10</td><td>−0.015em</td><td>Oración</td><td>#101826 / #FFF</td><td>Título de sección de marketing, portada de documentos</td></tr>
@@ -213,8 +221,8 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <tr><td>Body MD</td><td>Inter 400</td><td>1rem (16 px)</td><td>1.60</td><td>0</td><td>Oración</td><td>#101826</td><td>Texto base</td></tr>
 <tr><td>Body SM</td><td>Inter 400</td><td>0.9rem (14.4 px)</td><td>1.55</td><td>0</td><td>Oración</td><td>#4F535D</td><td>Descripciones en tarjetas y tablas compactas</td></tr>
 <tr><td>Caption</td><td>Inter 400</td><td>0.8rem (12.8 px)</td><td>1.50</td><td>0</td><td>Oración</td><td>#5A5E67</td><td>Ayudas de campo, pies de figura, metadatos</td></tr>
-<tr><td>Etiqueta de tabla</td><td>Poppins 600</td><td>0.72rem</td><td>1.4</td><td>+0.06em</td><td><b>MAYÚSCULAS</b></td><td>#455E7C</td><td>Cabeceras de tabla (§08), centradas</td></tr>
-<tr><td>Botón</td><td>Inter 600</td><td>0.95rem</td><td>1.2</td><td>0</td><td>Oración</td><td>según variante</td><td>Producto y documentos (en el sitio público: mayúsculas, ver §16)</td></tr>
+<tr><td>Etiqueta de tabla</td><td>Poppins 600</td><td>0.72rem</td><td>1.4</td><td>+0.06em</td><td><b>MAYÚSCULAS</b></td><td>#4F535D</td><td>Cabeceras de tabla y de listas de datos</td></tr>
+<tr><td>Botón</td><td>Inter 600</td><td>0.95rem</td><td>1.2</td><td>0</td><td>Oración</td><td>según variante</td><td>Producto y documentos (en el sitio público: mayúsculas, ver §10)</td></tr>
 <tr><td>Etiqueta de campo</td><td>Inter 500</td><td>0.92rem</td><td>1.4</td><td>0</td><td>Oración</td><td>#101826</td><td>Formularios</td></tr>
 <tr><td>Dato / código</td><td>JetBrains Mono 400</td><td>0.85–0.9rem</td><td>1.5</td><td>0</td><td>—</td><td>#101826</td><td>IPs, IDs, fechas, código</td></tr></table></div>
 <h3>Especímenes</h3>
@@ -231,222 +239,9 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
   <div class="spec"><div class="l"><b>Caption</b>Inter 400 · 12.8 px</div><div class="t-cap">IPv4 /16 /24 o host · IPv6 /32 /48 /64 o host. Se rechazan rangos privados.</div></div>
   <div class="spec"><div class="l"><b>Dato</b>JetBrains Mono 400</div><div class="t-mono">203.0.113.45 · 2026-09-14 01:45:49 · 311bbedd9b81427e99c8bafdca5e11c7</div></div>
 </div>
-<h3>Reglas generales</h3>
-<ul><li><b>Tres familias y nada más:</b> Poppins (display), Inter (cuerpo), JetBrains Mono (datos). No se aceptan otras fuentes en producto ni en documentos; el sitio público añade Space Grotesk solo para display (§16).</li>
-<li><b>Pesos permitidos:</b> Poppins 500/600/700/800; Inter 400/500/600/700; JetBrains Mono 400/500. Nada de itálicas como estilo de marca (solo para citas o términos extranjeros).</li>
-<li><b>Carga:</b> Google Fonts con <code>display=swap</code> y fallback <code>system-ui, sans-serif</code> / <code>ui-monospace, Menlo</code>. En PDF generados por servidor (dompdf) se usa DejaVu Sans como sustituto.</li>
-<li><b>Tamaño mínimo legible:</b> 12.8 px (caption). Nunca texto menor, salvo etiquetas de gráfica (10–11 px) que no son texto de lectura.</li>
-<li><b>Ancho de lectura:</b> 60–72 caracteres por línea en párrafos; los títulos con <code>text-wrap: balance</code>.</li></ul>
 
-<!-- ================================================================ LOGOTIPO -->
-<h2 class="sec" id="logo"><span class="n">03</span>Logotipo</h2>
-<p class="lead">El logotipo combina el isotipo de anillos concéntricos (radar) con el wordmark "INFOSEC MÉXICO". Transmite vigilancia continua y precisión; el tratamiento visual del resto del sistema debe respetar esa sobriedad.</p>
-<div class="grid g3">
-  <div class="logo-box"><img src="logo.png" alt="Logotipo sobre fondo claro"></div>
-  <div class="logo-box dark"><img src="logo.png" alt="Logotipo sobre fondo oscuro, en placa blanca"></div>
-  <div class="logo-box grid-bg"><img src="logo.png" alt="Área de protección"></div>
-</div>
-<div class="grid g2" style="margin-top:var(--space-24)">
-  <div class="card"><h3 style="margin-top:0">Reglas de uso</h3>
-  <ul><li><b>Área de protección:</b> alrededor del logotipo deja libre, como mínimo, la altura del isotipo (el anillo exterior) por cada lado.</li>
-  <li><b>Tamaño mínimo:</b> 28 px de alto en interfaces (barra de navegación), 44 px en portadas y documentos; 20 mm en impresión.</li>
-  <li><b>Sobre fondos oscuros o fotografías:</b> colócalo en una placa blanca con radio de 8 px (como en el hero de este documento) o usa la versión monocroma blanca cuando se disponga.</li>
-  <li><b>Alineación:</b> a la izquierda en navegación y documentos; centrado solo en pantallas de acceso y portadas.</li>
-  <li><b>Formato:</b> PNG con transparencia para pantalla; SVG cuando exista para impresión y escalado.</li></ul></div>
-  <div class="dd"><div class="no"><h4>Nunca</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cambiar los colores del isotipo o del wordmark.</li><li>Estirar, inclinar o rotar.</li><li>Aplicar sombras, degradados o contornos.</li><li>Colocarlo directamente sobre fondos con poco contraste.</li><li>Recrear el wordmark con otra tipografía.</li></ul></div>
-  <div class="ok"><h4>Siempre</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Usar el archivo original sin modificaciones.</li><li>Mantener la proporción.</li><li>Verificar contraste con el fondo.</li><li>Acompañarlo del nombre en texto en documentos largos ("Infosec México").</li></ul></div></div>
-</div>
-
-<!-- ================================================================ FONDOS ACEPTADOS -->
-<h2 class="sec" id="fondos"><span class="n">04</span>Fondos aceptados</h2>
-<p class="lead">Solo cinco fondos existen en el sistema claro. Cada uno tiene un papel; combinarlos de otra forma rompe la jerarquía.</p>
-<div class="grid g3">
-  <div class="sw"><div class="c" style="background:#F7F8F8;color:#101826;border-bottom:1px solid #E6E7E8">#F7F8F8</div><div class="i"><b>Fondo de página</b><span><code>--color-surface-alt</code> · el lienzo de toda aplicación y documento HTML; también hover de fila en tablas.</span></div></div>
-  <div class="sw"><div class="c" style="background:#FFFFFF;color:#101826;border-bottom:1px solid #E6E7E8">#FFFFFF</div><div class="i"><b>Superficie</b><span><code>--color-surface</code> · tarjetas, formularios, tablas, modales y el cuerpo de PDF. Siempre con borde #E6E7E8 o sombra suave, nunca "flotando" sin límite.</span></div></div>
-  <div class="sw"><div class="c" style="background:#030C18;color:#fff">#030C18</div><div class="i"><b>Portada / cabecera</b><span><code>--color-primary-dark</code> · heros, portadas de manuales y reportes, cabecera de correo y PDF, pantalla de acceso, KPI héroe. Texto blanco y subtítulo #C3CBD5.</span></div></div>
-  <div class="sw"><div class="c" style="background:#ECEFF2;color:#455E7C">#ECEFF2</div><div class="i"><b>Énfasis suave</b><span><code>--color-primary-soft</code> · cabeceras de tabla, badges primarios, hover de menú, alertas informativas, notas.</span></div></div>
-  <div class="sw"><div class="c" style="background:#E9E9EA;color:#101826">#E9E9EA</div><div class="i"><b>Indicador (KPI)</b><span><code>--silver-light</code> · cajas de indicadores con número grande. Solo para KPIs; no como fondo de sección.</span></div></div>
-  <div class="sw"><div class="c" style="background:linear-gradient(90deg,#E7F3EC 33%,#FDF2E2 33% 66%,#FBEAEA 66%);color:#101826">semánticos</div><div class="i"><b>Fondos de estado</b><span>#E7F3EC · #FDF2E2 · #FBEAEA solo en alertas y badges, nunca en bloques grandes.</span></div></div>
-</div>
-<h3>Cómo se combinan</h3>
-<div class="tw"><table><tr><th>Contexto</th><th>Fondo</th><th>Encima</th></tr>
-<tr><td>Página de aplicación</td><td>#F7F8F8</td><td>Tarjetas blancas separadas 24 px; barra de navegación blanca translúcida</td></tr>
-<tr><td>Portada de documento / hero</td><td>#030C18</td><td>Logo en placa blanca (radio 8 px), eyebrow #C3CBD5, título blanco, lead #C3CBD5</td></tr>
-<tr><td>Pantalla de acceso</td><td>#030C18 con degradado radial sutil hacia #071524</td><td>Tarjeta blanca centrada de 440 px</td></tr>
-<tr><td>Correo HTML</td><td>Blanco</td><td>Cabecera #030C18 con radio 14 px arriba; cuerpo con borde #E6E7E8</td></tr>
-<tr><td>PDF</td><td>Blanco</td><td>Cabecera #030C18; tablas con cabecera #ECEFF2</td></tr>
-<tr><td>Resumen de riesgo</td><td>#F7F8F8</td><td>Fila de cajas grises #E9E9EA y fila de severidades (§14)</td></tr></table></div>
-<div class="dd"><div class="no"><h4>Fondos no aceptados</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Fotografías o texturas detrás de texto.</li><li>Degradados de color (salvo el acceso y el sitio público).</li><li>Negro puro #000000 o grises fuera de la paleta.</li><li>Color primario #455E7C como fondo de sección (solo botones, navegación activa y cajas neutras de datos).</li><li>Fondos de severidad o semánticos en bloques grandes.</li></ul></div>
-<div class="ok"><h4>Siempre</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Texto #101826 sobre claros; blanco sobre #030C18.</li><li>Un solo fondo oscuro por pantalla (el hero o la portada).</li><li>Las superficies blancas llevan borde o sombra suave, no ambas.</li><li>Radio 20 px en tarjetas y heros, 14 px en tablas y alertas.</li></ul></div></div>
-
-<!-- ================================================================ MENÚS Y NAVEGACIÓN -->
-<h2 class="sec" id="menus"><span class="n">05</span>Menús y navegación</h2>
-<p class="lead">La navegación de producto es una barra superior fija, blanca y sobria; la del sitio público es oscura (§16). No hay menús laterales ni desplegables: máximo seis entradas visibles por rol.</p>
-<div class="card" style="padding:0;overflow:hidden">
-  <div style="display:flex;align-items:center;gap:14px;padding:0 20px;height:68px;border-bottom:1px solid #E6E7E8;background:#fff;white-space:nowrap;overflow-x:auto;color:#101826">
-    <img src="logo.png" alt="Infosec México" style="height:28px">
-    <div style="display:flex;gap:4px;flex:1"><span style="padding:8px 14px;border-radius:999px;background:#455E7C;color:#fff;font-weight:500;font-size:.92rem">Escaneos</span><span style="padding:8px 14px;border-radius:999px;color:#4F535D;font-weight:500;font-size:.92rem">Clientes</span><span style="padding:8px 14px;border-radius:999px;background:#ECEFF2;color:#455E7C;font-weight:500;font-size:.92rem">Usuarios <small style="font-weight:400">(hover)</small></span><span style="padding:8px 14px;border-radius:999px;color:#4F535D;font-weight:500;font-size:.92rem">Estadísticas</span><span style="padding:8px 14px;border-radius:999px;color:#4F535D;font-weight:500;font-size:.92rem">Configuración</span></div>
-    <span style="display:flex;align-items:center;gap:10px;font-weight:600;font-size:.92rem;color:#101826;flex:0 0 auto"><span style="width:34px;height:34px;border-radius:50%;background:#455E7C;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600">A</span>Administrador VM <small style="color:#5A5E67;font-weight:400">Administrador</small></span>
-    <span style="font-size:.85rem;color:#969AA2"><b style="color:#455E7C;background:#ECEFF2;padding:4px 6px;border-radius:6px">ES</b> / EN</span>
-    <span class="btn btn-outline btn-sm">Salir</span>
-  </div>
-</div>
-<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Elemento</th><th>Especificación</th></tr>
-<tr><td>Barra</td><td>Altura 68 px, fija (<code>position: sticky</code>), fondo blanco al 92 % con desenfoque 10 px, borde inferior 1 px #E6E7E8. Contenedor 1180 px, gutter 24 px.</td></tr>
-<tr><td>Logotipo</td><td>28 px de alto, a la izquierda, enlaza al inicio.</td></tr>
-<tr><td>Entradas</td><td>Inter 500 · 0.92 rem · tipo oración, sustantivos ("Escaneos", "Clientes"). Padding 8 × 14 px, forma píldora, separación 4 px. Color #4F535D.</td></tr>
-<tr><td>Hover</td><td>Fondo #ECEFF2, texto #455E7C, transición 150 ms.</td></tr>
-<tr><td>Activa</td><td>Fondo #455E7C, texto blanco. Una sola activa; corresponde a la sección, no a la subpágina.</td></tr>
-<tr><td>Bloque de usuario</td><td>Avatar circular 34 px en #455E7C con inicial en Poppins 600; nombre en Inter 600 0.92 rem; rol en caption #5A5E67. Enlaza al perfil.</td></tr>
-<tr><td>Idioma</td><td>"ES / EN" en 0.85 rem; el activo en #455E7C sobre #ECEFF2 (radio 6 px).</td></tr>
-<tr><td>Salir</td><td>Botón outline pequeño, siempre al extremo derecho.</td></tr>
-<tr><td>Móvil (&lt; 900 px)</td><td>Botón hamburguesa; las entradas se despliegan en columna bajo la barra (fondo blanco, borde inferior). Nunca ocultar "Salir".</td></tr>
-<tr><td>Por rol</td><td>Cliente: Mi resumen · Pentester: Escaneos, Estadísticas · Manager: Escaneos · Administrador: Escaneos, Clientes, Usuarios, Estadísticas, Configuración. Lo que el rol no puede usar no se muestra.</td></tr></table></div>
-<div class="dd"><div class="no"><h4>No</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Menús desplegables, mega-menús o barra lateral.</li><li>Iconos junto a las entradas (solo texto).</li><li>Más de seis entradas; si hacen falta, es otra pantalla con pestañas (§13).</li><li>Mayúsculas en las entradas (solo el sitio público, §16).</li></ul></div>
-<div class="ok"><h4>Sí</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Orden fijo: primero la tarea principal del rol, al final la configuración.</li><li>Foco visible (anillo #455E7C 2 px) al navegar con teclado.</li><li>Navegación secundaria dentro de la página con eyebrow "← Volver" y pestañas.</li><li>En documentos y manuales: tabla de contenido enlazada al inicio y enlace "← Volver a mi perfil".</li></ul></div></div>
-
-<!-- ================================================================ TÍTULOS -->
-<h2 class="sec" id="titulos"><span class="n">06</span>Títulos</h2>
-<p class="lead">Todo título se compone en <b>Poppins</b>, tipo oración, color #101826 (blanco sobre fondo oscuro), sin punto final y con tracking ligeramente negativo. El tamaño lo decide el nivel, nunca la importancia subjetiva.</p>
-<div class="tw"><table><tr><th>Nivel</th><th>Uso</th><th>Fuente · peso</th><th>Tamaño</th><th>Interlínea</th><th>Tracking</th><th>Margen inferior</th></tr>
-<tr><td><b>Display XL</b></td><td>Titular de portada del sitio público</td><td>Poppins 800</td><td>clamp(2.6rem, 5vw, 3.75rem) · 41–60 px</td><td>1.05</td><td>−0.02 em</td><td>16 px</td></tr>
-<tr><td><b>Display LG</b></td><td>Portada de documentos (manuales, reportes), secciones de marketing</td><td>Poppins 700</td><td>clamp(2.1rem, 4vw, 2.75rem) · 34–44 px</td><td>1.10</td><td>−0.015 em</td><td>10 px</td></tr>
-<tr><td><b>H1 · Heading LG</b></td><td>Título de página en aplicaciones. Uno por pantalla.</td><td>Poppins 700</td><td>1.75 rem · 28 px</td><td>1.20</td><td>−0.01 em</td><td>4 px (sigue el lead)</td></tr>
-<tr><td><b>H2 · Heading MD</b></td><td>Sección dentro de la página; sección numerada en documentos</td><td>Poppins 600</td><td>1.375 rem · 22 px</td><td>1.25</td><td>−0.01 em</td><td>12 px (48 px arriba)</td></tr>
-<tr><td><b>H3 · Heading SM</b></td><td>Título de tarjeta, tabla, gráfica o bloque</td><td>Poppins 600</td><td>1.125 rem · 18 px</td><td>1.30</td><td>0</td><td>12 px</td></tr>
-<tr><td><b>H4 · título de gráfica</b></td><td>Encabezado de tarjeta de gráfica y de modal</td><td>Poppins 600</td><td>0.95 rem · 15 px</td><td>1.30</td><td>0</td><td>12 px</td></tr></table></div>
-<div class="card">
-  <div class="spec"><div class="l"><b>Display LG</b>Poppins 700 · portada</div><div class="t-dlg">Manual del Pentester</div></div>
-  <div class="spec"><div class="l"><b>H1</b>Poppins 700 · 28 px</div><div class="t-hlg">Escaneos por cliente</div></div>
-  <div class="spec"><div class="l"><b>H2</b>Poppins 600 · 22 px</div><div class="t-hmd">Escaneos mensuales</div></div>
-  <div class="spec"><div class="l"><b>H3</b>Poppins 600 · 18 px</div><div class="t-hsm">Activos evaluados</div></div>
-  <div class="spec"><div class="l"><b>H4</b>Poppins 600 · 15 px</div><div style="font-family:var(--font-display);font-weight:600;font-size:.95rem">Mitigación acumulada vs riesgo activo</div></div>
-</div>
-<h3>Anatomía de un encabezado de página</h3>
-<div class="card"><p class="eyebrow" style="margin:0 0 6px">← Escaneos</p><div class="t-hlg">Ventura <span class="badge badge-success" style="vertical-align:middle;margin-left:8px">Activo</span></div><p class="t-blg" style="margin:6px 0 0;font-size:1rem">Pentesters: Omar Robles · Contactos: contacto@cliente-demo.com</p></div>
-<ul style="margin-top:var(--space-12)"><li><b>Eyebrow</b> encima (contexto o enlace de retorno "← Sección"), <b>H1</b>, y debajo un <b>lead</b> de una línea en #4F535D. Un badge de estado puede acompañar al H1, alineado a la media altura y con 8 px de separación.</li>
-<li>Los H2 llevan 48 px de aire arriba y 12 px abajo; nunca dos títulos seguidos sin contenido entre ellos.</li>
-<li>Tipo oración con acentos; sin punto final; sin dos puntos; sin mayúsculas sostenidas; sin color primario ni semántico.</li>
-<li>Longitud: H1 hasta 6 palabras; H2/H3 hasta 8. Si necesita más, sobra un adjetivo.</li>
-<li>En documentos, los H2 se numeran con el prefijo <span style="font-size:.8rem;color:var(--color-primary);font-weight:600;letter-spacing:.06em">01</span> en Inter 600 0.8 rem primario, separado 14 px.</li></ul>
-
-<!-- ================================================================ SUBTÍTULOS -->
-<h2 class="sec" id="subtitulos"><span class="n">07</span>Subtítulos</h2>
-<p class="lead">Los subtítulos acompañan y explican; por eso van en <b>Inter</b> y en color secundario. Nunca compiten con el título.</p>
-<div class="tw"><table><tr><th>Estilo</th><th>Uso</th><th>Fuente · peso</th><th>Tamaño</th><th>Color</th><th>Caja</th></tr>
-<tr><td><b>Lead</b></td><td>Frase bajo el H1 o bajo un Display: qué es la pantalla o el documento</td><td>Inter 400</td><td>1.125 rem · 18 px (1 rem en aplicaciones)</td><td>#4F535D · #C3CBD5 sobre oscuro</td><td>Oración</td></tr>
-<tr><td><b>Eyebrow</b></td><td>Etiqueta corta encima del título: contexto, rol, ruta de retorno</td><td>Inter 600</td><td>0.75 rem · 12 px · tracking +0.08 em</td><td>#455E7C · #C3CBD5 sobre oscuro</td><td>MAYÚSCULAS</td></tr>
-<tr><td><b>Subtítulo de sección</b></td><td>Explicación bajo un H2 o H3</td><td>Inter 400</td><td>0.9 rem · 14.4 px</td><td>#4F535D</td><td>Oración</td></tr>
-<tr><td><b>Etiqueta de KPI</b></td><td>Nombre del indicador bajo la cifra</td><td>Inter 600</td><td>0.8 rem</td><td>#101826 (caja gris) · #fff (caja de color)</td><td>Oración</td></tr>
-<tr><td><b>Pie / caption</b></td><td>Ayuda de campo, pie de figura, metadatos, notas al pie</td><td>Inter 400</td><td>0.8 rem · 12.8 px</td><td>#5A5E67</td><td>Oración</td></tr>
-<tr><td><b>Meta de portada</b></td><td>Versión, fecha, acceso, dirigido a</td><td>Inter 400 + valor en 600</td><td>0.85 rem</td><td>#C3CBD5 + blanco</td><td>Oración</td></tr></table></div>
-<div class="card">
-  <div class="spec"><div class="l"><b>Eyebrow</b>Inter 600 · 12 px</div><div class="t-eyebrow">Red Team · Pentester</div></div>
-  <div class="spec"><div class="l"><b>Lead</b>Inter 400 · 18 px</div><div class="t-blg">Cómo cargar los escaneos mensuales, revisar los hallazgos por activo y seguir la evolución de cada cliente.</div></div>
-  <div class="spec"><div class="l"><b>Subtítulo de sección</b>Inter 400 · 14.4 px</div><div class="t-bsm">Evolución de riesgo por cliente y actividad de la plataforma.</div></div>
-  <div class="spec"><div class="l"><b>Caption</b>Inter 400 · 12.8 px</div><div class="t-cap">El nombre del archivo debe contener el mes (p. ej. "3 agosto.nessus" o "2026-08").</div></div>
-</div>
-<ul style="margin-top:var(--space-12)"><li>Un lead por pantalla; una o dos líneas (máximo 160 caracteres).</li><li>El eyebrow lleva máximo 4 palabras; se separa con " · " cuando combina dos ideas ("Red Team · Pentester").</li><li>Los subtítulos nunca en negrita completa ni en Poppins; el énfasis puntual va en <b>negrita</b> dentro del texto.</li><li>Sobre fondo oscuro, todos los subtítulos usan #C3CBD5; el título, blanco.</li></ul>
-
-<!-- ================================================================ TABLAS -->
-<h2 class="sec" id="tablas"><span class="n">08</span>Tablas</h2>
-<p class="lead">Las tablas son el componente más usado en producto y en reportes. Una sola especificación aplica en pantalla, en HTML autocontenido y en PDF.</p>
-<div class="card" style="padding:0;overflow:hidden"><div class="tw"><table class="centered" style="margin:0;border:0;border-radius:0"><tr><th>Mes</th><th>Archivo</th><th>Activos</th><th>Severidad</th><th>Estatus</th><th></th></tr>
-<tr><td><b>Sep 2026</b><br><span class="t-cap" style="font-family:var(--font-mono)">2026-09-04</span></td><td>4 septiembre.nessus</td><td>14</td><td><span class="sev-chips"><span class="chip crit">153</span><span class="chip high">179</span><span class="chip med">304</span></span></td><td><span class="badge badge-primary">Validado</span><br><span class="t-cap">Cargado por: Zaira Martínez · Validado por: Angel Alvarado</span></td><td><span class="btn btn-ghost btn-sm">Abrir</span></td></tr>
-<tr><td><b>Ago 2026</b><br><span class="t-cap" style="font-family:var(--font-mono)">2026-08-06</span></td><td>3 agosto.nessus</td><td>14</td><td><span class="sev-chips"><span class="chip crit">290</span><span class="chip high">271</span><span class="chip med">402</span></span></td><td><span class="badge badge-warning">Pendiente de validación</span><br><span class="t-cap">Cargado por: Zaira Martínez</span></td><td><span class="btn btn-ghost btn-sm">Abrir</span></td></tr></table></div></div>
-<h3>Especificación</h3>
-<div class="tw"><table><tr><th>Parte</th><th>Regla</th></tr>
-<tr><td class="left"><b>Contenedor</b></td><td class="left">Dentro de una tarjeta blanca; envoltorio con <code>overflow-x: auto</code> para que la tabla pueda ser más ancha que la pantalla sin romper el diseño. Ancho 100 %. Radio 14 px con esquinas superiores en la cabecera.</td></tr>
-<tr><td class="left"><b>Cabecera</b></td><td class="left">Fondo <code>--color-primary-soft</code> #ECEFF2 · texto <code>--color-primary</code> #455E7C · Poppins 600 · 0.72 rem · MAYÚSCULAS con tracking +0.06 em · <b>centrada</b> · padding 10 × 12 px · sin ajuste de línea (<code>white-space: nowrap</code>) · borde inferior 1 px #E6E7E8. Sin sufijos ni abreviaturas entre paréntesis ("Severidad", no "Severidad (C / A / M)").</td></tr>
-<tr><td class="left"><b>Celdas</b></td><td class="left">Inter 400 · 0.9 rem · #101826 · padding 10 × 12 px · alineadas al centro horizontal y vertical. Excepción: textos largos (nombre de vulnerabilidad, sistema operativo, descripciones, notas) alineados a la izquierda (<code>td.left</code>).</td></tr>
-<tr><td class="left"><b>Identificadores</b></td><td class="left">Mes, IP y hostname en <b>negritas</b>; fechas, IPs, hashes e IDs en JetBrains Mono. Texto secundario de la celda (quién cargó, fecha) en caption #5A5E67 debajo del dato principal.</td></tr>
-<tr><td class="left"><b>Números</b></td><td class="left"><code>font-variant-numeric: tabular-nums</code>; centrados como el resto. Porcentajes con un decimal (69.6 %).</td></tr>
-<tr><td class="left"><b>Severidad</b></td><td class="left">Una sola columna "Severidad" con chips crítica / alta / media en ese orden (§14). Bajas solo en resúmenes, no en tablas.</td></tr>
-<tr><td class="left"><b>Estado</b></td><td class="left">Un badge por celda (§09): primario para validado, aviso para pendiente, éxito para enviado/activo, peligro para bloqueado.</td></tr>
-<tr><td class="left"><b>Acciones</b></td><td class="left">Última columna, sin cabecera, botón ghost pequeño ("Abrir", "Editar"); el destructivo ("Bloquear", "Eliminar") en texto #B3312C. Máximo dos acciones por fila.</td></tr>
-<tr><td class="left"><b>Filas</b></td><td class="left">Divisor 1 px #E6E7E8; hover #F7F8F8 en producto (no en documentos); sin zebra; altura mínima 44 px.</td></tr>
-<tr><td class="left"><b>Orden</b></td><td class="left">Series temporales del mes más reciente al más antiguo; rankings de mayor a menor; listados alfabéticos por nombre. Sin ordenamiento por clic salvo que se indique con icono.</td></tr>
-<tr><td class="left"><b>Vacío</b></td><td class="left">Una fila con texto en #5A5E67 ("Aún no hay escaneos cargados."), nunca una tabla sin filas ni un mensaje fuera de la tabla.</td></tr>
-<tr><td class="left"><b>Compacta</b></td><td class="left">Para tablas secundarias y modales: padding 7 × 8 px, 0.85 rem. Mismas reglas de cabecera.</td></tr>
-<tr><td class="left"><b>Reporte HTML</b></td><td class="left">Idéntica; tipografía con fallback Segoe UI/Arial; chips y badges como en pantalla.</td></tr>
-<tr><td class="left"><b>PDF</b></td><td class="left">Cabecera #ECEFF2 / #455E7C en 9 px mayúsculas; celdas 9 px; chips de severidad como pastillas de 8 px. Las tablas no se cortan entre páginas si caben en una.</td></tr></table></div>
-<div class="dd"><div class="no"><h4>No</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Cabeceras alineadas a la izquierda, en gris o en tipo oración.</li><li>Números a la derecha con textos centrados: toda la tabla comparte alineación.</li><li>Columnas C / A / M separadas en texto plano; siempre chips.</li><li>Dos badges o un botón primario dentro de una celda.</li><li>Tablas dentro de rejillas estrechas (comprimen las columnas); ocupan el ancho completo.</li></ul></div>
-<div class="ok"><h4>Sí</h4><ul style="margin:0;padding-left:18px;font-size:.9rem"><li>Título de la tabla en H2/H3 encima, dentro de la misma tarjeta.</li><li>Cabeceras cortas (1–2 palabras) y sin abreviaturas ambiguas.</li><li>Datos técnicos en monoespaciada; identificadores en negritas.</li><li>Botón "Abrir" como enlace de fila; la fila no es clicable completa.</li></ul></div></div>
-
-<!-- ================================================================ BOTONES, BADGES, ALERTAS Y TARJETAS -->
-<h2 class="sec" id="comp"><span class="n">09</span>Botones, badges, alertas y tarjetas</h2>
-<h3>Botones</h3>
-<div class="card">
-<div class="btn-row"><a class="btn btn-primary" href="#comp">Bloquear en Cloudflare</a><a class="btn btn-outline" href="#comp">Exportar PDF</a><a class="btn btn-ghost" href="#comp">Cancelar</a><a class="btn btn-danger" href="#comp">Eliminar regla</a><a class="btn btn-dark" href="#comp">Solicitar cotización</a><span class="btn btn-primary is-disabled">Deshabilitado</span></div>
-<div class="btn-row" style="margin-top:var(--space-16)"><a class="btn btn-primary btn-sm" href="#comp">Pequeño</a><a class="btn btn-primary" href="#comp">Estándar</a><a class="btn btn-primary btn-lg" href="#comp">Grande (portada)</a></div>
-<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Variante</th><th>Cuándo</th><th>Reposo</th><th>Hover</th><th>Activo / Foco</th><th>Deshabilitado</th></tr>
-<tr><td>Primario</td><td>La acción principal de la pantalla. <b>Uno por vista.</b></td><td>#455E7C · texto #FFF</td><td>#3A506A, sombra suave, −1 px</td><td>#2F4257 · anillo #455E7C 2 px</td><td>45 % opacidad</td></tr>
-<tr><td>Outline</td><td>Acciones secundarias (exportar, actualizar, cambiar contraseña)</td><td>transparente · texto #455E7C · borde #C3CBD5</td><td>fondo #ECEFF2 · borde #455E7C</td><td>anillo</td><td>45 %</td></tr>
-<tr><td>Ghost</td><td>Terciarias, navegación interna, cancelar</td><td>texto #4F535D</td><td>texto #455E7C · fondo #ECEFF2</td><td>anillo</td><td>45 %</td></tr>
-<tr><td>Destructivo</td><td>Irreversibles; siempre con confirmación</td><td>texto/borde #B3312C</td><td>fondo #FBEAEA</td><td>anillo #B3312C</td><td>45 %</td></tr>
-<tr><td>Dark</td><td>CTA sobre fondos claros del sitio de marketing</td><td>#030C18 · texto #FFF</td><td>#0F1E32</td><td>anillo</td><td>45 %</td></tr></table></div>
-<p class="t-bsm">Forma píldora (999 px), Inter 600, 12×24 px de padding (7×14 en pequeño, 15×32 en grande). Icono opcional a la izquierda, 18 px, separado 8 px. Texto en tipo oración, verbo primero. Botones de icono (papelera) llevan <code>aria-label</code> y borde 1 px #E6E7E8.</p></div>
-
-<h3>Badges y chips</h3>
-<div class="card"><div class="btn-row"><span class="badge badge-primary">Administrador</span><span class="badge badge-success">Activo</span><span class="badge badge-warning">Suspendido</span><span class="badge badge-danger">Bloqueo</span><span class="badge badge-neutral">Analista</span><span class="chip">infosecmexico.com.mx <small style="color:var(--silver-dark)">active</small></span><span class="chip on">block:write</span></div>
-<p class="t-bsm" style="margin-top:var(--space-12)">Badge = estado o categoría (color semántico, texto 0.78 rem 600). Chip = valor seleccionable o listado (borde 1 px, fondo blanco; activo en primario). Nunca más de un badge por celda; nunca un badge como botón.</p></div>
-
-<h3>Alertas y mensajes</h3>
-<div class="card">
-<div class="alert alert-success"><span class="ic">✓</span><div><b>1.2.3.4 bloqueada en infosecmexico.com.mx</b>Regla 311bbedd… creada. Se notificó al superior y al cliente.</div></div>
-<div class="alert alert-warning"><span class="ic">!</span><div><b>Una sola sesión por usuario</b>Si inicias sesión en otro equipo, esta sesión se cerrará.</div></div>
-<div class="alert alert-danger"><span class="ic">×</span><div><b>No se pudo bloquear</b>"10.0.0.5" es una dirección privada o reservada.</div></div>
-<div class="alert alert-info"><span class="ic">i</span><div><b>Sin duplicados</b>Si la IP ya tiene una regla en ese dominio, la plataforma lo avisa y no crea otra.</div></div>
-<p class="t-bsm">Título en negrita (qué pasó) + una línea (qué hacer). Icono de texto simple, sin emojis en producto. Radio 14 px, padding 14×16, sin borde. Las alertas de página van arriba del contenido; las de campo, debajo del campo en 0.78 rem.</p></div>
-
-<h3>Tarjetas y tablas</h3>
-<div class="grid g2">
-<div class="card"><p class="eyebrow">Tarjeta estándar</p><h3 style="margin:0 0 8px">Título en Heading SM</h3><p class="t-bsm">Borde 1 px #E6E7E8, radio 20 px, padding 32 px, sombra suave. En marketing, hover eleva a sombra media y −4 px. En producto no hay hover.</p><div class="btn-row"><a class="btn btn-outline btn-sm" href="#comp">Acción</a></div></div>
-<div class="card" style="padding:0;overflow:hidden"><div class="tw"><table style="margin:0;border:0;border-radius:0"><tr><th>Objetivo</th><th>Modo</th><th class="num">Creación</th></tr><tr><td class="t-mono">1.2.3.4</td><td><span class="badge badge-danger">block</span></td><td class="num t-mono">2026-09-14 01:45</td></tr><tr><td class="t-mono">187.190.204.110</td><td><span class="badge badge-success">whitelist</span></td><td class="num t-mono">2026-09-03 19:55</td></tr></table></div></div>
-</div>
-<p class="t-bsm" style="margin-top:var(--space-12)">Especificación completa de tablas en §08.</p>
-
-<!-- ================================================================ FORMULARIOS -->
-<h2 class="sec" id="forms"><span class="n">10</span>Formularios</h2>
-<div class="card"><div class="grid g2">
-  <div class="field"><label for="f1">Correo electrónico</label><input class="input" id="f1" type="email" placeholder="analista@infosecmexico.com.mx"><span class="help">Este correo es tu credencial de acceso.</span></div>
-  <div class="field"><label for="f2">Objetivo</label><input class="input is-error" id="f2" value="10.0.0.5"><span class="err">"10.0.0.5" es una dirección privada o reservada; no se bloquea.</span></div>
-  <div class="field"><label for="f3">Cliente</label><select class="input" id="f3"><option>Selecciona…</option><option>Ventura</option><option>Infosec México</option></select></div>
-  <div class="field"><label for="f4">Campo deshabilitado</label><input class="input" id="f4" value="Zaira Martínez" disabled></div>
-  <div class="field" style="grid-column:1/-1"><label for="f5">Motivo / justificación</label><textarea class="input" id="f5" rows="3" placeholder="Ticket, alerta del SIEM, IOC, evidencia…"></textarea><span class="help">Se registra en Cloudflare, en la bitácora y en las notificaciones.</span></div>
-  <div class="field"><label>Opciones</label><label class="check"><input type="checkbox" checked> Enviar acceso por correo</label><label class="check"><input type="checkbox"> Copia al analista</label></div>
-  <div class="field"><label>Tipo</label><label class="check"><input type="radio" name="r" checked> IP o segmento</label><label class="check"><input type="radio" name="r"> Dominio</label></div>
-  <div class="field"><label>Interruptor</label><div class="btn-row"><span class="switch on" role="switch" aria-checked="true" aria-label="Activo"></span><span class="t-bsm">Activo</span><span class="switch" role="switch" aria-checked="false" aria-label="Inactivo"></span><span class="t-bsm">Inactivo</span></div></div>
-</div>
-<div class="btn-row" style="margin-top:var(--space-24)"><a class="btn btn-primary" href="#forms">Guardar</a><a class="btn btn-ghost" href="#forms">Cancelar</a></div></div>
-<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Estado</th><th>Borde</th><th>Fondo</th><th>Extra</th></tr>
-<tr><td>Reposo</td><td>1 px #E6E7E8</td><td>#FFFFFF</td><td>Placeholder en #969AA2 (decorativo)</td></tr><tr><td>Foco</td><td>#455E7C</td><td>#FFFFFF</td><td>Anillo 3 px rgba(69,94,124,.15)</td></tr><tr><td>Error</td><td>#B3312C</td><td>#FFFFFF</td><td>Mensaje debajo en #B3312C 0.78 rem; el campo conserva el valor</td></tr><tr><td>Deshabilitado</td><td>#E6E7E8</td><td>#F7F8F8</td><td>Texto #5A5E67, cursor no permitido</td></tr></table></div>
-<ul><li>Etiqueta encima del campo (nunca solo placeholder); obligatorio marcado con <span style="color:var(--success)">*</span> verde o indicando "(opcional)" en los opcionales, no ambos.</li><li>Radio 8 px, padding 11×14, Inter 0.95 rem. Campos en una columna en móvil; hasta 4 por fila en escritorio.</li><li>Botón primario alineado a la izquierda al final del formulario; el destructivo nunca junto al primario.</li><li>Validación al enviar, mensaje específico por campo; el éxito se confirma con alerta de página.</li></ul>
-
-<!-- ================================================================ ESPACIADO, RADIOS, SOMBRAS Y LAYOUTS -->
-<h2 class="sec" id="espacio"><span class="n">11</span>Espaciado, radios, sombras y layouts</h2>
-<div class="grid g2">
-<div class="card"><h3 style="margin-top:0">Escala de espacio (base 4 px)</h3>
-<div class="tw"><table><tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
-<tr><td>space-4 / 8</td><td>4 · 8 px</td><td>Separación icono-texto, entre chips</td></tr><tr><td>space-12 / 16</td><td>12 · 16 px</td><td>Entre campos, padding de celdas y alertas</td></tr><tr><td>space-24</td><td>24 px</td><td>Entre tarjetas, padding de tarjeta compacta, gutter lateral</td></tr><tr><td>space-32</td><td>32 px</td><td>Padding de tarjeta estándar, separación entre bloques</td></tr><tr><td>space-48 / 64</td><td>48 · 64 px</td><td>Entre secciones, padding de portada</td></tr><tr><td>space-96</td><td>96 px</td><td>Respiro superior/inferior de secciones de marketing</td></tr></table></div>
-<p class="t-bsm">Contenedor máximo 1120 px (sitio) y 1180 px (producto). Gutter lateral mínimo 16 px en móvil, 24 px en escritorio. Los grupos de elementos se separan con <code>gap</code>, no con márgenes sueltos.</p></div>
-<div class="card"><h3 style="margin-top:0">Radios, sombras, movimiento</h3>
-<div class="tw"><table><tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
-<tr><td>radius-sm</td><td>8 px</td><td>Inputs, código, chips cuadrados, placas de logo</td></tr><tr><td>radius-md</td><td>14 px</td><td>Alertas, tablas, tarjetas compactas, modales pequeños</td></tr><tr><td>radius-lg</td><td>20 px</td><td>Tarjetas estándar, heros, paneles</td></tr><tr><td>radius-pill</td><td>999 px</td><td>Botones, badges, chips, navegación activa</td></tr>
-<tr><td>shadow-soft</td><td>0 10 24 rgba(3,12,24,.06)</td><td>Tarjetas en reposo</td></tr><tr><td>shadow-medium</td><td>0 18 40 rgba(3,12,24,.10)</td><td>Modales, elementos elevados, hover de tarjetas de marketing</td></tr>
-<tr><td>motion-fast</td><td>150 ms ease</td><td>Hover, foco, cambios de color</td></tr><tr><td>motion-normal</td><td>250 ms ease</td><td>Apertura de paneles, transformaciones</td></tr></table></div>
-<p class="t-bsm">Respeta <code>prefers-reduced-motion</code>: sin transiciones ni desplazamientos animados. Nada parpadea; nada se mueve sin que el usuario lo provoque.</p></div>
-</div>
-<h3>Layouts</h3>
-<div class="grid g2">
-<div class="card"><p class="eyebrow">Hero dividido (sitio)</p><h3 style="margin:0 0 8px">Texto + visual</h3><p class="t-bsm">Fondo #030C18, Display LG blanco, lead en #C3CBD5, CTA primario + outline claro. Altura según contenido, nunca 100 vh. Ideal para portada y landings.</p><div class="btn-row"><span class="btn btn-primary btn-sm">CTA principal</span><span class="btn btn-outline btn-sm">Secundaria</span></div></div>
-<div class="card"><p class="eyebrow">Sección con rejilla</p><h3 style="margin:0 0 8px">Título + texto + tarjetas</h3><p class="t-bsm">Eyebrow, Display LG / Heading LG, lead de 60–70 caracteres por línea y rejilla de 2–4 tarjetas con la misma altura por fila. Separación 24 px; sección a 64–96 px.</p></div>
-<div class="card"><p class="eyebrow">Página de producto</p><h3 style="margin:0 0 8px">Cabecera + formulario + tabla</h3><p class="t-bsm">Barra fija de 68 px, cabecera de página (eyebrow + Heading LG + lead), tarjeta de acción a todo lo ancho con campos en filas de 3–4, y debajo la tabla. Las tablas nunca comprimen a la columna vecina: rejillas con <code>minmax(0,1fr)</code>.</p></div>
-<div class="card"><p class="eyebrow">Portal / dashboard</p><h3 style="margin:0 0 8px">Filtros → métricas → gráficas → detalle</h3><p class="t-bsm">Filtros en una fila arriba; fila de KPIs (una héroe); gráficas en rejilla de 2; tablas de detalle al final. Todo lo importante visible sin desplazarse.</p></div>
-</div>
-
-<!-- ================================================================ REDACCIÓN: MAYÚSCULAS, MINÚSCULAS Y ESTILO -->
-<h2 class="sec" id="redaccion"><span class="n">12</span>Redacción: mayúsculas, minúsculas y estilo</h2>
+<!-- ================================================================ REDACCIÓN -->
+<h2 class="sec" id="redaccion"><span class="n">04</span>Redacción: mayúsculas, minúsculas y estilo</h2>
 <p class="lead">La marca escribe como habla un especialista que respeta el tiempo del lector: claro, directo, en español correcto. La caja tipográfica es información, no decoración.</p>
 <div class="grid g2">
 <div class="card"><h3 style="margin-top:0">Mayúsculas y minúsculas</h3>
@@ -478,8 +273,73 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <div class="no"><h4>Así no</h4><p class="t-eyebrow" style="margin:0;color:var(--danger)">Soc - cloudflare</p><div class="t-hmd" style="color:var(--color-primary)">BLOQUEO DE IPS MALICIOSAS</div><p class="t-bsm" style="margin:6px 0 10px">Seleccione El Cliente Y Capture El Objetivo Validado Por El SOC.</p><span class="btn btn-danger btn-sm">BLOQUEAR!!</span></div>
 </div>
 
-<!-- ================================================================ COMPONENTES DE PRODUCTO -->
-<h2 class="sec" id="producto"><span class="n">13</span>Componentes de producto</h2>
+<!-- ================================================================ ESPACIADO -->
+<h2 class="sec" id="espacio"><span class="n">05</span>Espaciado, radios, sombras y movimiento</h2>
+<div class="grid g2">
+<div class="card"><h3 style="margin-top:0">Escala de espacio (base 4 px)</h3>
+<div class="tw"><table><tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
+<tr><td>space-4 / 8</td><td>4 · 8 px</td><td>Separación icono-texto, entre chips</td></tr><tr><td>space-12 / 16</td><td>12 · 16 px</td><td>Entre campos, padding de celdas y alertas</td></tr><tr><td>space-24</td><td>24 px</td><td>Entre tarjetas, padding de tarjeta compacta, gutter lateral</td></tr><tr><td>space-32</td><td>32 px</td><td>Padding de tarjeta estándar, separación entre bloques</td></tr><tr><td>space-48 / 64</td><td>48 · 64 px</td><td>Entre secciones, padding de portada</td></tr><tr><td>space-96</td><td>96 px</td><td>Respiro superior/inferior de secciones de marketing</td></tr></table></div>
+<p class="t-bsm">Contenedor máximo 1120 px (sitio) y 1180 px (producto). Gutter lateral mínimo 16 px en móvil, 24 px en escritorio. Los grupos de elementos se separan con <code>gap</code>, no con márgenes sueltos.</p></div>
+<div class="card"><h3 style="margin-top:0">Radios, sombras, movimiento</h3>
+<div class="tw"><table><tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
+<tr><td>radius-sm</td><td>8 px</td><td>Inputs, código, chips cuadrados, placas de logo</td></tr><tr><td>radius-md</td><td>14 px</td><td>Alertas, tablas, tarjetas compactas, modales pequeños</td></tr><tr><td>radius-lg</td><td>20 px</td><td>Tarjetas estándar, heros, paneles</td></tr><tr><td>radius-pill</td><td>999 px</td><td>Botones, badges, chips, navegación activa</td></tr>
+<tr><td>shadow-soft</td><td>0 10 24 rgba(3,12,24,.06)</td><td>Tarjetas en reposo</td></tr><tr><td>shadow-medium</td><td>0 18 40 rgba(3,12,24,.10)</td><td>Modales, elementos elevados, hover de tarjetas de marketing</td></tr>
+<tr><td>motion-fast</td><td>150 ms ease</td><td>Hover, foco, cambios de color</td></tr><tr><td>motion-normal</td><td>250 ms ease</td><td>Apertura de paneles, transformaciones</td></tr></table></div>
+<p class="t-bsm">Respeta <code>prefers-reduced-motion</code>: sin transiciones ni desplazamientos animados. Nada parpadea; nada se mueve sin que el usuario lo provoque.</p></div>
+</div>
+
+<!-- ================================================================ COMPONENTES -->
+<h2 class="sec" id="comp"><span class="n">06</span>Componentes base</h2>
+<h3>Botones</h3>
+<div class="card">
+<div class="btn-row"><a class="btn btn-primary" href="#comp">Bloquear en Cloudflare</a><a class="btn btn-outline" href="#comp">Exportar PDF</a><a class="btn btn-ghost" href="#comp">Cancelar</a><a class="btn btn-danger" href="#comp">Eliminar regla</a><a class="btn btn-dark" href="#comp">Solicitar cotización</a><span class="btn btn-primary is-disabled">Deshabilitado</span></div>
+<div class="btn-row" style="margin-top:var(--space-16)"><a class="btn btn-primary btn-sm" href="#comp">Pequeño</a><a class="btn btn-primary" href="#comp">Estándar</a><a class="btn btn-primary btn-lg" href="#comp">Grande (portada)</a></div>
+<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Variante</th><th>Cuándo</th><th>Reposo</th><th>Hover</th><th>Activo / Foco</th><th>Deshabilitado</th></tr>
+<tr><td>Primario</td><td>La acción principal de la pantalla. <b>Uno por vista.</b></td><td>#455E7C · texto #FFF</td><td>#3A506A, sombra suave, −1 px</td><td>#2F4257 · anillo #455E7C 2 px</td><td>45 % opacidad</td></tr>
+<tr><td>Outline</td><td>Acciones secundarias (exportar, actualizar, cambiar contraseña)</td><td>transparente · texto #455E7C · borde #C3CBD5</td><td>fondo #ECEFF2 · borde #455E7C</td><td>anillo</td><td>45 %</td></tr>
+<tr><td>Ghost</td><td>Terciarias, navegación interna, cancelar</td><td>texto #4F535D</td><td>texto #455E7C · fondo #ECEFF2</td><td>anillo</td><td>45 %</td></tr>
+<tr><td>Destructivo</td><td>Irreversibles; siempre con confirmación</td><td>texto/borde #B3312C</td><td>fondo #FBEAEA</td><td>anillo #B3312C</td><td>45 %</td></tr>
+<tr><td>Dark</td><td>CTA sobre fondos claros del sitio de marketing</td><td>#030C18 · texto #FFF</td><td>#0F1E32</td><td>anillo</td><td>45 %</td></tr></table></div>
+<p class="t-bsm">Forma píldora (999 px), Inter 600, 12×24 px de padding (7×14 en pequeño, 15×32 en grande). Icono opcional a la izquierda, 18 px, separado 8 px. Texto en tipo oración, verbo primero. Botones de icono (papelera) llevan <code>aria-label</code> y borde 1 px #E6E7E8.</p></div>
+
+<h3>Badges y chips</h3>
+<div class="card"><div class="btn-row"><span class="badge badge-primary">Administrador</span><span class="badge badge-success">Activo</span><span class="badge badge-warning">Suspendido</span><span class="badge badge-danger">Bloqueo</span><span class="badge badge-neutral">Analista</span><span class="chip">infosecmexico.com.mx <small style="color:var(--silver-dark)">active</small></span><span class="chip on">block:write</span></div>
+<p class="t-bsm" style="margin-top:var(--space-12)">Badge = estado o categoría (color semántico, texto 0.78 rem 600). Chip = valor seleccionable o listado (borde 1 px, fondo blanco; activo en primario). Nunca más de un badge por celda; nunca un badge como botón.</p></div>
+
+<h3>Alertas y mensajes</h3>
+<div class="card">
+<div class="alert alert-success"><span class="ic">✓</span><div><b>1.2.3.4 bloqueada en infosecmexico.com.mx</b>Regla 311bbedd… creada. Se notificó al superior y al cliente.</div></div>
+<div class="alert alert-warning"><span class="ic">!</span><div><b>Una sola sesión por usuario</b>Si inicias sesión en otro equipo, esta sesión se cerrará.</div></div>
+<div class="alert alert-danger"><span class="ic">×</span><div><b>No se pudo bloquear</b>"10.0.0.5" es una dirección privada o reservada.</div></div>
+<div class="alert alert-info"><span class="ic">i</span><div><b>Sin duplicados</b>Si la IP ya tiene una regla en ese dominio, la plataforma lo avisa y no crea otra.</div></div>
+<p class="t-bsm">Título en negrita (qué pasó) + una línea (qué hacer). Icono de texto simple, sin emojis en producto. Radio 14 px, padding 14×16, sin borde. Las alertas de página van arriba del contenido; las de campo, debajo del campo en 0.78 rem.</p></div>
+
+<h3>Tarjetas y tablas</h3>
+<div class="grid g2">
+<div class="card"><p class="eyebrow">Tarjeta estándar</p><h3 style="margin:0 0 8px">Título en Heading SM</h3><p class="t-bsm">Borde 1 px #E6E7E8, radio 20 px, padding 32 px, sombra suave. En marketing, hover eleva a sombra media y −4 px. En producto no hay hover.</p><div class="btn-row"><a class="btn btn-outline btn-sm" href="#comp">Acción</a></div></div>
+<div class="card" style="padding:0;overflow:hidden"><div class="tw"><table style="margin:0;border:0;border-radius:0"><tr><th>Objetivo</th><th>Modo</th><th class="num">Creación</th></tr><tr><td class="t-mono">1.2.3.4</td><td><span class="badge badge-danger">block</span></td><td class="num t-mono">2026-09-14 01:45</td></tr><tr><td class="t-mono">187.190.204.110</td><td><span class="badge badge-success">whitelist</span></td><td class="num t-mono">2026-09-03 19:55</td></tr></table></div></div>
+</div>
+<p class="t-bsm" style="margin-top:var(--space-12)">Tablas: cabecera Poppins 600 0.72 rem mayúsculas sobre #F7F8F8; filas separadas por 1 px; hover de fila #F7F8F8; números alineados a la derecha con <code>tabular-nums</code>; datos técnicos en monoespaciada; contenedor con <code>overflow-x:auto</code>. Variante compacta: padding 7×6 y 0.85 rem.</p>
+
+<!-- ================================================================ FORMULARIOS -->
+<h2 class="sec" id="forms"><span class="n">07</span>Formularios</h2>
+<div class="card"><div class="grid g2">
+  <div class="field"><label for="f1">Correo electrónico</label><input class="input" id="f1" type="email" placeholder="analista@infosecmexico.com.mx"><span class="help">Este correo es tu credencial de acceso.</span></div>
+  <div class="field"><label for="f2">Objetivo</label><input class="input is-error" id="f2" value="10.0.0.5"><span class="err">"10.0.0.5" es una dirección privada o reservada; no se bloquea.</span></div>
+  <div class="field"><label for="f3">Cliente</label><select class="input" id="f3"><option>Selecciona…</option><option>Ventura</option><option>Infosec México</option></select></div>
+  <div class="field"><label for="f4">Campo deshabilitado</label><input class="input" id="f4" value="Zaira Martínez" disabled></div>
+  <div class="field" style="grid-column:1/-1"><label for="f5">Motivo / justificación</label><textarea class="input" id="f5" rows="3" placeholder="Ticket, alerta del SIEM, IOC, evidencia…"></textarea><span class="help">Se registra en Cloudflare, en la bitácora y en las notificaciones.</span></div>
+  <div class="field"><label>Opciones</label><label class="check"><input type="checkbox" checked> Enviar acceso por correo</label><label class="check"><input type="checkbox"> Copia al analista</label></div>
+  <div class="field"><label>Tipo</label><label class="check"><input type="radio" name="r" checked> IP o segmento</label><label class="check"><input type="radio" name="r"> Dominio</label></div>
+  <div class="field"><label>Interruptor</label><div class="btn-row"><span class="switch on" role="switch" aria-checked="true" aria-label="Activo"></span><span class="t-bsm">Activo</span><span class="switch" role="switch" aria-checked="false" aria-label="Inactivo"></span><span class="t-bsm">Inactivo</span></div></div>
+</div>
+<div class="btn-row" style="margin-top:var(--space-24)"><a class="btn btn-primary" href="#forms">Guardar</a><a class="btn btn-ghost" href="#forms">Cancelar</a></div></div>
+<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Estado</th><th>Borde</th><th>Fondo</th><th>Extra</th></tr>
+<tr><td>Reposo</td><td>1 px #E6E7E8</td><td>#FFFFFF</td><td>Placeholder en #969AA2 (decorativo)</td></tr><tr><td>Foco</td><td>#455E7C</td><td>#FFFFFF</td><td>Anillo 3 px rgba(69,94,124,.15)</td></tr><tr><td>Error</td><td>#B3312C</td><td>#FFFFFF</td><td>Mensaje debajo en #B3312C 0.78 rem; el campo conserva el valor</td></tr><tr><td>Deshabilitado</td><td>#E6E7E8</td><td>#F7F8F8</td><td>Texto #5A5E67, cursor no permitido</td></tr></table></div>
+<ul><li>Etiqueta encima del campo (nunca solo placeholder); obligatorio marcado con <span style="color:var(--success)">*</span> verde o indicando "(opcional)" en los opcionales, no ambos.</li><li>Radio 8 px, padding 11×14, Inter 0.95 rem. Campos en una columna en móvil; hasta 4 por fila en escritorio.</li><li>Botón primario alineado a la izquierda al final del formulario; el destructivo nunca junto al primario.</li><li>Validación al enviar, mensaje específico por campo; el éxito se confirma con alerta de página.</li></ul>
+
+<!-- ================================================================ PRODUCTO -->
+<h2 class="sec" id="producto"><span class="n">08</span>Componentes de producto</h2>
 <p class="lead">Patrones usados en IPStrike y reutilizables en los siguientes sistemas: métricas, pestañas, pasos, paginación, modales y tooltips.</p>
 <h3>Métricas (KPI)</h3>
 <div class="metrics"><div class="metric hero"><b>7</b>Ataques detenidos</div><div class="metric"><b>7</b>IPs desbloqueadas</div><div class="metric"><b>5</b>Dominios protegidos</div><div class="metric"><b>1</b>Dominios con actividad</div></div>
@@ -497,8 +357,34 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <div class="modal"><p class="eyebrow">Confirmar</p><h3 style="margin:0 0 8px">¿Eliminar la regla para 1.2.3.4?</h3><p class="t-bsm">La IP volverá a tener acceso a infosecmexico.com.mx. Se notificará al superior y al cliente.</p><div class="btn-row"><a class="btn btn-ghost" href="#producto">Cancelar</a><a class="btn btn-danger" href="#producto">Eliminar</a></div></div>
 <p class="t-bsm" style="margin-top:var(--space-12)">Ancho máximo 440 px, radio 20 px, sombra media. La pregunta nombra el objeto y la consecuencia. Cancelar a la izquierda (ghost), acción a la derecha; si es destructiva, en rojo. Cierra con Esc y devuelve el foco.</p>
 
+<!-- ================================================================ LAYOUTS -->
+<h2 class="sec" id="layouts"><span class="n">09</span>Layouts</h2>
+<div class="grid g2">
+<div class="card"><p class="eyebrow">Hero dividido (sitio)</p><h3 style="margin:0 0 8px">Texto + visual</h3><p class="t-bsm">Fondo #030C18, Display LG blanco, lead en #C3CBD5, CTA primario + outline claro. Altura según contenido, nunca 100 vh. Ideal para portada y landings.</p><div class="btn-row"><span class="btn btn-primary btn-sm">CTA principal</span><span class="btn btn-outline btn-sm">Secundaria</span></div></div>
+<div class="card"><p class="eyebrow">Sección con rejilla</p><h3 style="margin:0 0 8px">Título + texto + tarjetas</h3><p class="t-bsm">Eyebrow, Display LG / Heading LG, lead de 60–70 caracteres por línea y rejilla de 2–4 tarjetas con la misma altura por fila. Separación 24 px; sección a 64–96 px.</p></div>
+<div class="card"><p class="eyebrow">Página de producto</p><h3 style="margin:0 0 8px">Cabecera + formulario + tabla</h3><p class="t-bsm">Barra fija de 68 px, cabecera de página (eyebrow + Heading LG + lead), tarjeta de acción a todo lo ancho con campos en filas de 3–4, y debajo la tabla. Las tablas nunca comprimen a la columna vecina: rejillas con <code>minmax(0,1fr)</code>.</p></div>
+<div class="card"><p class="eyebrow">Portal / dashboard</p><h3 style="margin:0 0 8px">Filtros → métricas → gráficas → detalle</h3><p class="t-bsm">Filtros en una fila arriba; fila de KPIs (una héroe); gráficas en rejilla de 2; tablas de detalle al final. Todo lo importante visible sin desplazarse.</p></div>
+</div>
+
+<!-- ================================================================ DARK -->
+<h2 class="sec" id="dark"><span class="n">10</span>Tema oscuro del sitio público</h2>
+<p class="lead">infosecmexico.com.mx usa una variante oscura con acento cian neón. Convive con el sistema claro bajo estas reglas: mismo logotipo, misma voz, misma escala de espacio; cambian los fondos, el acento y la tipografía display.</p>
+<div class="dark-demo"><p class="eyebrow">Servicios</p><h3 style="font-family:'Space Grotesk',var(--font-display)">Protección que se anticipa</h3><p>Fondo #030C18, superficies #071524 / #0A1E33, bordes rgba(0,212,255,.12), texto #E8F1FB y #8BAFC8. Acento cian #00D4FF (11:1 sobre el fondo) y verde #00E676 solo para indicadores positivos.</p>
+<div class="grid g3" style="margin-top:var(--space-16)"><div class="dcard"><span class="dpill">Hackeo ético</span><p style="margin:10px 0 0;color:#E8F1FB">Tarjeta oscura con borde cian tenue; en hover, borde a .35 y sombra cian.</p></div><div class="dcard"><span class="dpill">Forense digital</span><p style="margin:10px 0 0;color:#E8F1FB">Tipografía display del sitio: Space Grotesk; cuerpo: Inter.</p></div><div class="dcard"><span class="dpill">Monitoreo</span><p style="margin:10px 0 0;color:#E8F1FB">Botones en degradado cian con texto oscuro y <b>mayúsculas</b> con tracking .06 em (excepción exclusiva del sitio).</p></div></div>
+<div class="btn-row" style="margin-top:var(--space-16)"><span class="dbtn">Solicitar diagnóstico</span></div></div>
+<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Elemento</th><th>Sistema claro (producto, documentos)</th><th>Sitio oscuro</th></tr>
+<tr><td>Display</td><td>Poppins</td><td>Space Grotesk</td></tr><tr><td>Acento</td><td>#455E7C</td><td>#00D4FF</td></tr><tr><td>Botón primario</td><td>píldora azul, tipo oración</td><td>degradado cian, MAYÚSCULAS, radio 12 px</td></tr><tr><td>Fondo / tarjeta</td><td>#F7F8F8 / #FFFFFF</td><td>#030C18 / #0A1E33</td></tr><tr><td>Radios</td><td>8 · 14 · 20 · píldora</td><td>6 · 12 · 20</td></tr></table></div>
+<div class="alert alert-warning"><span class="ic">!</span><div><b>No mezclar</b>El cian neón no se usa en producto ni en documentos, y el azul acero no sustituye al cian en el sitio. Cada contexto conserva su acento.</div></div>
+
+<!-- ================================================================ DATOS -->
+<h2 class="sec" id="datos"><span class="n">11</span>Visualización de datos</h2>
+<div class="grid g2">
+<div class="card chart"><svg xmlns="http://www.w3.org/2000/svg" width="520" height="190" viewBox="0 0 520 190" role="img" aria-label="Dominios más atacados"><text x="0" y="16" font-size="13" font-weight="600" fill="#101826" font-family="Inter">Dominios más atacados (bloqueos)</text><text x="180" y="46" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">asistenciaventura.com</text><rect x="190" y="34" width="280" height="16" rx="4" fill="#455E7C"/><text x="478" y="46" font-size="12" font-weight="600" fill="#101826" font-family="Inter">14</text><text x="180" y="76" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">subastasventura.com</text><rect x="190" y="64" width="180" height="16" rx="4" fill="#C3CBD5"/><text x="378" y="76" font-size="12" font-weight="600" fill="#101826" font-family="Inter">9</text><text x="180" y="106" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">venturadigital.com.mx</text><rect x="190" y="94" width="120" height="16" rx="4" fill="#C3CBD5"/><text x="318" y="106" font-size="12" font-weight="600" fill="#101826" font-family="Inter">6</text><text x="180" y="136" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">gruasventura.com</text><rect x="190" y="124" width="60" height="16" rx="4" fill="#C3CBD5"/><text x="258" y="136" font-size="12" font-weight="600" fill="#101826" font-family="Inter">3</text></svg></div>
+<div class="card"><h3 style="margin-top:0">Reglas</h3><ul style="font-size:.92rem"><li><b>Una serie, un tono:</b> el valor principal en #455E7C, el resto en #C3CBD5. Nada de arcoíris.</li><li>Varias series: orden fijo de tonos (#455E7C, #030C18, #8BAFC8, #C3CBD5) con leyenda y etiqueta directa; máximo 4.</li><li>Estados (bien/aviso/crítico) con la paleta semántica, con icono y etiqueta, nunca solo color.</li><li>Barras finas con extremo redondeado 4 px, etiqueta directa del valor, rejilla #E6E7E8 al 100 %, texto en tonos de texto (no en el color de la serie).</li><li>Un solo eje; si hay dos medidas, dos gráficas.</li><li>Números con <code>tabular-nums</code>; título en Poppins/Inter 600 13 px que nombra la medida.</li><li>Siempre existe una tabla equivalente para quien no pueda leer la gráfica.</li></ul></div>
+</div>
+
 <!-- ================================================================ DATOS DE VULNERABILIDADES -->
-<h2 class="sec" id="vulns"><span class="n">14</span>Datos de vulnerabilidades</h2>
+<h2 class="sec" id="vulns"><span class="n">12</span>Datos de vulnerabilidades y tablas</h2>
 <p class="lead">Reglas nacidas en VulnManagement para presentar hallazgos de seguridad: una paleta de severidad propia, cajas de resumen, chips en tablas y cabeceras uniformes. Aplican a cualquier producto que muestre riesgo o vulnerabilidades.</p>
 
 <h3>Paleta de severidad</h3>
@@ -525,7 +411,12 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <tr><td><b>Ago 2026</b></td><td>3 agosto.nessus</td><td>14</td><td><span class="sev-chips"><span class="chip crit">290</span><span class="chip high">271</span><span class="chip med">402</span></span></td><td><span class="badge badge-primary">Validado</span></td></tr></table></div>
 
 <h3>Tablas</h3>
-<p>La especificación de tablas (cabecera, alineación, chips, orden) está en §08 y aplica sin cambios a los datos de vulnerabilidades.</p>
+<ul>
+<li><b>Cabecera:</b> fondo <code>--color-primary-soft</code> (#ECEFF2), texto <code>--color-primary</code>, Poppins 600, 0.72 rem, mayúsculas con tracking 0.06 em, <b>centrada</b>; esquinas superiores con <code>--radius-sm</code>.</li>
+<li><b>Celdas:</b> centradas y alineadas a media altura; solo los textos largos (nombre de vulnerabilidad, sistema operativo, descripciones) se alinean a la izquierda. Identificadores (IP, hostname, mes) en negritas.</li>
+<li><b>Orden:</b> series temporales del mes más reciente al más antiguo; rankings de mayor a menor.</li>
+<li><b>Divisores:</b> <code>--color-border</code> de 1 px; sin zebra.</li>
+</ul>
 
 <h3>Gráficas de riesgo</h3>
 <ul>
@@ -536,25 +427,8 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 <li>Fechas y meses siempre mediante selector de calendario, nunca captura manual.</li>
 </ul>
 
-<!-- ================================================================ VISUALIZACIÓN DE DATOS -->
-<h2 class="sec" id="datos"><span class="n">15</span>Visualización de datos</h2>
-<div class="grid g2">
-<div class="card chart"><svg xmlns="http://www.w3.org/2000/svg" width="520" height="190" viewBox="0 0 520 190" role="img" aria-label="Dominios más atacados"><text x="0" y="16" font-size="13" font-weight="600" fill="#101826" font-family="Inter">Dominios más atacados (bloqueos)</text><text x="180" y="46" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">asistenciaventura.com</text><rect x="190" y="34" width="280" height="16" rx="4" fill="#455E7C"/><text x="478" y="46" font-size="12" font-weight="600" fill="#101826" font-family="Inter">14</text><text x="180" y="76" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">subastasventura.com</text><rect x="190" y="64" width="180" height="16" rx="4" fill="#C3CBD5"/><text x="378" y="76" font-size="12" font-weight="600" fill="#101826" font-family="Inter">9</text><text x="180" y="106" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">venturadigital.com.mx</text><rect x="190" y="94" width="120" height="16" rx="4" fill="#C3CBD5"/><text x="318" y="106" font-size="12" font-weight="600" fill="#101826" font-family="Inter">6</text><text x="180" y="136" font-size="12" text-anchor="end" fill="#101826" font-family="Inter">gruasventura.com</text><rect x="190" y="124" width="60" height="16" rx="4" fill="#C3CBD5"/><text x="258" y="136" font-size="12" font-weight="600" fill="#101826" font-family="Inter">3</text></svg></div>
-<div class="card"><h3 style="margin-top:0">Reglas</h3><ul style="font-size:.92rem"><li><b>Una serie, un tono:</b> el valor principal en #455E7C, el resto en #C3CBD5. Nada de arcoíris.</li><li>Varias series: orden fijo de tonos (#455E7C, #030C18, #8BAFC8, #C3CBD5) con leyenda y etiqueta directa; máximo 4.</li><li>Estados (bien/aviso/crítico) con la paleta semántica, con icono y etiqueta, nunca solo color.</li><li>Barras finas con extremo redondeado 4 px, etiqueta directa del valor, rejilla #E6E7E8 al 100 %, texto en tonos de texto (no en el color de la serie).</li><li>Un solo eje; si hay dos medidas, dos gráficas.</li><li>Números con <code>tabular-nums</code>; título en Poppins/Inter 600 13 px que nombra la medida.</li><li>Siempre existe una tabla equivalente para quien no pueda leer la gráfica.</li></ul></div>
-</div>
-
-<!-- ================================================================ TEMA OSCURO DEL SITIO PÚBLICO -->
-<h2 class="sec" id="dark"><span class="n">16</span>Tema oscuro del sitio público</h2>
-<p class="lead">infosecmexico.com.mx usa una variante oscura con acento cian neón. Convive con el sistema claro bajo estas reglas: mismo logotipo, misma voz, misma escala de espacio; cambian los fondos, el acento y la tipografía display.</p>
-<div class="dark-demo"><p class="eyebrow">Servicios</p><h3 style="font-family:'Space Grotesk',var(--font-display)">Protección que se anticipa</h3><p>Fondo #030C18, superficies #071524 / #0A1E33, bordes rgba(0,212,255,.12), texto #E8F1FB y #8BAFC8. Acento cian #00D4FF (11:1 sobre el fondo) y verde #00E676 solo para indicadores positivos.</p>
-<div class="grid g3" style="margin-top:var(--space-16)"><div class="dcard"><span class="dpill">Hackeo ético</span><p style="margin:10px 0 0;color:#E8F1FB">Tarjeta oscura con borde cian tenue; en hover, borde a .35 y sombra cian.</p></div><div class="dcard"><span class="dpill">Forense digital</span><p style="margin:10px 0 0;color:#E8F1FB">Tipografía display del sitio: Space Grotesk; cuerpo: Inter.</p></div><div class="dcard"><span class="dpill">Monitoreo</span><p style="margin:10px 0 0;color:#E8F1FB">Botones en degradado cian con texto oscuro y <b>mayúsculas</b> con tracking .06 em (excepción exclusiva del sitio).</p></div></div>
-<div class="btn-row" style="margin-top:var(--space-16)"><span class="dbtn">Solicitar diagnóstico</span></div></div>
-<div class="tw" style="margin-top:var(--space-16)"><table><tr><th>Elemento</th><th>Sistema claro (producto, documentos)</th><th>Sitio oscuro</th></tr>
-<tr><td>Display</td><td>Poppins</td><td>Space Grotesk</td></tr><tr><td>Acento</td><td>#455E7C</td><td>#00D4FF</td></tr><tr><td>Botón primario</td><td>píldora azul, tipo oración</td><td>degradado cian, MAYÚSCULAS, radio 12 px</td></tr><tr><td>Fondo / tarjeta</td><td>#F7F8F8 / #FFFFFF</td><td>#030C18 / #0A1E33</td></tr><tr><td>Radios</td><td>8 · 14 · 20 · píldora</td><td>6 · 12 · 20</td></tr></table></div>
-<div class="alert alert-warning"><span class="ic">!</span><div><b>No mezclar</b>El cian neón no se usa en producto ni en documentos, y el azul acero no sustituye al cian en el sitio. Cada contexto conserva su acento.</div></div>
-
-<!-- ================================================================ TOKENS CSS -->
-<h2 class="sec" id="tokens"><span class="n">17</span>Tokens CSS</h2>
+<!-- ================================================================ TOKENS -->
+<h2 class="sec" id="tokens"><span class="n">13</span>Tokens CSS</h2>
 <p class="lead">Copia este bloque como base de cualquier proyecto nuevo. Los componentes se estilizan a través de los tokens, nunca con valores sueltos.</p>
 <pre><code>:root {
   /* Marca */
@@ -587,7 +461,7 @@ footer{margin-top:var(--space-64);padding-top:var(--space-16);border-top:1px sol
 /* Fuentes */
 &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;</code></pre>
 <h3>Lista de verificación antes de publicar</h3>
-<ul><li>¿Un solo botón primario por vista y el acento en pocos lugares?</li><li>¿Cabeceras de tabla en Primary soft, centradas (§08), y severidades solo con la paleta de §01/§14?</li><li>¿Títulos en tipo oración, eyebrows y cabeceras de tabla en mayúsculas con tracking, acentos incluidos?</li><li>¿Texto auxiliar en #5A5E67 (no #969AA2) y contraste ≥ 4.5:1 en todo lo legible?</li><li>¿Foco visible en todo lo interactivo, alt en imágenes, tabla equivalente para cada gráfica?</li><li>¿Espaciado por tokens y rejillas que no aplastan columnas en móvil (gutter ≥ 16 px)?</li><li>¿Mensajes que dicen qué pasó y qué hacer, sin jerga ni anglicismos innecesarios?</li></ul>
+<ul><li>¿Un solo botón primario por vista y el acento en pocos lugares?</li><li>¿Cabeceras de tabla en Primary soft, centradas, y severidades solo con la paleta de §12?</li><li>¿Títulos en tipo oración, eyebrows y cabeceras de tabla en mayúsculas con tracking, acentos incluidos?</li><li>¿Texto auxiliar en #5A5E67 (no #969AA2) y contraste ≥ 4.5:1 en todo lo legible?</li><li>¿Foco visible en todo lo interactivo, alt en imágenes, tabla equivalente para cada gráfica?</li><li>¿Espaciado por tokens y rejillas que no aplastan columnas en móvil (gutter ≥ 16 px)?</li><li>¿Mensajes que dicen qué pasó y qué hacer, sin jerga ni anglicismos innecesarios?</li></ul>
 
-<footer><span>© 2026 Infosec México · Sistema de diseño v3.0</span><span>Fuente: infosecmexico-brand/design-system.html</span></footer>
+<footer><span>© 2026 Infosec México · Sistema de diseño v2.1</span><span>Fuente: infosecmexico-brand/design-system.html</span></footer>
 </div>
